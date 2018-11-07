@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class SnapToPosition : MonoBehaviour {
 
-
+	private Rigidbody rigidbody;
+	private bool onTriggerStay = false;
 
 
 	// Use this for initialization
 	void Start () {
-		
+		rigidbody = this.GetComponent<Rigidbody>();
 	}
 	
 	// Update is called once per frame
@@ -55,8 +56,15 @@ public class SnapToPosition : MonoBehaviour {
                 other.transform.localRotation = Quaternion.Euler(rotXstuffRound *90, rotYstuffRound *90, rotZstuffRound *90);
             }
         }
-
-
-
     }
+
+	public void onPickUp() {
+		rigidbody.constraints = RigidbodyConstraints.None;
+	}
+
+	public void onDetach() {
+		if(onTriggerStay) {
+			rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+		}
+	}
 }
