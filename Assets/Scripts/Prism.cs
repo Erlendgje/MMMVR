@@ -8,7 +8,7 @@ public class Prism : MonoBehaviour {
 	[SerializeField] GameObject prism;
 	// Use this for initialization
 	void Start () {
-		myPrism = new GeneratePrism(150, 1, 2);
+		myPrism = new GeneratePrism(30, 1, 2);
 
 		foreach(Vector3[] v in myPrism.vertices) {
 			GameObject myGameObject = Instantiate(prism, this.transform);
