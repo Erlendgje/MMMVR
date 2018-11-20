@@ -50,8 +50,6 @@ public class Prism : MonoBehaviour {
 			mesh.triangles = myPrism.indices;
 			MeshCollider mc = myGameObject.AddComponent<MeshCollider>();
 			mc.convex = true;
-			//myGameObject.AddComponent<VelocityEstimator>();
-			//myGameObject.AddComponent<Throwable>();
 		}
 	}
 }
