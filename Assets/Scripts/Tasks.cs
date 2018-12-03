@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
+using Valve.VR.InteractionSystem;
 
 public abstract class Tasks : MonoBehaviour{
 
@@ -24,8 +26,12 @@ public abstract class Tasks : MonoBehaviour{
 	}
 
 	public void spawnObject() {
-		activeObject = Instantiate((GameObject)Resources.Load(tasks[task].prefab), this.transform);
+		activeObject = Instantiate((GameObject)Resources.Load("Prefabs/" + tasks[task].prefab), this.transform);
 		activeTaskObject = activeObject.transform.Find("TaskObject").gameObject;
+		text.text = tasks[task].text;
+		foreach(InteractableHoverEvents ihe in GetComponentsInChildren<InteractableHoverEvents>()) {
+			ihe.onDetachedFromHand.AddListener(onDetach);
+		}
 	}
 
 	public class Task {
