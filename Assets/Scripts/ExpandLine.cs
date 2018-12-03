@@ -11,6 +11,7 @@ public class ExpandLine : MonoBehaviour {
 	[SerializeField] private Transform handle2;
 	[SerializeField] private Transform background;
 	[SerializeField] private bool x, y, z;
+	[SerializeField] private bool taskCheck;
 
 	private Vector3 starPosition;
 	private MeshRenderer mr;
@@ -28,16 +29,16 @@ public class ExpandLine : MonoBehaviour {
 		if(x) {
 			mr.material.mainTextureScale = new Vector2((float)System.Math.Round(lm.value * 2 - 0.05f, 1) + 0.005f, mr.material.mainTextureScale.y);
 			background.localScale = new Vector3((float)System.Math.Round(this.transform.localPosition.x - 0.05f, 1), background.localScale.y, background.localScale.z);
-			text.transform.localPosition = new Vector3((float)System.Math.Round(this.transform.localPosition.x / 2 - 0.05f, 1), starPosition.y, starPosition.z);
+			text.transform.localPosition = new Vector3((float)System.Math.Round(this.transform.localPosition.x / 2, 1) - 0.05f, starPosition.y, starPosition.z);
 			handle1.localPosition = new Vector3(text.transform.localPosition.x, handle1.localPosition.y, handle1.localPosition.z);
 			handle2.localPosition = new Vector3(text.transform.localPosition.x, handle2.localPosition.y, handle2.localPosition.z);
 			text.GetComponent<TextMesh>().text = System.Math.Floor((lm.value * 2 * 10)) + "dm";
 		}
 
 		if(y) {
-			mr.material.mainTextureScale = new Vector2(mr.material.mainTextureScale.x, (float)System.Math.Round((lm.value * 2 - 0.05f), 1) * 10 + 0.005f);
+			mr.material.mainTextureScale = new Vector2(mr.material.mainTextureScale.x, (float)System.Math.Round((lm.value * 2 - 0.05f), 1) * 10 + 0.005f * 10);
 			background.localScale = new Vector3(background.localScale.x, (float)System.Math.Round(Mathf.Abs(this.transform.localPosition.y) - 0.05f, 1), background.localScale.z);
-			text.transform.localPosition = new Vector3(starPosition.x, (float)System.Math.Round(this.transform.localPosition.y / 2 - 0.05f,1), starPosition.z);
+			text.transform.localPosition = new Vector3(starPosition.x, (float)System.Math.Round(this.transform.localPosition.y - 0.05f,1), starPosition.z);
 			handle1.localPosition = new Vector3(handle1.localPosition.x, text.transform.localPosition.y, handle1.localPosition.z);
 			handle2.localPosition = new Vector3(handle2.localPosition.x, text.transform.localPosition.y, handle2.localPosition.z);
 			text.GetComponent<TextMesh>().text = System.Math.Floor(lm.value * 2 * 10) + "dm";
