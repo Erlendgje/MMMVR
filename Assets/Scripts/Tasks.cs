@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -26,12 +27,10 @@ public abstract class Tasks : MonoBehaviour{
 	}
 
 	public void spawnObject() {
-		activeObject = Instantiate((GameObject)Resources.Load("Prefabs/" + tasks[task].prefab), this.transform);
+		activeObject = GetComponentsInChildren<Transform>(true).Where(x => x.name == tasks[task].prefab).ToList()[0].gameObject;
+		activeObject.SetActive(true);
 		activeTaskObject = activeObject.transform.Find("TaskObject").gameObject;
 		text.text = tasks[task].text;
-		foreach(InteractableHoverEvents ihe in GetComponentsInChildren<InteractableHoverEvents>()) {
-			ihe.onDetachedFromHand.AddListener(onDetach);
-		}
 	}
 
 	public class Task {
