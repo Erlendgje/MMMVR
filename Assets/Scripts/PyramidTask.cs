@@ -11,15 +11,22 @@ public class PyramidTask : Tasks {
 				
 
 
-				for (int i = 0; i < activeTaskObject.transform.GetChildCount (); i++) {
-					if (!activeTaskObject.transform.GetChild(i).GetComponent<SnapToPosition>().getInTrigger()) {
+				for (int i = 0; i < activeTaskObject.transform.childCount; i++) {
+                    Debug.Log("Hey" + i, activeTaskObject);
+                    if (!activeTaskObject.transform.GetChild(i).GetComponent<SnapToPosition>().getInTrigger()) {
 						return false;
 					}
 				}
 				return true;
 
-			}))
-		};
+			})),
+            new Task("Bruk de fargede spakene til å lage en kube med volum på 100dm^3", "Volume", new System.Func<bool>(() => {
+                if(activeTaskObject.transform.localScale.x * activeTaskObject.transform.localScale.y * activeTaskObject.transform.localScale.z == 0.1) {
+                    return true;
+                }
+                return false;
+            }))
+        };
 		spawnObject();
 	}
 }

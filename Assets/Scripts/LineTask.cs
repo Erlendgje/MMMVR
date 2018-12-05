@@ -10,7 +10,8 @@ public class LineTask : Tasks {
 			new Task("Dra i det røde håndtaket for å endre lengden på linjen til 1 meter.", "Area", new System.Func<bool>(() => activeTaskObject.transform.localScale.x == 1)),
 
 			new Task("Dra i det blå håndtaket for å endre høyden på boksen til 1 meter.", none, new System.Func<bool>(() => {
-				if(activeTaskObject.transform.localScale.x == 1) {
+                Debug.Log("Hey ehye hyeh yhey hyehy hy");
+                if(activeTaskObject.transform.localScale.x == 1) {
 					if(activeTaskObject.transform.localScale.y == 1) {
 						return true;
 					}
