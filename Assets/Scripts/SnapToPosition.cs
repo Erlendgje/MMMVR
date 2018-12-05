@@ -6,7 +6,7 @@ public class SnapToPosition : MonoBehaviour {
 
 	private Rigidbody rgdb;
     private bool isPickedUp = false;
-    private bool inTrgger = false;
+	private bool inTrigger = false;
 
 
 	// Use this for initialization
@@ -37,13 +37,13 @@ public class SnapToPosition : MonoBehaviour {
                 {
                     transform.localPosition = new Vector3(0, 0, 0);
                     transform.localRotation = Quaternion.Euler(rotXstuffRound * 90, rotYstuffRound * 90, rotZstuffRound * 90);
-                    inTrgger = true;
+                    inTrigger = true;
                 }
-                else { inTrgger = false; }
+                else { inTrigger = false; }
             }
             else
             {
-                inTrgger = false;
+                inTrigger = false;
             }
         }
     }
@@ -55,8 +55,13 @@ public class SnapToPosition : MonoBehaviour {
 
 	public void onDetach() {
         isPickedUp = false;
-		if(inTrgger) {
+		if(inTrigger) {
 			rgdb.constraints = RigidbodyConstraints.FreezeAll;
 		}
 	}
+
+	public bool getInTrigger() {
+		return this.inTrigger;
+	}
+
 }
