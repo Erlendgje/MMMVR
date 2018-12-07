@@ -64,4 +64,9 @@ public class SnapToPosition : MonoBehaviour {
 		return this.inTrigger;
 	}
 
+    public bool getIsPickedUp()
+    {
+        return this.isPickedUp;
+    }
+
 }
