@@ -18,6 +18,9 @@ public abstract class Tasks : MonoBehaviour{
 	public void onDetach() {
 		if(tasks[task].taskCheck()) {
 			task++;
+			if(task >= tasks.Count) {
+				task--;
+			}
 			text.text = tasks[task].text;
 			if(tasks[task].prefab != none) {
 				Destroy(activeObject);

@@ -1625,7 +1625,7 @@ MonoBehaviour:
   x: 0
   y: 1
   z: 0
-  taskCheck: 0
+  d3: 0
 --- !u!114 &114209820362198474
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1768,7 +1768,7 @@ MonoBehaviour:
   x: 1
   y: 0
   z: 0
-  taskCheck: 0
+  d3: 0
 --- !u!114 &114493095799341216
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1831,7 +1831,7 @@ MonoBehaviour:
   x: 0
   y: 0
   z: 0
-  taskCheck: 0
+  d3: 0
 --- !u!114 &114607445626081452
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2132,7 +2132,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 1
   m_DrawMode: 2
-  m_Size: {x: 10, y: 1}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
