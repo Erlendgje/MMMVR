@@ -27,14 +27,16 @@ public class ExpandLine : MonoBehaviour {
 	void Update () {
 		if(x) {
 			if(d3) {
-				foreach(MeshRenderer meshRenderer in background.Find("PlaneY").GetComponentsInChildren<MeshRenderer>()) {
-					meshRenderer.material.mainTextureScale = new Vector2(meshRenderer.material.mainTextureScale.x, (float)System.Math.Round((lm.value * 2 - 0.05f), 1) * 10 + 0.005f * 10);
-				}
+                foreach (MeshRenderer meshRenderer in background.Find("PlaneZ").GetComponentsInChildren<MeshRenderer>())
+                {
+                    meshRenderer.material.mainTextureScale = new Vector2((float)System.Math.Round(lm.value * 2 - 0.05f, 1) + 0.005f, meshRenderer.material.mainTextureScale.y);
+                }
 
-				foreach(MeshRenderer meshRenderer in background.Find("PlaneZ").GetComponentsInChildren<MeshRenderer>()) {
-					meshRenderer.material.mainTextureScale = new Vector2(meshRenderer.material.mainTextureScale.x, (float)System.Math.Round((lm.value * 2 - 0.05f), 1) * 10 + 0.005f * 10);
-				}
-			}
+                foreach (MeshRenderer meshRenderer in background.Find("PlaneY").GetComponentsInChildren<MeshRenderer>())
+                {
+                    meshRenderer.material.mainTextureScale = new Vector2((float)System.Math.Round(lm.value * 2 - 0.05f, 1) + 0.005f, meshRenderer.material.mainTextureScale.y);
+                }
+            }
 			else {
 				mr.material.mainTextureScale = new Vector2((float)System.Math.Round(lm.value * 2 - 0.05f, 1) + 0.005f, mr.material.mainTextureScale.y);
 			}
@@ -47,13 +49,15 @@ public class ExpandLine : MonoBehaviour {
 
 		if(y) {
 			if(d3) {
-				foreach(MeshRenderer meshRenderer in background.Find("PlaneZ").GetComponentsInChildren<MeshRenderer>()) {
-					meshRenderer.material.mainTextureScale = new Vector2(meshRenderer.material.mainTextureScale.x, (float)System.Math.Round((lm.value * 2 - 0.05f), 1) * 10 + 0.005f * 10);
-				}
-				foreach(MeshRenderer meshRenderer in background.Find("PlaneX").GetComponentsInChildren<MeshRenderer>()) {
-					meshRenderer.material.mainTextureScale = new Vector2((float)System.Math.Round(lm.value * 2 - 0.05f, 1) + 0.005f, mr.material.mainTextureScale.y);
-				}
-			}
+                foreach (MeshRenderer meshRenderer in background.Find("PlaneX").GetComponentsInChildren<MeshRenderer>())
+                {
+                    meshRenderer.material.mainTextureScale = new Vector2((float)System.Math.Round(lm.value * 2 - 0.05f, 1) + 0.005f, meshRenderer.material.mainTextureScale.y);
+                }
+                foreach (MeshRenderer meshRenderer in background.Find("PlaneZ").GetComponentsInChildren<MeshRenderer>())
+                {
+                    meshRenderer.material.mainTextureScale = new Vector2(meshRenderer.material.mainTextureScale.x, (float)System.Math.Round((lm.value * 2 - 0.05f), 1) * 10 + 0.005f * 10);
+                }
+            }
 			else {
 				mr.material.mainTextureScale = new Vector2(mr.material.mainTextureScale.x, (float)System.Math.Round((lm.value * 2 - 0.05f), 1) * 10 + 0.005f * 10);
 			}
@@ -66,36 +70,21 @@ public class ExpandLine : MonoBehaviour {
 
 		if(z) {
 			if(d3) {
-				foreach(MeshRenderer meshRenderer in background.Find("PlaneX").GetComponentsInChildren<MeshRenderer>()) {
-					meshRenderer.material.mainTextureScale = new Vector2((float)System.Math.Round(lm.value * 2 - 0.05f, 1) + 0.005f, mr.material.mainTextureScale.y);
-				}
-				foreach(MeshRenderer meshRenderer in background.Find("PlaneZ").GetComponentsInChildren<MeshRenderer>()) {
-					meshRenderer.material.mainTextureScale = new Vector2(meshRenderer.material.mainTextureScale.x, (float)System.Math.Round((lm.value * 2 - 0.05f), 1) * 10 + 0.005f * 10);
-				}
-			}
+                foreach (MeshRenderer meshRenderer in background.Find("PlaneX").GetComponentsInChildren<MeshRenderer>())
+                {
+                    meshRenderer.material.mainTextureScale = new Vector2(meshRenderer.material.mainTextureScale.x, (float)System.Math.Round((lm.value * 2 - 0.05f), 1) * 10 + 0.005f * 10);
+                }
+
+                foreach (MeshRenderer meshRenderer in background.Find("PlaneY").GetComponentsInChildren<MeshRenderer>())
+                {
+                    meshRenderer.material.mainTextureScale = new Vector2(meshRenderer.material.mainTextureScale.x, (float)System.Math.Round((lm.value * 2 - 0.05f), 1) * 10 + 0.005f * 10);
+                }
+            }
 			background.localScale = new Vector3(background.localScale.x, background.localScale.y, (float)System.Math.Round(this.transform.localPosition.x - 0.05f, 1));
 			text.transform.localPosition = new Vector3(starPosition.x, starPosition.y, -this.transform.localPosition.x / 2);
 			handle1.localPosition = new Vector3(handle1.localPosition.x, handle1.localPosition.y, text.transform.localPosition.z);
 			handle2.localPosition = new Vector3(handle2.localPosition.x, handle2.localPosition.y, text.transform.localPosition.z);
 			text.GetComponent<TextMesh>().text = System.Math.Floor(lm.value * 2 * 10) + "dm";
-		}
-	}
-
-	private void updateX() {
-		foreach(MeshRenderer meshRenderer in background.Find("PlaneX").GetComponentsInChildren<MeshRenderer>()) {
-			meshRenderer.material.mainTextureScale = new Vector2((float)System.Math.Round(lm.value * 2 - 0.05f, 1) + 0.005f, mr.material.mainTextureScale.y);
-		}
-	}
-
-	private void updateY() {
-		foreach(MeshRenderer meshRenderer in background.Find("PlaneY").GetComponentsInChildren<MeshRenderer>()) {
-			meshRenderer.material.mainTextureScale = new Vector2(meshRenderer.material.mainTextureScale.x, (float)System.Math.Round((lm.value * 2 - 0.05f), 1) * 10 + 0.005f * 10);
-		}
-	}
-
-	private void updateZ() {
-		foreach(MeshRenderer meshRenderer in background.Find("PlaneZ").GetComponentsInChildren<MeshRenderer>()) {
-			meshRenderer.material.mainTextureScale = new Vector2(meshRenderer.material.mainTextureScale.x, (float)System.Math.Round((lm.value * 2 - 0.05f), 1) * 10 + 0.005f * 10);
 		}
 	}
 }
