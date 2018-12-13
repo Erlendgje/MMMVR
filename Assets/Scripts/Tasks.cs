@@ -23,7 +23,7 @@ public abstract class Tasks : MonoBehaviour{
 			}
 			text.text = tasks[task].text;
 			if(tasks[task].prefab != none) {
-				Destroy(activeObject);
+				//Destroy(activeObject);
 				spawnObject();
 			}
 		}

@@ -5,36 +5,37 @@ using UnityEngine;
 public class PyramidTask : Tasks {
 
 	// Use this for initialization
-	void Start () {
+	void Start() {
 		tasks = new List<Task> {
 			new Task ("Hva er volumet til en pyramide? Plukk opp en av pyramidene", "Pyramid", new System.Func<bool> (() => {
-				
+
 
 				for (int i = 0; i < activeTaskObject.transform.childCount; i++) {
-                    Debug.Log("Hey" + activeTaskObject.transform.GetChild(i).GetComponent<SnapToPosition>().getIsPickedUp(), activeTaskObject);
-                    if (activeTaskObject.transform.GetChild(i).GetComponent<SnapToPosition>().getIsPickedUp()) {
+					if (activeTaskObject.transform.GetChild(i).GetComponent<SnapToPosition>().getIsPickedUp()) {
 						return true;
 					}
 				}
 				return false;
 
 			})),
-            new Task ("Vi har sett at volumet av en kube er l * b * h. Fyll pyramider inn i kuben til den er full.", none, new System.Func<bool> (() => {
+			new Task ("Vi har sett at volumet av en kube er <b>lengde * bredde * høyde</b>. Hvor mange pyramider får du plass til i en kube?", none, new System.Func<bool> (() => {
 
+				int count = 0;
+				for (int i = 0; i < activeTaskObject.transform.childCount; i++) {
+					if (activeTaskObject.transform.GetChild(i).GetComponent<SnapToPosition>().getInTrigger()) {
+						count++;
+					}
+				}
+				if(count >= 3) {
+					return true;
+				}
+				return false;
 
-                for (int i = 0; i < activeTaskObject.transform.childCount; i++) {
-                    Debug.Log("Hey" + i, activeTaskObject);
-                    if (!activeTaskObject.transform.GetChild(i).GetComponent<SnapToPosition>().getInTrigger()) {
-                        return false;
-                    }
-                }
-                return true;
-
-            })),
-            new Task ("Så bra! Siden du fikk 3 pyramider inni kuben er formelen for en pyramide (l * b * h)/3.", none, new System.Func<bool> (() => {
-                return true;
-            }))
-        };
+			})),
+			new Task ("Så bra, du får plass til tre pyramider inni kuben.", none, new System.Func<bool> (() => {
+				return true;
+			}))
+		};
 		spawnObject();
 	}
 }
