@@ -19,9 +19,4 @@ public class SpawnCube : MonoBehaviour {
 		}
 
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
