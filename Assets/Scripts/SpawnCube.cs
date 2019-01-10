@@ -13,10 +13,19 @@ public class SpawnCube : MonoBehaviour {
 		for(int i = 0; i < x; i++) {
 			for(int k = 0; k < y; k++) {
 				for(int l = 0; l < z; l++) {
-					Instantiate(cube, new Vector3(this.transform.position.x + i * 0.1f, this.transform.position.y + k * 0.1f, this.transform.position.z + l * 0.1f), Quaternion.Euler(0, 0, 0), this.transform);
+					Instantiate(cube, new Vector3(this.transform.position.x + i * 0.101f, this.transform.position.y + k * 0.101f, this.transform.position.z + l * 0.101f), Quaternion.Euler(0, 0, 0), this.transform);
 				}
 			}
 		}
 
 	}
+
+
+    public void activateGravity()
+    {
+        foreach(Rigidbody r in this.GetComponentsInChildren<Rigidbody>())
+        {
+            r.isKinematic = false;
+        }
+    }
 }

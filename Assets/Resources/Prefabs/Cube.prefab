@@ -169,7 +169,7 @@ MonoBehaviour:
   releaseVelocityStyle: 1
   releaseVelocityTimeOffset: -0.011
   scaleReleaseVelocity: 1.1
-  restoreOriginalParent: 0
+  restoreOriginalParent: 1
   attachEaseIn: 0
   snapAttachEaseInCurve:
     serializedVersion: 2
