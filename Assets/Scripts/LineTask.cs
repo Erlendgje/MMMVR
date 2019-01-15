@@ -30,7 +30,7 @@ public class LineTask : Tasks {
 				return false;
 			})),
 
-			new Task("En kubikkmeter inneholder 1000 små kuber på 1 kubikkdesemeter", "Cubes", new System.Func<bool>(() => {
+			new Task("En kubikkmeter inneholder 1000 kuber på 1 kubikkdesemeter", "Cubes", new System.Func<bool>(() => {
 				return true;
 			}))};
 
