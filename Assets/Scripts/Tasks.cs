@@ -13,7 +13,7 @@ public abstract class Tasks : MonoBehaviour{
 	public Text text;
 	private GameObject activeObject;
 	public GameObject activeTaskObject;
-	public string none = "";
+	public static string NONE = "";
 
 	public void onDetach() {
 		if(tasks[task].taskCheck()) {
@@ -22,8 +22,8 @@ public abstract class Tasks : MonoBehaviour{
 				task--;
 			}
 			text.text = tasks[task].text;
-			if(tasks[task].prefab != none) {
-				Destroy(activeObject);
+			if(tasks[task].prefab != NONE) {
+				//Destroy(activeObject);
 				spawnObject();
 			}
 		}
