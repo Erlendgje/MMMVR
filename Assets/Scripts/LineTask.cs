@@ -9,7 +9,7 @@ public class LineTask : Tasks {
 		tasks = new List<Task> {
 			new Task("Nå skal vi se på lendgde, areal og volum. Dra i det røde håndtaket for å endre lengden på linjen.", "Area", new System.Func<bool>(() => activeTaskObject.transform.localScale.x != 0.1f)),
 
-			new Task("Dra nå i håndtakene for å lage et areal på 1 kvadratmeter", none, new System.Func<bool>(() => {
+			new Task("Dra nå i håndtakene for å lage et areal på 1 kvadratmeter", NONE, new System.Func<bool>(() => {
                 if(activeTaskObject.transform.localScale.x * activeTaskObject.transform.localScale.y == 1f) {
 					return true;
 				}
@@ -23,15 +23,21 @@ public class LineTask : Tasks {
 				return false;
 			})),
 
-			new Task("Bra! Lag nå en kube på 1 kubikkmeter", none, new System.Func<bool>(() => {
+			new Task("Bra! Lag nå en kube på 1 kubikkmeter", NONE, new System.Func<bool>(() => {
 				if(activeTaskObject.transform.localScale.x * activeTaskObject.transform.localScale.y * activeTaskObject.transform.localScale.z == 1f) {
 					return true;
 				}
 				return false;
 			})),
 
-			new Task("En kubikkmeter inneholder 1000 kuber på 1 kubikkdesemeter", "Cubes", new System.Func<bool>(() => {
-				return true;
+			new Task("En kubikkmeter inneholder 1000 kuber på 1 kubikkdesemeter. Trykk på den sorte knappen.", "Cubes", new System.Func<bool>(() => {
+				if(!activeTaskObject.GetComponentInChildren<Rigidbody>().isKinematic) {
+					return true;
+				}
+				return false;
+			})),
+			new Task("Trykk på den rød knappen for å fortsette!", NONE, new System.Func<bool>(() => {
+				return false;
 			}))};
 
 		spawnObject();

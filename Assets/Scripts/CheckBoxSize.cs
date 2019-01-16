@@ -39,13 +39,13 @@ public class CheckBoxSize : MonoBehaviour
 		}
 
 		if(myType == Type.cm) {
-			tm.text = (cubeToCheck.transform.localScale.x * cubeToCheck.transform.localScale.y * z) * 10000 * times * times + "cm" + ending;
+			tm.text = System.Math.Round(cubeToCheck.transform.localScale.x * cubeToCheck.transform.localScale.y * z * 10000 * times * times, 2) + "cm" + ending;
 		}
 		else if(myType == Type.dm) {
-			tm.text = (cubeToCheck.transform.localScale.x * cubeToCheck.transform.localScale.y * z) * 100 * times + "dm" + ending;
+			tm.text = System.Math.Round(cubeToCheck.transform.localScale.x * cubeToCheck.transform.localScale.y * z * 100 * times, 2) + "dm" + ending;
 		}
 		else if(myType == Type.m) {
-			tm.text = (cubeToCheck.transform.localScale.x * cubeToCheck.transform.localScale.y * z) + "m" + ending;
+			tm.text = System.Math.Round(cubeToCheck.transform.localScale.x * cubeToCheck.transform.localScale.y * z, 2) + "m" + ending;
 		}
 	}
 }
