@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,10 +13,21 @@ public class GameManager : MonoBehaviour
     {
         
     }
+    
+    public SteamVR_Input_Sources handType;
+    public SteamVR_Action_Boolean changeAction;
 
+    public bool GetChangeScene()
+    {
+        return changeAction.GetLastStateDown(handType);
+    }
+    
     // Update is called once per frame
     void Update()
     {
-        
+        if (GetChangeScene())
+        {
+            print("KAKE");
+        }
     }
 }

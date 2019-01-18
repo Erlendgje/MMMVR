@@ -112,8 +112,7 @@
       "/actions/default/in/Pose": "Pose",
       "/actions/default/out/Haptic": "Haptic",
       "/actions/platformer/in/Move": "Move",
-      "/actions/platformer/in/Jump": "Jump",
-      "/actions/default/in/Test": "Test"
+      "/actions/platformer/in/Jump": "Jump"
     }
   ]
 }
