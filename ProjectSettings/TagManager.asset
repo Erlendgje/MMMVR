@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Point
+  - Arrow
+  - Base
   layers:
   - Default
   - TransparentFX

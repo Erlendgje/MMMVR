@@ -30,7 +30,7 @@ public class MyHandScript : MonoBehaviour {
 			}
 			else {
 				mathWorldActivated = false;
-                teleportPlayer(new Vector3(-20, 1, 0));
+                teleportPlayer(new Vector3(-20, 23, 0));
 				SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName("MathWorld"));
 			}
 		}

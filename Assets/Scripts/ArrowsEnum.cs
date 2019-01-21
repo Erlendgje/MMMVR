@@ -5,7 +5,7 @@ using UnityEngine;
 public class ArrowsEnum : MonoBehaviour
 {
 
-	public enum Direction { X, Y, Z }
+	public enum Direction { X, Y, Z, Base }
 
 	public Direction direction;
 
