@@ -17,7 +17,7 @@ public class CustomGrid : MonoBehaviour {
 
 	void LateUpdate () {
 		pos.x = Mathf.Floor(target.transform.position.x / gridSize) * gridSize;
-		//pos.y = Mathf.Floor(target.transform.position.y / gridSize) * gridSize;
+        pos.y = structure.transform.position.y;
 		pos.z = Mathf.Floor(target.transform.position.z / gridSize) * gridSize;
 
 		structure.transform.position = pos;

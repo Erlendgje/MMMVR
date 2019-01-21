@@ -40,7 +40,7 @@ public class ExpandCube : MonoBehaviour {
 			text.transform.localPosition = new Vector3(starPosition.x, this.transform.localPosition.y / 2, starPosition.z);
 			handle1.localPosition = new Vector3(handle1.localPosition.x, text.transform.localPosition.y, handle1.localPosition.z);
 			handle2.localPosition = new Vector3(handle2.localPosition.x, text.transform.localPosition.y, handle2.localPosition.z);
-			text.GetComponent<TextMesh>().text = System.Math.Floor(lm.value * 2 * 10) + "dm";
+			text.GetComponent<TextMesh>().text = System.Math.Floor(-background.localScale.y) + "dm";
 		}
 
 		if(z) {
@@ -49,7 +49,7 @@ public class ExpandCube : MonoBehaviour {
 			text.transform.localPosition = new Vector3(starPosition.x, starPosition.y, -this.transform.localPosition.x / 2);
 			handle1.localPosition = new Vector3(handle1.localPosition.x, handle1.localPosition.y, text.transform.localPosition.z);
 			handle2.localPosition = new Vector3(handle2.localPosition.x, handle2.localPosition.y, text.transform.localPosition.z);
-			text.GetComponent<TextMesh>().text = System.Math.Floor(lm.value * 2 * 10) + "dm";
+			text.GetComponent<TextMesh>().text = System.Math.Floor(background.localScale.z) + "dm";
 		}
 	}
 }
