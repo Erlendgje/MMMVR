@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class SnapToPosition : MonoBehaviour {
 
+    [SerializeField] GameObject errorText;
+    public GameObject point;
 	private Rigidbody rgdb;
     private bool isPickedUp = false;
 	private bool inTrigger = false;
+    public static List<GameObject> snappedObjects;
+   
+
+    private float distance = 0.1f;
 
 
 	// Use this for initialization
 	void Start () {
-		rgdb = this.GetComponent<Rigidbody>();
-	}
+        rgdb = this.GetComponent<Rigidbody>();
+
+        if (snappedObjects == null)
+        {
+            snappedObjects = new List<GameObject>();
+        }
+
+    }
 
     void OnTriggerStay(Collider other)
     {
@@ -49,7 +61,13 @@ public class SnapToPosition : MonoBehaviour {
     }
 
     public void onPickUp() {
+        Debug.Log(snappedObjects.Count);
 		rgdb.constraints = RigidbodyConstraints.None;
+        if (snappedObjects.Contains(this.gameObject))
+        {
+            snappedObjects.Remove(this.gameObject);
+            errorText.SetActive(false);
+        }
         isPickedUp = true;
 	}
 
@@ -57,7 +75,16 @@ public class SnapToPosition : MonoBehaviour {
         isPickedUp = false;
 		if(inTrigger) {
 			rgdb.constraints = RigidbodyConstraints.FreezeAll;
-		}
+
+            foreach(GameObject go in snappedObjects)
+            {
+                if(Vector3.Distance(go.GetComponent<SnapToPosition>().point.transform.position, point.transform.position) > distance)
+                {
+                    errorText.SetActive(true);
+                }
+            }
+            snappedObjects.Add(this.gameObject);
+        }
 	}
 
 	public bool getInTrigger() {
