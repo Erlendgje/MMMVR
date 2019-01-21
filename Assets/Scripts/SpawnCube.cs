@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpawnCube : MonoBehaviour {
 
 	[SerializeField] GameObject cube;
-	[SerializeField] int x, y, z;
+	[SerializeField] int x, y, z = 10;
 
 	// Use this for initialization
 	void Start () {
@@ -13,7 +13,7 @@ public class SpawnCube : MonoBehaviour {
 		for(int i = 0; i < x; i++) {
 			for(int k = 0; k < y; k++) {
 				for(int l = 0; l < z; l++) {
-					Instantiate(cube, new Vector3(this.transform.position.x + i * 0.101f, this.transform.position.y + k * 0.101f, this.transform.position.z + l * 0.101f), Quaternion.Euler(0, 0, 0), this.transform);
+					Instantiate(cube, this.transform).transform.localPosition = new Vector3( i * 0.101f, k * 0.101f, l * 0.101f);
 				}
 			}
 		}

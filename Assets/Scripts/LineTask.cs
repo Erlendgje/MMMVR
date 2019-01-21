@@ -30,13 +30,13 @@ public class LineTask : Tasks {
 				return false;
 			})),
 
-			new Task("En kubikkmeter inneholder 1000 kuber på 1 kubikkdesemeter. Trykk på den sorte knappen.", "Cubes", new System.Func<bool>(() => {
+			new Task("En kubikkmeter inneholder 1000 kuber på 1 kubikkdesemeter. Trykk på den sorte knappen.", "1000Cubes", new System.Func<bool>(() => {
 				if(!activeTaskObject.GetComponentInChildren<Rigidbody>().isKinematic) {
 					return true;
 				}
 				return false;
 			})),
-			new Task("Trykk på den rød knappen for å fortsette!", NONE, new System.Func<bool>(() => {
+			new Task("Trykk på menyknappen for å fortsette!", NONE, new System.Func<bool>(() => {
 				return false;
 			}))};
 

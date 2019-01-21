@@ -5,9 +5,7 @@ using UnityEngine.SceneManagement;
 using Valve.VR;
 
 public class MyHandScript : MonoBehaviour {
-
-	[SerializeField] private GameObject mathWorld;
-	[SerializeField] private GameObject teleportingArea;
+    
 	private static bool mathWorldActivated = false;
 
 	// Start is called before the first frame update
@@ -27,17 +25,13 @@ public class MyHandScript : MonoBehaviour {
 		if(GetChangeScene()) {
 			if(!mathWorldActivated) {
 				mathWorldActivated = true;
-				SceneManager.LoadScene("MathWorld", LoadSceneMode.Additive);
-				SceneManager.SetActiveScene(SceneManager.GetSceneByName("MathWorld"));
-				teleportingArea.SetActive(false);
-				teleportPlayer(new Vector3(0, 1, 0));
+                teleportPlayer(new Vector3(-20, 1, 0));
+                SceneManager.LoadScene("MathWorld", LoadSceneMode.Additive);
 			}
 			else {
 				mathWorldActivated = false;
-				SceneManager.SetActiveScene(SceneManager.GetSceneByName("TheGame"));
+                teleportPlayer(new Vector3(-20, 1, 0));
 				SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName("MathWorld"));
-				teleportingArea.SetActive(true);
-				teleportPlayer(new Vector3(0, 1, 0));
 			}
 		}
 	}
