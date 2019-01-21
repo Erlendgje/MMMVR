@@ -8,10 +8,15 @@ public class WateringLogic : MonoBehaviour
 
 	public UnityEvent onContainerInBox;
 
-	protected virtual void OnTriggerStay(Collider other)
+	protected virtual void OnTriggerEnter(Collider other)
 	{
-			Debug.Log("Enter");
-			onContainerInBox.Invoke ();
+		Debug.Log(other.name);
+        if (other.name.Equals("Cube"))
+        {
+            onContainerInBox.Invoke();
+        }
+		
+
 	}
 
 	public bool isCorrectContainer() {

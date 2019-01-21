@@ -14,8 +14,14 @@ public class ShapesTask : Tasks {
 				}
 				return false;
 
-			}))
-		};
+			})),
+            new Task ("Nå fikk de godt med vann <3", "none", new System.Func<bool> (() => {
+
+                
+                return false;
+
+            }))
+        };
 		spawnObject();
 	}
 }
