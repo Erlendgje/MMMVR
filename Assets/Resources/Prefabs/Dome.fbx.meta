@@ -9,16 +9,38 @@ ModelImporter:
     100006: pSphere3
     100008: transform1
     100010: transform2
+    100012: pCylinder1
+    100014: pSphere4
+    100016: transform3
+    100018: transform4
+    100020: pCylinder2
+    100022: pSphere5
+    100024: transform5
+    100026: transform6
     400000: //RootNode
     400002: pSphere1
     400004: pSphere2
     400006: pSphere3
     400008: transform1
     400010: transform2
+    400012: pCylinder1
+    400014: pSphere4
+    400016: transform3
+    400018: transform4
+    400020: pCylinder2
+    400022: pSphere5
+    400024: transform5
+    400026: transform6
     2100000: lambert1
     2300000: pSphere3
+    2300002: pSphere4
+    2300004: pSphere5
     3300000: pSphere3
+    3300002: pSphere4
+    3300004: pSphere5
     4300000: pSphere3
+    4300002: pSphere4
+    4300004: pSphere5
   externalObjects: {}
   materials:
     importMaterials: 1
