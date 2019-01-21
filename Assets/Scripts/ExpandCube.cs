@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR.InteractionSystem;
 
-public class ExpandLine : MonoBehaviour {
+public class ExpandCube : MonoBehaviour {
 
 	[SerializeField] private GameObject text;
 	[SerializeField] private LinearMapping lm;
@@ -26,61 +26,26 @@ public class ExpandLine : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(x) {
-			if(d3) {
-				foreach (MeshRenderer meshRenderer in background.Find("PlaneZ").GetComponentsInChildren<MeshRenderer>())
-				{
-					meshRenderer.material.mainTextureScale = new Vector2((float)System.Math.Round(lm.value * 2 - 0.05f, 1) + 0.005f, meshRenderer.material.mainTextureScale.y);
-				}
-
-				foreach (MeshRenderer meshRenderer in background.Find("PlaneY").GetComponentsInChildren<MeshRenderer>())
-				{
-					meshRenderer.material.mainTextureScale = new Vector2((float)System.Math.Round(lm.value * 2 - 0.05f, 1) + 0.005f, meshRenderer.material.mainTextureScale.y);
-				}
-			}
-			else {
-				mr.material.mainTextureScale = new Vector2((float)System.Math.Round(lm.value * 2 - 0.05f, 1) + 0.005f, mr.material.mainTextureScale.y);
-			}
-			background.localScale = new Vector3((float)System.Math.Round(this.transform.localPosition.x - 0.05f, 0), background.localScale.y, background.localScale.z);
+			
+			background.localScale = new Vector3((float)System.Math.Floor(this.transform.localPosition.x), background.localScale.y, background.localScale.z);
 			text.transform.localPosition = new Vector3(this.transform.localPosition.x / 2, starPosition.y, starPosition.z);
 			handle1.localPosition = new Vector3(text.transform.localPosition.x, handle1.localPosition.y, handle1.localPosition.z);
 			handle2.localPosition = new Vector3(text.transform.localPosition.x, handle2.localPosition.y, handle2.localPosition.z);
-			text.GetComponent<TextMesh>().text = System.Math.Floor((lm.value * 2 * 10)) + "dm";
+			text.GetComponent<TextMesh>().text = System.Math.Floor(background.localScale.x) + "dm";
 		}
 
 		if(y) {
-			if(d3) {
-				foreach (MeshRenderer meshRenderer in background.Find("PlaneX").GetComponentsInChildren<MeshRenderer>())
-				{
-					meshRenderer.material.mainTextureScale = new Vector2((float)System.Math.Round(lm.value * 2 - 0.05f, 1) + 0.005f, meshRenderer.material.mainTextureScale.y);
-				}
-				foreach (MeshRenderer meshRenderer in background.Find("PlaneZ").GetComponentsInChildren<MeshRenderer>())
-				{
-					meshRenderer.material.mainTextureScale = new Vector2(meshRenderer.material.mainTextureScale.x, (float)System.Math.Round((lm.value * 2 - 0.05f), 1) * 10 + 0.005f * 10);
-				}
-			}
-			else {
-				mr.material.mainTextureScale = new Vector2(mr.material.mainTextureScale.x, (float)System.Math.Round((lm.value * 2 - 0.05f), 1) * 10 + 0.005f * 10);
-			}
-			background.localScale = new Vector3(background.localScale.x, (float)System.Math.Round(this.transform.localPosition.x - 0.05f, 0), background.localScale.z);
-			handle1.localPosition = new Vector3(handle1.localPosition.x, text.transform.localPosition.y, handle1.localPosition.z);
+			
+			background.localScale = new Vector3(background.localScale.x, -(float)System.Math.Floor(this.transform.localPosition.y), background.localScale.z);
 			text.transform.localPosition = new Vector3(starPosition.x, this.transform.localPosition.y / 2, starPosition.z);
+			handle1.localPosition = new Vector3(handle1.localPosition.x, text.transform.localPosition.y, handle1.localPosition.z);
 			handle2.localPosition = new Vector3(handle2.localPosition.x, text.transform.localPosition.y, handle2.localPosition.z);
 			text.GetComponent<TextMesh>().text = System.Math.Floor(lm.value * 2 * 10) + "dm";
 		}
 
 		if(z) {
-			if(d3) {
-				foreach (MeshRenderer meshRenderer in background.Find("PlaneX").GetComponentsInChildren<MeshRenderer>())
-				{
-					meshRenderer.material.mainTextureScale = new Vector2(meshRenderer.material.mainTextureScale.x, (float)System.Math.Round((lm.value * 2 - 0.05f), 1) * 10 + 0.005f * 10);
-				}
-
-				foreach (MeshRenderer meshRenderer in background.Find("PlaneY").GetComponentsInChildren<MeshRenderer>())
-				{
-					meshRenderer.material.mainTextureScale = new Vector2(meshRenderer.material.mainTextureScale.x, (float)System.Math.Round((lm.value * 2 - 0.05f), 1) * 10 + 0.005f * 10);
-				}
-			}
-			background.localScale = new Vector3(background.localScale.x, background.localScale.y, (float)System.Math.Round(this.transform.localPosition.x - 0.05f, 0));
+			
+			background.localScale = new Vector3(background.localScale.x, background.localScale.y, (float)System.Math.Floor(this.transform.localPosition.x));
 			text.transform.localPosition = new Vector3(starPosition.x, starPosition.y, -this.transform.localPosition.x / 2);
 			handle1.localPosition = new Vector3(handle1.localPosition.x, handle1.localPosition.y, text.transform.localPosition.z);
 			handle2.localPosition = new Vector3(handle2.localPosition.x, handle2.localPosition.y, text.transform.localPosition.z);
