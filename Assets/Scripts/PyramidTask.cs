@@ -18,7 +18,7 @@ public class PyramidTask : Tasks {
 				return false;
 
 			})),
-			new Task ("Vi har sett at volumet av en kube er <b>lengde * bredde * høyde</b>. Hvor mange pyramider får du plass til i en kube?", none, new System.Func<bool> (() => {
+			new Task ("Vi har sett at volumet av en kube er <b>lengde * bredde * høyde</b>. Hvor mange pyramider får du plass til i en kube?", NONE, new System.Func<bool> (() => {
 
 				int count = 0;
 				for (int i = 0; i < activeTaskObject.transform.childCount; i++) {
@@ -32,7 +32,7 @@ public class PyramidTask : Tasks {
 				return false;
 
 			})),
-			new Task ("Så bra, du får plass til tre pyramider inni kuben.", none, new System.Func<bool> (() => {
+			new Task ("Så bra, du får plass til tre pyramider inni kuben.", NONE, new System.Func<bool> (() => {
 				return true;
 			}))
 		};
