@@ -122,6 +122,7 @@ GameObject:
   - component: {fileID: 2209424478657083634}
   - component: {fileID: 2209424478657083637}
   - component: {fileID: 2209424478657083636}
+  - component: {fileID: 5874144056883962641}
   m_Layer: 0
   m_Name: BaseCube
   m_TagString: Untagged
@@ -201,6 +202,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5874144056883962641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2209424478657083638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1226c6f41838b0469f23cb95f3c9c48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xArrow1: {fileID: 5398325713791818135}
+  xArrow2: {fileID: 3046623640193615310}
+  zArrow1: {fileID: 4166412616803665117}
+  zArrow2: {fileID: 8693060782007903125}
 --- !u!1 &6080878278297053958
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,7 +232,7 @@ GameObject:
   - component: {fileID: 6522375503764403407}
   - component: {fileID: 2673877712483009684}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: Z1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -305,7 +322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 502438c95310c164dbee0abdad55e016, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  direction: 0
+  direction: 2
 --- !u!1 &8350212815755172161
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,7 +337,7 @@ GameObject:
   - component: {fileID: 8937595635870767868}
   - component: {fileID: 2284028383480152985}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: X2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -425,7 +442,7 @@ GameObject:
   - component: {fileID: 1893284714612437091}
   - component: {fileID: 8374494400398115732}
   m_Layer: 0
-  m_Name: Cube (3)
+  m_Name: Z2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -515,7 +532,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 502438c95310c164dbee0abdad55e016, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  direction: 0
+  direction: 2
 --- !u!1 &8592376818796766054
 GameObject:
   m_ObjectHideFlags: 0
@@ -566,7 +583,7 @@ GameObject:
   - component: {fileID: 6305229466985051708}
   - component: {fileID: 6029839611140034690}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: X1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
