@@ -29,10 +29,10 @@ public class ExpandBase : MonoBehaviour
         zArrow1.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, zArrow1.transform.position.z);
         zArrow2.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, zArrow2.transform.position.z);
 
-        y1.text = this.transform.localScale.x + "m";
-        y2.text = this.transform.localScale.x + "m";
+        y1.text = (int)this.transform.localScale.x + "m";
+        y2.text = (int)this.transform.localScale.x + "m";
 
-        x1.text = this.transform.localScale.z + "m";
-        x2.text = this.transform.localScale.z + "m";
+        x1.text = (int)this.transform.localScale.z + "m";
+        x2.text = (int)this.transform.localScale.z + "m";
     }
 }
