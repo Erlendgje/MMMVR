@@ -10,7 +10,18 @@ public class WateringLogic : MonoBehaviour
 	public UnityEvent onContainerInBox;
     [SerializeField] public int wantedValue;
 
+
+	private List<Vector3> tankPositions;
     private int totalValue = 0;
+
+
+	void Start()
+	{
+		for (var i = 0; i < transform.childCount; i++) {
+			tankPositions.Add (transform.GetChild (i).localPosition);
+		}
+	}
+
 
 	protected virtual void OnTriggerEnter(Collider other)
 	{
@@ -31,9 +42,7 @@ public class WateringLogic : MonoBehaviour
             if (totalValue > wantedValue)
             {
                 totalValue = 0;
-
-
-
+				respawnShapes ();
             }
 
             Debug.Log(totalValue.ToString());
@@ -48,7 +57,10 @@ public class WateringLogic : MonoBehaviour
 
     private void respawnShapes()
     {
-
+		for (var i = 0; i < transform.childCount; i++) {
+			transform.GetChild (i).localPosition = tankPositions[i];
+			transform.GetChild (i).gameObject.SetActive (true);
+		}
     }
 
 }
