@@ -10,14 +10,17 @@ public class BaseArrow : MonoBehaviour {
 	[SerializeField] Material standbyMaterial;
 	[SerializeField] Material clickedMaterial;
 	private GameObject clickedObject;
+    private MeshRenderer mr;
 	private LineRenderer lr;
 	private Ray laser;
+    private Vector3 initialControllerState;
+    private Vector3 initialClickedObjectPosition;
 
 
 	// Start is called before the first frame update
 	void Start() {
 		lr = GetComponent<LineRenderer>();
-		laser = new Ray;
+		laser = new Ray();
 	}
 
 	public SteamVR_Input_Sources handType;
@@ -33,66 +36,72 @@ public class BaseArrow : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update() {
-		if(getArrowDown()) {
+        laser.origin = this.transform.position;
+        laser.direction = this.transform.forward;
+        if (getArrowDown()) {
 			RaycastHit raycastHit;
-			if(Physics.Raycast(laser, out raycastHit, Mathf.Infinity, LayerMask.NameToLayer("Base"), QueryTriggerInteraction.Ignore)) {
-				arrowPress = true;
-				clickedObject = raycastHit.collider.gameObject;
-				clickedObject.GetComponent<MeshRenderer>().material = clickedMaterial;
-			}
+            if (Physics.Raycast(laser, out raycastHit, Mathf.Infinity, 1 << LayerMask.NameToLayer("Base"), QueryTriggerInteraction.Ignore))
+            {
+                arrowPress = true;
+                clickedObject = raycastHit.collider.gameObject.GetComponentInParent<ArrowsEnum>().gameObject;
+                mr = raycastHit.collider.gameObject.GetComponent<MeshRenderer>();
+                mr.material = clickedMaterial;
+                initialControllerState = transform.position + transform.forward * 20f;
+                initialClickedObjectPosition = clickedObject.transform.position;
+                if (clickedObject.GetComponent<ArrowsEnum>().direction == ArrowsEnum.Direction.Base)
+                {
+                    initialClickedObjectPosition = GameObject.FindGameObjectWithTag("Base").transform.position;
+                }
+            }
 		}
 	
 		if(getArrowUp()) {
 			arrowPress = false;
 			if(clickedObject != null) {
-				clickedObject.GetComponent<MeshRenderer>().material = standbyMaterial;
+				mr.material = standbyMaterial;
 				clickedObject = null;
 			}
 		}
 
 		if(!arrowPress) {
-
-			laser.origin = this.transform.position;
-			laser.direction = this.transform.forward;
-
-
 			lr.enabled = true;
 			lr.SetPosition(0, transform.position);
 
 			RaycastHit raycastHit;
-			if(Physics.Raycast(laser, out raycastHit, Mathf.Infinity, LayerMask.NameToLayer("Base"), QueryTriggerInteraction.Ignore)) {
+			if(Physics.Raycast(laser, out raycastHit, Mathf.Infinity, 1 << LayerMask.NameToLayer("Base"), QueryTriggerInteraction.Ignore)) {
 				if(clickedObject != null && raycastHit.collider.gameObject != clickedObject) {
-					clickedObject.GetComponent<MeshRenderer>().material = standbyMaterial;
+					mr.material = standbyMaterial;
 				}
-				clickedObject = raycastHit.collider.gameObject;
-				clickedObject.GetComponent<MeshRenderer>().material = hoverMaterial;
+				clickedObject = raycastHit.collider.gameObject.GetComponentInParent<ArrowsEnum>().gameObject;
+                mr = raycastHit.collider.gameObject.GetComponent<MeshRenderer>();
+				mr.material = hoverMaterial;
 				lr.SetPosition(1, raycastHit.point);
 
 			}
 			else {
 				lr.SetPosition(1, laser.origin + laser.direction * 100f);
 				if(clickedObject != null) {
-					clickedObject.GetComponent<MeshRenderer>().material = standbyMaterial;
+					mr.material = standbyMaterial;
 				}
 			}
 
 		}
 		else {
 			lr.enabled = false;
-			RaycastHit raycastHit;
-			if(Physics.Raycast(laser, out raycastHit, Mathf.Infinity, LayerMask.NameToLayer("Base"), QueryTriggerInteraction.Ignore)) {
-				if(clickedObject.GetComponent<ArrowsEnum>().direction == ArrowsEnum.Direction.X) {
-					clickedObject.transform.position = new Vector3(Mathf.FloorToInt((transform.position + transform.forward * 20f).x), clickedObject.transform.position.y, clickedObject.transform.position.z);
-				}
-				else if(clickedObject.GetComponent<ArrowsEnum>().direction == ArrowsEnum.Direction.Y) {
-					clickedObject.transform.position = new Vector3(clickedObject.transform.position.x, Mathf.FloorToInt((transform.position + transform.forward * 20f).y), clickedObject.transform.position.z);
-				}
-				else if(clickedObject.GetComponent<ArrowsEnum>().direction == ArrowsEnum.Direction.Z) {
-					clickedObject.transform.position = new Vector3(clickedObject.transform.position.x, clickedObject.transform.position.y, Mathf.FloorToInt((transform.position + transform.forward * 20f).z));
-				}
-				else if(clickedObject.GetComponent<ArrowsEnum>().direction == ArrowsEnum.Direction.Base) {
-					GameObject.FindGameObjectWithTag("Base").transform.position = new Vector3((transform.position + transform.forward * 20f).x, GameObject.FindGameObjectWithTag("Base").transform.position.y, (transform.position + transform.forward * 20f).z);
-				}
+            if (clickedObject.GetComponent<ArrowsEnum>().direction == ArrowsEnum.Direction.X) {
+				clickedObject.transform.position = new Vector3(Mathf.RoundToInt(initialClickedObjectPosition.x + ((transform.position + transform.forward * 20f) - initialControllerState).x), clickedObject.transform.position.y, clickedObject.transform.position.z);
+			}
+			else if(clickedObject.GetComponent<ArrowsEnum>().direction == ArrowsEnum.Direction.Y) {
+                if(Mathf.RoundToInt(initialClickedObjectPosition.y + ((transform.position + transform.forward * 20f) - initialControllerState).y) > 0 && Mathf.RoundToInt(initialClickedObjectPosition.y + ((transform.position + transform.forward * 20f) - initialControllerState).y) < 21)
+                {
+                    clickedObject.transform.position = new Vector3(clickedObject.transform.position.x, Mathf.RoundToInt(initialClickedObjectPosition.y + ((transform.position + transform.forward * 20f) - initialControllerState).y), clickedObject.transform.position.z);
+                }
+            }
+			else if(clickedObject.GetComponent<ArrowsEnum>().direction == ArrowsEnum.Direction.Z) {
+				clickedObject.transform.position = new Vector3(clickedObject.transform.position.x, clickedObject.transform.position.y, Mathf.RoundToInt(initialClickedObjectPosition.z + ((transform.position + transform.forward * 20f) - initialControllerState).z));
+			}
+			else if(clickedObject.GetComponent<ArrowsEnum>().direction == ArrowsEnum.Direction.Base) {
+				GameObject.FindGameObjectWithTag("Base").transform.position = new Vector3(Mathf.RoundToInt(initialClickedObjectPosition.x + ((transform.position + transform.forward * 20f) - initialControllerState).x), GameObject.FindGameObjectWithTag("Base").transform.position.y, Mathf.RoundToInt(initialClickedObjectPosition.z + ((transform.position + transform.forward * 20f) - initialControllerState).z));
 			}
 		}
 	}
