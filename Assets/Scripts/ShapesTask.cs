@@ -9,13 +9,11 @@ public class ShapesTask : Tasks {
 		tasks = new List<Task> {
 			new Task ("Potetene trenger vann. Ta formen som inneholder 10 liter vann og putt inn i vanningsskapet", "PotatoFarm", new System.Func<bool> (() => {
 
-				if (activeTaskObject.transform.GetChild(0).GetComponent<WateringLogic>().isCorrectContainer()) {
-					return true;	
-				}
-				return false;
+				return true;	
+				
 
 			})),
-            new Task ("Nå fikk de godt med vann <3", "none", new System.Func<bool> (() => {
+            new Task ("Nå fikk de godt med vann <3", NONE, new System.Func<bool> (() => {
 
                 
                 return false;
