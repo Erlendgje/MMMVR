@@ -32,8 +32,9 @@ public class PyramidTask : Tasks {
 				return false;
 
 			})),
-			new Task ("Så bra, du får plass til tre pyramider inni kuben.", NONE, new System.Func<bool> (() => {
-				return true;
+			new Task ("Så bra, du får plass til tre pyramider inni kuben. Trykk på meny knappen for å fortsette", NONE, new System.Func<bool> (() => {
+				TaskManager.taskManager.mathWorldDone = true;
+				return false;
 			}))
 		};
 		spawnObject();

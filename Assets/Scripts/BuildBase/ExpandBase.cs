@@ -21,6 +21,8 @@ public class ExpandBase : MonoBehaviour
     [SerializeField] private TextMesh z2;
 
 
+	public bool inside, outside;
+
     // Update is called once per frame
     void Update()
     {
@@ -44,4 +46,31 @@ public class ExpandBase : MonoBehaviour
         x1.text = Mathf.RoundToInt(this.transform.localScale.z) + "m";
         x2.text = Mathf.RoundToInt(this.transform.localScale.z) + "m";
     }
+
+	private void OnTriggerEnter(Collider other) {
+		if(other.CompareTag("Inside")) {
+			inside = true;
+		}
+		else if(other.CompareTag("Outside")) {
+			outside = true;
+		}
+	}
+
+	private void OnTriggerStay(Collider other) {
+		if(other.CompareTag("Inside")) {
+			inside = true;
+		}
+		else if(other.CompareTag("Outside")) {
+			outside = true;
+		}
+	}
+
+	private void OnTriggerExit(Collider other) {
+		if(other.CompareTag("Inside")) {
+			inside = false;
+		}
+		else if(other.CompareTag("Outside")) {
+			outside = false;
+		}
+	}
 }

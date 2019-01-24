@@ -7,6 +7,8 @@ TagManager:
   - Point
   - Arrow
   - Base
+  - Inside
+  - Outside
   layers:
   - Default
   - TransparentFX

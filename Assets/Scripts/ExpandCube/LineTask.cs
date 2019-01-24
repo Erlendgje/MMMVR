@@ -37,6 +37,7 @@ public class LineTask : Tasks {
 				return false;
 			})),
 			new Task("Trykk på menyknappen for å fortsette!", NONE, new System.Func<bool>(() => {
+				TaskManager.taskManager.mathWorldDone = true;
 				return false;
 			}))};
 

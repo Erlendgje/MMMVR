@@ -8,6 +8,8 @@ public class LoadTask : MonoBehaviour
 
 	// Start is called before the first frame update
 	void Start() {
-		Instantiate(taskObjects[TaskManager.activeTask], this.transform);
+		if(TaskManager.taskManager.activeTask < taskObjects.Count) {
+			Instantiate(taskObjects[TaskManager.taskManager.activeTask], this.transform);
+		}
 	}
 }

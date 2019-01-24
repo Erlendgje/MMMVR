@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using Valve.VR;
 
 public class BaseArrow : MonoBehaviour {
@@ -15,6 +16,8 @@ public class BaseArrow : MonoBehaviour {
 	private Ray laser;
     private Vector3 initialControllerState;
     private Vector3 initialClickedObjectPosition;
+
+	public UnityEvent onDetach;
 
 
 	// Start is called before the first frame update
@@ -60,6 +63,7 @@ public class BaseArrow : MonoBehaviour {
 			if(clickedObject != null) {
 				mr.material = standbyMaterial;
 				clickedObject = null;
+				onDetach.Invoke();
 			}
 		}
 
