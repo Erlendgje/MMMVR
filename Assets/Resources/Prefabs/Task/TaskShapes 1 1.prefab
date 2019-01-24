@@ -763,7 +763,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 219733804348247323}
-  activeTaskObject: {fileID: 0}
+  activeTaskObject: {fileID: 219733804096230015}
 --- !u!1 &219733804348247320
 GameObject:
   m_ObjectHideFlags: 0
