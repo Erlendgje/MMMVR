@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using Valve.VR;
 
@@ -25,12 +23,22 @@ public class MyHandScript : MonoBehaviour {
 		if(GetChangeScene()) {
 			if(!mathWorldActivated) {
 				mathWorldActivated = true;
-                teleportPlayer(new Vector3(-20, 1, 0));
-                SceneManager.LoadScene("MathWorld", LoadSceneMode.Additive);
+				TaskManager.taskManager.setActive(false);
+				teleportPlayer(new Vector3(-20, 1, 0));
+				SceneManager.LoadScene("MathWorld", LoadSceneMode.Additive);
+
 			}
 			else {
 				mathWorldActivated = false;
-                teleportPlayer(new Vector3(-20, 1, 0));
+				TaskManager.taskManager.setActive(true);
+                if (TaskManager.taskManager.mathWorldDone)
+                {
+                    teleportPlayer(TaskManager.taskManager.getActiveTask().playerPosition);
+                }
+                else
+                {
+                    teleportPlayer(new Vector3(-20, 0.5f, 0));
+                }
 				SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName("MathWorld"));
 			}
 		}
