@@ -6,7 +6,7 @@ public class TaskManager : MonoBehaviour
 {
 
 	public List<MarsTask> marsTasks;
-	private GameObject activeObject;
+	public GameObject activeObject;
 	public bool mathWorldDone;
 
 	public static TaskManager taskManager;

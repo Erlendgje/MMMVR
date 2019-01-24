@@ -61,7 +61,6 @@ public class SnapToPosition : MonoBehaviour {
     }
 
     public void onPickUp() {
-        Debug.Log(snappedObjects.Count);
 		rgdb.constraints = RigidbodyConstraints.None;
         if (snappedObjects.Contains(this.gameObject))
         {

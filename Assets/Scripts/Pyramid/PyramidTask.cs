@@ -5,7 +5,6 @@ using UnityEngine;
 public class PyramidTask : Tasks {
     public override void onChangeScene()
     {
-        throw new System.NotImplementedException();
     }
 
     // Use this for initialization
@@ -31,13 +30,13 @@ public class PyramidTask : Tasks {
 					}
 				}
 				if(count >= 3) {
-					return true;
+                    TaskManager.taskManager.mathWorldDone = true;
+                    return true;
 				}
 				return false;
 
 			})),
 			new Task ("Så bra, du får plass til tre pyramider inni kuben. Trykk på meny knappen for å fortsette", NONE, new System.Func<bool> (() => {
-				TaskManager.taskManager.mathWorldDone = true;
 				return false;
 			}))
 		};

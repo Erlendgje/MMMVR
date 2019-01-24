@@ -14,7 +14,6 @@ public class BaseTask : Tasks
     {
         tasks = new List<Task> {
             new Task ("Vi må lage task, flytt basen til bygg området", "Base", new System.Func<bool> (() => {
-                Debug.Log(activeTaskObject.GetComponentInChildren<ExpandBase>().inside);
 				if(activeTaskObject.GetComponentInChildren<ExpandBase>().inside && !activeTaskObject.GetComponentInChildren<ExpandBase>().outside) {
                     onChangeScene();
                     TaskManager.taskManager.nextTask();
