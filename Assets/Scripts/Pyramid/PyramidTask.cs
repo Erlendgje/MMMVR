@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PyramidTask : Tasks {
+    public override void onChangeScene()
+    {
+        throw new System.NotImplementedException();
+    }
 
-	// Use this for initialization
-	void Start() {
+    // Use this for initialization
+    void Start() {
 		tasks = new List<Task> {
 			new Task ("Hva er volumet til en pyramide? Plukk opp en av pyramidene", "Pyramid", new System.Func<bool> (() => {
 

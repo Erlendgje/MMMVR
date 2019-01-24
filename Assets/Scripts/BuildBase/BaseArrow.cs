@@ -17,8 +17,6 @@ public class BaseArrow : MonoBehaviour {
     private Vector3 initialControllerState;
     private Vector3 initialClickedObjectPosition;
 
-	public UnityEvent onDetach;
-
 
 	// Start is called before the first frame update
 	void Start() {
@@ -62,8 +60,8 @@ public class BaseArrow : MonoBehaviour {
 			arrowPress = false;
 			if(clickedObject != null) {
 				mr.material = standbyMaterial;
+                clickedObject.GetComponentInParent<Observer>().checkTask();
 				clickedObject = null;
-				onDetach.Invoke();
 			}
 		}
 

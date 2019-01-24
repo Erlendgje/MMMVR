@@ -17,10 +17,10 @@ public abstract class Tasks : MonoBehaviour{
 
 	public void onDetach() {
 		if(tasks[task].taskCheck()) {
-			task++;
-			if(task >= tasks.Count) {
-				task--;
-			}
+            if(task <= tasks.Count)
+            {
+                task++;
+            }
 			text.text = tasks[task].text;
 			if(tasks[task].prefab != NONE) {
 				//Destroy(activeObject);
@@ -35,6 +35,9 @@ public abstract class Tasks : MonoBehaviour{
 		activeTaskObject = activeObject.transform.Find("TaskObject").gameObject;
 		text.text = tasks[task].text;
 	}
+
+    public abstract void onChangeScene();
+    
 
 	public class Task {
 		 

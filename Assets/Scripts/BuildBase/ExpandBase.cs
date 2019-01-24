@@ -53,7 +53,7 @@ public class ExpandBase : MonoBehaviour
 		}
 		else if(other.CompareTag("Outside")) {
 			outside = true;
-		}
+        }
 	}
 
 	private void OnTriggerStay(Collider other) {
@@ -62,7 +62,7 @@ public class ExpandBase : MonoBehaviour
 		}
 		else if(other.CompareTag("Outside")) {
 			outside = true;
-		}
+        }
 	}
 
 	private void OnTriggerExit(Collider other) {
@@ -71,6 +71,6 @@ public class ExpandBase : MonoBehaviour
 		}
 		else if(other.CompareTag("Outside")) {
 			outside = false;
-		}
+        }
 	}
 }

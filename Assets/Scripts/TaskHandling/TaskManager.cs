@@ -39,11 +39,14 @@ public class TaskManager : MonoBehaviour
 	}
     
 	public void setActive(bool value) {
-		if(activeObject != null) {
-			activeObject.SetActive(value);
-		}
+        if (activeObject != null) {
+            marsTasks[activeTask].task.GetComponentInChildren<Tasks>().onChangeScene();
+            activeObject.SetActive(value);
+            
+        }
 		else if(mathWorldDone) {
-			spawnTask();
+            marsTasks[activeTask].task.GetComponentInChildren<Tasks>().onChangeScene();
+            spawnTask();
 		}
 	}
 

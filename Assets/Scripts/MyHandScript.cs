@@ -31,7 +31,14 @@ public class MyHandScript : MonoBehaviour {
 			else {
 				mathWorldActivated = false;
 				TaskManager.taskManager.setActive(true);
-                teleportPlayer(TaskManager.taskManager.getActiveTask().playerPosition);
+                if (TaskManager.taskManager.mathWorldDone)
+                {
+                    teleportPlayer(TaskManager.taskManager.getActiveTask().playerPosition);
+                }
+                else
+                {
+                    teleportPlayer(new Vector3(-20, 0.5f, 0));
+                }
 				SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName("MathWorld"));
 			}
 		}
