@@ -10,6 +10,7 @@ public class WateringLogic : MonoBehaviour
 	public UnityEvent onContainerInBox;
     [SerializeField] public int wantedValue;
     [SerializeField] public GameObject redLight = null;
+	[SerializeField] public GameObject errorText = null;
 
     private Animator _animator;
     
@@ -32,7 +33,7 @@ public class WateringLogic : MonoBehaviour
 	protected virtual void OnTriggerEnter(Collider other)
 	{
         //Debug.Log(other.name);
-
+		errorText.SetActive (false);
         StartCoroutine(closeDoor(other));
 
     }
@@ -88,6 +89,7 @@ public class WateringLogic : MonoBehaviour
             if (totalValue > wantedValue)
             {
                 totalValue = 0;
+				errorText.SetActive (true);
                 redLight.SetActive(true);
                 yield return new WaitForSeconds(0.1f);
                 redLight.SetActive(false);
@@ -100,6 +102,7 @@ public class WateringLogic : MonoBehaviour
                 yield return new WaitForSeconds(0.1f);
                 respawnShapes();
                 redLight.SetActive(false);
+
             }
             
 
