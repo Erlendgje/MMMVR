@@ -26,8 +26,8 @@ public class ExpandBase : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		this.transform.localScale = new Vector3(xArrow1.localPosition.x - xArrow2.localPosition.x, yArrow.localPosition.y, zArrow1.localPosition.z - zArrow2.localPosition.z);
-        Vector3 position = new Vector3((xArrow1.localPosition.x - xArrow2.localPosition.x) / 2 + xArrow2.localPosition.x, yArrow.localPosition.y / 2, (zArrow1.localPosition.z - zArrow2.localPosition.z) / 2 + zArrow2.localPosition.z);
+		this.transform.localScale = new Vector3(xArrow1.localPosition.x - xArrow2.localPosition.x, yArrow.position.y, zArrow1.localPosition.z - zArrow2.localPosition.z);
+        Vector3 position = new Vector3((xArrow1.localPosition.x - xArrow2.localPosition.x) / 2 + xArrow2.localPosition.x, yArrow.position.y / 2, (zArrow1.localPosition.z - zArrow2.localPosition.z) / 2 + zArrow2.localPosition.z);
 
         this.transform.localPosition = position;
 

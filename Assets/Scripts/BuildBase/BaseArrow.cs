@@ -51,7 +51,7 @@ public class BaseArrow : MonoBehaviour {
                 initialClickedObjectPosition = clickedObject.transform.position;
                 if (clickedObject.GetComponent<ArrowsEnum>().direction == ArrowsEnum.Direction.Base)
                 {
-                    initialClickedObjectPosition = GameObject.FindGameObjectWithTag("Base").transform.position;
+                    initialClickedObjectPosition = clickedObject.GetComponentInParent<Observer>().transform.position;
                 }
             }
 		}
@@ -103,7 +103,7 @@ public class BaseArrow : MonoBehaviour {
 				clickedObject.transform.position = new Vector3(clickedObject.transform.position.x, clickedObject.transform.position.y, Mathf.RoundToInt(initialClickedObjectPosition.z + ((transform.position + transform.forward * 20f) - initialControllerState).z));
 			}
 			else if(clickedObject.GetComponent<ArrowsEnum>().direction == ArrowsEnum.Direction.Base) {
-				GameObject.FindGameObjectWithTag("Base").transform.position = new Vector3(Mathf.RoundToInt(initialClickedObjectPosition.x + ((transform.position + transform.forward * 20f) - initialControllerState).x), GameObject.FindGameObjectWithTag("Base").transform.position.y, Mathf.RoundToInt(initialClickedObjectPosition.z + ((transform.position + transform.forward * 20f) - initialControllerState).z));
+				clickedObject.GetComponentInParent<Observer>().transform.position = new Vector3(Mathf.RoundToInt(initialClickedObjectPosition.x + ((transform.position + transform.forward * 20f) - initialControllerState).x), clickedObject.GetComponentInParent<Observer>().transform.position.y, Mathf.RoundToInt(initialClickedObjectPosition.z + ((transform.position + transform.forward * 20f) - initialControllerState).z));
 			}
 		}
 	}
