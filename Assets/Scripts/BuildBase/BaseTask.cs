@@ -13,15 +13,37 @@ public class BaseTask : Tasks
     void Start()
     {
         tasks = new List<Task> {
-            new Task ("Vi må lage task, flytt basen til bygg området", "Base", new System.Func<bool> (() => {
-				if(activeTaskObject.GetComponentInChildren<ExpandBase>().inside && !activeTaskObject.GetComponentInChildren<ExpandBase>().outside) {
-                    onChangeScene();
-                    TaskManager.taskManager.nextTask();
-                    return true;
-				}
+            new Task ("Vi må bygge en base. Først trenger vi et drivhus for å dyrke poteter. Sett av et område på 200m" + "\u00B2", "Greenhouse", new System.Func<bool> (() => {
+                if(activeTaskObject.GetComponent<ExpandBase>().inside && !activeTaskObject.GetComponent<ExpandBase>().outside) {
+                    if (activeTaskObject.transform.localScale.x * activeTaskObject.transform.localScale.z == 200)
+                    {
+                        return true;
+                    }
+                }
                 return false;
             })),
-            new Task ("Sweet, dette er en test. Trykk på menyknappen for å fortsette!", NONE, new System.Func<bool> (() => {
+            new Task ("Vi trenger vann til potetene. Sett ut en vanntank som rommer 100 liter", "WaterTank", new System.Func<bool> (() => {
+                if(activeTaskObject.GetComponent<ExpandBase>().inside && !activeTaskObject.GetComponent<ExpandBase>().outside) {
+                    if (activeTaskObject.transform.localScale.x * activeTaskObject.transform.localScale.y * activeTaskObject.transform.localScale.z == 100)
+                    {
+                        return true;
+                    }
+                }
+                return false;
+            })),
+            new Task ("Vi må nå lage en kompost-tank på 50 kubikkmeter", "Compost", new System.Func<bool> (() => {
+				if(activeTaskObject.GetComponent<ExpandBase>().inside && !activeTaskObject.GetComponent<ExpandBase>().outside) {
+                    
+                    if (activeTaskObject.transform.localScale.x * activeTaskObject.transform.localScale.y * activeTaskObject.transform.localScale.z == 50)
+                    {
+                        onChangeScene();
+                        TaskManager.taskManager.nextTask();
+                        return true;
+                    }
+                }
+                return false;
+            })),
+            new Task ("Bra, trykk på menyknappen for å fortsette!", NONE, new System.Func<bool> (() => {
                 return false;
 
             }))

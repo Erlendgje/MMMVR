@@ -11,7 +11,7 @@ public abstract class Tasks : MonoBehaviour{
 	public List<Task> tasks;
 	private int task = 0;
 	public Text text;
-	private GameObject activeObject;
+	public GameObject activeObject;
 	public GameObject activeTaskObject;
 	public static string NONE = "";
 
