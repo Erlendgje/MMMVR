@@ -9,7 +9,8 @@ public class BaseArrow : MonoBehaviour {
 	private bool arrowPress = false;
 	[SerializeField] Material hoverMaterial;
 	[SerializeField] Material standbyMaterial;
-	[SerializeField] Material clickedMaterial;
+	[SerializeField] Material canPlaceMaterial;
+	[SerializeField] Material cantPlaceMaterial;
 	private GameObject clickedObject;
     private MeshRenderer mr;
 	private LineRenderer lr;
@@ -46,7 +47,7 @@ public class BaseArrow : MonoBehaviour {
                 arrowPress = true;
                 clickedObject = raycastHit.collider.gameObject.GetComponentInParent<ArrowsEnum>().gameObject;
                 mr = raycastHit.collider.gameObject.GetComponent<MeshRenderer>();
-                mr.material = clickedMaterial;
+                mr.material = canPlaceMaterial;
                 initialControllerState = transform.position + transform.forward * 20f;
                 initialClickedObjectPosition = clickedObject.transform.position;
                 if (clickedObject.GetComponent<ArrowsEnum>().direction == ArrowsEnum.Direction.Base)
@@ -104,6 +105,13 @@ public class BaseArrow : MonoBehaviour {
 			}
 			else if(clickedObject.GetComponent<ArrowsEnum>().direction == ArrowsEnum.Direction.Base) {
 				clickedObject.GetComponentInParent<Observer>().transform.position = new Vector3(Mathf.RoundToInt(initialClickedObjectPosition.x + ((transform.position + transform.forward * 20f) - initialControllerState).x), clickedObject.GetComponentInParent<Observer>().transform.position.y, Mathf.RoundToInt(initialClickedObjectPosition.z + ((transform.position + transform.forward * 20f) - initialControllerState).z));
+			}
+
+			if(clickedObject.GetComponent<ExpandBase>().outside) {
+				mr.material = cantPlaceMaterial;
+			}
+			else if(clickedObject.GetComponent<ExpandBase>().inside){
+				mr.material = canPlaceMaterial;
 			}
 		}
 	}
