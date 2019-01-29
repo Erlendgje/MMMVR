@@ -47,7 +47,7 @@ public class BaseArrow : MonoBehaviour {
                 arrowPress = true;
                 clickedObject = raycastHit.collider.gameObject.GetComponentInParent<ArrowsEnum>().gameObject;
                 mr = raycastHit.collider.gameObject.GetComponent<MeshRenderer>();
-                mr.material = canPlaceMaterial;
+                //mr.material = canPlaceMaterial;
                 initialControllerState = transform.position + transform.forward * 20f;
                 initialClickedObjectPosition = clickedObject.transform.position;
                 if (clickedObject.GetComponent<ArrowsEnum>().direction == ArrowsEnum.Direction.Base)
@@ -61,9 +61,14 @@ public class BaseArrow : MonoBehaviour {
 			arrowPress = false;
 			if(clickedObject != null) {
 				mr.material = standbyMaterial;
+                if (clickedObject.GetComponent<ArrowsEnum>().direction == ArrowsEnum.Direction.Base)
+                {
+                    clickedObject.GetComponent<ExpandBase>().setColor = true;
+                }
                 clickedObject.GetComponentInParent<Observer>().checkTask();
 				clickedObject = null;
-			}
+                
+            }
 		}
 
 		if(!arrowPress) {
@@ -74,17 +79,29 @@ public class BaseArrow : MonoBehaviour {
 			if(Physics.Raycast(laser, out raycastHit, Mathf.Infinity, 1 << LayerMask.NameToLayer("Base"), QueryTriggerInteraction.Ignore)) {
 				if(clickedObject != null && raycastHit.collider.gameObject != clickedObject) {
 					mr.material = standbyMaterial;
+                    if(clickedObject.GetComponent<ArrowsEnum>().direction == ArrowsEnum.Direction.Base)
+                    {
+                        clickedObject.GetComponent<ExpandBase>().setColor = true;
+                    }
 				}
 				clickedObject = raycastHit.collider.gameObject.GetComponentInParent<ArrowsEnum>().gameObject;
                 mr = raycastHit.collider.gameObject.GetComponent<MeshRenderer>();
 				mr.material = hoverMaterial;
 				lr.SetPosition(1, raycastHit.point);
+                if (clickedObject.GetComponent<ArrowsEnum>().direction == ArrowsEnum.Direction.Base)
+                {
+                    clickedObject.GetComponent<ExpandBase>().setColor = false;
+                }
 
-			}
+            }
 			else {
 				lr.SetPosition(1, laser.origin + laser.direction * 100f);
 				if(clickedObject != null) {
-					mr.material = standbyMaterial;
+                    if (clickedObject.GetComponent<ArrowsEnum>().direction == ArrowsEnum.Direction.Base)
+                    {
+                        clickedObject.GetComponent<ExpandBase>().setColor = true;
+                    }
+                    mr.material = standbyMaterial;
 				}
 			}
 
@@ -105,14 +122,15 @@ public class BaseArrow : MonoBehaviour {
 			}
 			else if(clickedObject.GetComponent<ArrowsEnum>().direction == ArrowsEnum.Direction.Base) {
 				clickedObject.GetComponentInParent<Observer>().transform.position = new Vector3(Mathf.RoundToInt(initialClickedObjectPosition.x + ((transform.position + transform.forward * 20f) - initialControllerState).x), clickedObject.GetComponentInParent<Observer>().transform.position.y, Mathf.RoundToInt(initialClickedObjectPosition.z + ((transform.position + transform.forward * 20f) - initialControllerState).z));
-			}
-
-			if(clickedObject.GetComponent<ExpandBase>().outside) {
-				mr.material = cantPlaceMaterial;
-			}
-			else if(clickedObject.GetComponent<ExpandBase>().inside){
-				mr.material = canPlaceMaterial;
+                if(clickedObject.GetComponent<ExpandBase>().outside || !clickedObject.GetComponent<ExpandBase>().inside)
+                {
+                    mr.material = cantPlaceMaterial;
+                }
+                else
+                {
+                    mr.material = canPlaceMaterial;
+                }
 			}
 		}
-	}
+    }
 }

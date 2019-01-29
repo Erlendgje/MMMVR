@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 3196174197055076678}
   - component: {fileID: 3196174197054110598}
   - component: {fileID: 6253072061283989000}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Arrow
   m_TagString: Arrow
   m_Icon: {fileID: 0}
@@ -267,8 +267,11 @@ MonoBehaviour:
   y: {fileID: 8865454546131689868}
   z1: {fileID: 8865454545759896913}
   z2: {fileID: 8865454546351025348}
+  outsideMaterial: {fileID: 2100000, guid: a8f782ec419f7d044bdeaaf19373a612, type: 2}
+  insideMaterial: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   inside: 0
   outside: 0
+  setColor: 1
 --- !u!114 &7323161042644859996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -676,7 +679,7 @@ GameObject:
   - component: {fileID: 8545552975090241986}
   - component: {fileID: 8545552975090241985}
   - component: {fileID: 8545552975090241984}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Arrow
   m_TagString: Arrow
   m_Icon: {fileID: 0}
@@ -872,8 +875,11 @@ MonoBehaviour:
   y: {fileID: 8545552974927840120}
   z1: {fileID: 8545552976535077412}
   z2: {fileID: 8545552975505152453}
+  outsideMaterial: {fileID: 2100000, guid: a8f782ec419f7d044bdeaaf19373a612, type: 2}
+  insideMaterial: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   inside: 0
   outside: 0
+  setColor: 1
 --- !u!114 &8545552975138380591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -945,7 +951,7 @@ GameObject:
   - component: {fileID: 8545552975250034310}
   - component: {fileID: 8545552975250034309}
   - component: {fileID: 8545552975250034308}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Arrow
   m_TagString: Arrow
   m_Icon: {fileID: 0}
@@ -1175,7 +1181,7 @@ GameObject:
   - component: {fileID: 8545552975453594889}
   - component: {fileID: 8545552975453594888}
   - component: {fileID: 8545552975453594935}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Arrow
   m_TagString: Arrow
   m_Icon: {fileID: 0}
@@ -1417,7 +1423,7 @@ GameObject:
   - component: {fileID: 8545552975525822434}
   - component: {fileID: 8545552975525822433}
   - component: {fileID: 8545552975525822432}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Arrow
   m_TagString: Arrow
   m_Icon: {fileID: 0}
@@ -1705,7 +1711,7 @@ GameObject:
   - component: {fileID: 8545552975988139061}
   - component: {fileID: 8545552975988139060}
   - component: {fileID: 8545552975988139059}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Arrow
   m_TagString: Arrow
   m_Icon: {fileID: 0}
@@ -2101,7 +2107,7 @@ GameObject:
   - component: {fileID: 8545552976073659530}
   - component: {fileID: 8545552976073659529}
   - component: {fileID: 8545552976073659528}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Arrow
   m_TagString: Arrow
   m_Icon: {fileID: 0}
@@ -2193,7 +2199,7 @@ GameObject:
   - component: {fileID: 8545552976153161246}
   - component: {fileID: 8545552976153161245}
   - component: {fileID: 8545552976153161244}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Arrow
   m_TagString: Arrow
   m_Icon: {fileID: 0}
@@ -2285,7 +2291,7 @@ GameObject:
   - component: {fileID: 8545552976174005744}
   - component: {fileID: 8545552976174005759}
   - component: {fileID: 8545552976174005758}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Arrow
   m_TagString: Arrow
   m_Icon: {fileID: 0}
@@ -2377,7 +2383,7 @@ GameObject:
   - component: {fileID: 8545552976231810477}
   - component: {fileID: 8545552976231810476}
   - component: {fileID: 8545552976231810475}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Arrow
   m_TagString: Arrow
   m_Icon: {fileID: 0}
@@ -2769,8 +2775,11 @@ MonoBehaviour:
   y: {fileID: 8545552975060114474}
   z1: {fileID: 8545552976545939859}
   z2: {fileID: 8545552975538374305}
+  outsideMaterial: {fileID: 2100000, guid: a8f782ec419f7d044bdeaaf19373a612, type: 2}
+  insideMaterial: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   inside: 0
   outside: 0
+  setColor: 1
 --- !u!114 &8545552976475343757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2812,7 +2821,7 @@ GameObject:
   - component: {fileID: 8545552976479404759}
   - component: {fileID: 8545552976479404758}
   - component: {fileID: 8545552976479404757}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Arrow
   m_TagString: Arrow
   m_Icon: {fileID: 0}
@@ -3008,7 +3017,7 @@ GameObject:
   - component: {fileID: 8545552976539288653}
   - component: {fileID: 8545552976539288652}
   - component: {fileID: 8545552976539288651}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Arrow
   m_TagString: Arrow
   m_Icon: {fileID: 0}
@@ -3308,7 +3317,7 @@ GameObject:
   - component: {fileID: 8545552976816825592}
   - component: {fileID: 8545552976816825575}
   - component: {fileID: 8545552976816825574}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Arrow
   m_TagString: Arrow
   m_Icon: {fileID: 0}
@@ -3400,7 +3409,7 @@ GameObject:
   - component: {fileID: 8545552976822317779}
   - component: {fileID: 8545552976822317778}
   - component: {fileID: 8545552976822317777}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Arrow
   m_TagString: Arrow
   m_Icon: {fileID: 0}
@@ -3492,7 +3501,7 @@ GameObject:
   - component: {fileID: 8545552976883969596}
   - component: {fileID: 8545552976883969595}
   - component: {fileID: 8545552976883969594}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Arrow
   m_TagString: Arrow
   m_Icon: {fileID: 0}
@@ -3654,7 +3663,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8865454545171862659
 Transform:
   m_ObjectHideFlags: 0
