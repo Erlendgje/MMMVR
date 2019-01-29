@@ -47,7 +47,6 @@ public class BaseArrow : MonoBehaviour {
                 arrowPress = true;
                 clickedObject = raycastHit.collider.gameObject.GetComponentInParent<ArrowsEnum>().gameObject;
                 mr = raycastHit.collider.gameObject.GetComponent<MeshRenderer>();
-                //mr.material = canPlaceMaterial;
                 initialControllerState = transform.position + transform.forward * 20f;
                 initialClickedObjectPosition = clickedObject.transform.position;
                 if (clickedObject.GetComponent<ArrowsEnum>().direction == ArrowsEnum.Direction.Base)
@@ -67,7 +66,6 @@ public class BaseArrow : MonoBehaviour {
                 }
                 clickedObject.GetComponentInParent<Observer>().checkTask();
 				clickedObject = null;
-                
             }
 		}
 
