@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR.InteractionSystem;
 
 public class BaseTask : Tasks
 {
     public override void onChangeScene()
     {
         GameObject.FindGameObjectWithTag("GameController").GetComponent<BaseArrow>().enabled = !GameObject.FindGameObjectWithTag("GameController").GetComponent<BaseArrow>().enabled;
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<LineRenderer>().enabled = !GameObject.FindGameObjectWithTag("GameController").GetComponent<LineRenderer>().enabled;
     }
 
     // Use this for initialization
@@ -36,14 +38,20 @@ public class BaseTask : Tasks
                     
                     if (activeTaskObject.transform.localScale.x * activeTaskObject.transform.localScale.y * activeTaskObject.transform.localScale.z == 50)
                     {
-                        onChangeScene();
-                        TaskManager.taskManager.nextTask();
                         return true;
                     }
                 }
                 return false;
             })),
-            new Task ("Bra, trykk på menyknappen for å fortsette!", NONE, new System.Func<bool> (() => {
+            new Task ("Du kan fortsette å endre på byggningene hvis du vil, trykk på den rød knappen når du er ferdig.", "Button", new System.Func<bool> (() => {
+                if(activeTaskObject.GetComponent<HoverButton>().engaged) {
+                    onChangeScene();
+                    TaskManager.taskManager.nextTask();
+                    return true;
+                }
+                return false;
+            })),
+            new Task ("Trykk på menyknappen for å fortsette!", NONE, new System.Func<bool> (() => {
                 return false;
 
             }))
