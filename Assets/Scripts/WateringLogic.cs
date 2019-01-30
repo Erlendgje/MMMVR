@@ -34,15 +34,11 @@ public class WateringLogic : MonoBehaviour
 	{
         //Debug.Log(other.name);
 		errorText.SetActive (false);
-        StartCoroutine(closeDoor(other));
+        StartCoroutine(CloseDoor(other));
 
     }
 
-	public bool isCorrectContainer() {
-		return true;
-	}
-
-    private void respawnShapes()
+    public void RespawnShapes()
     {
         var childCount = transform.childCount;
 
@@ -50,7 +46,7 @@ public class WateringLogic : MonoBehaviour
         for (var i = 0; i < childCount; i++) {
 
             //Debug.Log(tankPositions[i].ToString() + "hey");
-
+            totalValue = 0;
             transform.GetChild(i).localPosition = tankPositions[i];
             transform.GetChild(i).localRotation = new Quaternion(0, 0, 0, 0);
             transform.GetChild (i).gameObject.SetActive (true);
@@ -58,7 +54,7 @@ public class WateringLogic : MonoBehaviour
         }
     }
 
-    IEnumerator closeDoor(Collider other)
+    IEnumerator CloseDoor(Collider other)
     {
         int otherValue = 0;
 
@@ -88,7 +84,7 @@ public class WateringLogic : MonoBehaviour
 
             if (totalValue > wantedValue)
             {
-                totalValue = 0;
+                
 				errorText.SetActive (true);
                 redLight.SetActive(true);
                 yield return new WaitForSeconds(0.1f);
@@ -100,7 +96,7 @@ public class WateringLogic : MonoBehaviour
                 yield return new WaitForSeconds(0.1f);
                 redLight.SetActive(true);
                 yield return new WaitForSeconds(0.1f);
-                respawnShapes();
+                RespawnShapes();
                 redLight.SetActive(false);
 
             }
