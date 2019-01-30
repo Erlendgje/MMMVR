@@ -10,7 +10,7 @@ public class ShapesTask : Tasks {
     // Use this for initialization
     void Start() {
 		tasks = new List<Task> {
-			new Task ("Potetene trenger vann. Ta tanken som inneholder 35 liter vann og putt den inn i vanningsskapet.", "PotatoFarm", new System.Func<bool> (() => {
+			new Task ("Potetene trenger vann. Ta tankene som tilsammen inneholder 35 liter vann og putt dem inn i vanningsskapet.", "PotatoFarm", new System.Func<bool> (() => {
 
 				return true;	
 

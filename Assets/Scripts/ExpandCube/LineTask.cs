@@ -11,7 +11,7 @@ public class LineTask : Tasks {
     // Use this for initialization
     void Start () {
 		tasks = new List<Task> {
-			new Task("Nå skal vi se på lendgde, areal og volum. Dra i det røde håndtaket for å endre lengden på linjen.", "Area", new System.Func<bool>(() => activeTaskObject.transform.localScale.x != 0.1f)),
+			new Task("Nå skal vi se på lengde, areal og volum. Dra i det røde håndtaket for å endre lengden på linjen.", "Area", new System.Func<bool>(() => activeTaskObject.transform.localScale.x != 0.1f)),
 
 			new Task("Dra nå i håndtakene for å lage et areal på 1 kvadratmeter", NONE, new System.Func<bool>(() => {
                 if(activeTaskObject.transform.localScale.x * activeTaskObject.transform.localScale.y == 1f) {
