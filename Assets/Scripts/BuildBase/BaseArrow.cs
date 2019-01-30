@@ -120,7 +120,7 @@ public class BaseArrow : MonoBehaviour {
 			}
 			else if(clickedObject.GetComponent<ArrowsEnum>().direction == ArrowsEnum.Direction.Base) {
 				clickedObject.GetComponentInParent<Observer>().transform.position = new Vector3(Mathf.RoundToInt(initialClickedObjectPosition.x + ((transform.position + transform.forward * 20f) - initialControllerState).x), clickedObject.GetComponentInParent<Observer>().transform.position.y, Mathf.RoundToInt(initialClickedObjectPosition.z + ((transform.position + transform.forward * 20f) - initialControllerState).z));
-                if(clickedObject.GetComponent<ExpandBase>().outside || !clickedObject.GetComponent<ExpandBase>().inside)
+                if(clickedObject.GetComponent<ExpandBase>().outside || !clickedObject.GetComponent<ExpandBase>().inside || clickedObject.GetComponent<ExpandBase>().overlap)
                 {
                     mr.material = cantPlaceMaterial;
                 }

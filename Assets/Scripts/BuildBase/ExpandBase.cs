@@ -23,7 +23,7 @@ public class ExpandBase : MonoBehaviour
     [SerializeField] private Material outsideMaterial;
     [SerializeField] private Material insideMaterial;
 
-	public bool inside, outside;
+	public bool inside, outside, overlap;
     public bool setColor = true;
 
     // Update is called once per frame
@@ -52,11 +52,11 @@ public class ExpandBase : MonoBehaviour
 
         if(setColor)
         {
-            if(outside || !inside)
+            if(outside || !inside || overlap)
             {
                 GetComponent<MeshRenderer>().material = outsideMaterial;
             }
-            else if(!outside && inside)
+            else if(!outside && inside && !overlap)
             {
                 GetComponent<MeshRenderer>().material = insideMaterial;
             }
@@ -70,6 +70,10 @@ public class ExpandBase : MonoBehaviour
 		else if(other.CompareTag("Outside")) {
 			outside = true;
         }
+        else if (other.CompareTag("Base"))
+        {
+            overlap = true;
+        }
 	}
 
 	private void OnTriggerStay(Collider other) {
@@ -79,7 +83,11 @@ public class ExpandBase : MonoBehaviour
 		else if(other.CompareTag("Outside")) {
 			outside = true;
         }
-	}
+        else if (other.CompareTag("Base"))
+        {
+            overlap = true;
+        }
+    }
 
 	private void OnTriggerExit(Collider other) {
 		if(other.CompareTag("Inside")) {
@@ -88,5 +96,9 @@ public class ExpandBase : MonoBehaviour
 		else if(other.CompareTag("Outside")) {
 			outside = false;
         }
-	}
+        else if (other.CompareTag("Base"))
+        {
+            overlap = false;
+        }
+    }
 }
