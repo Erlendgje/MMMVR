@@ -45,6 +45,12 @@ public class BaseTask : Tasks
             })),
             new Task ("Du kan fortsette å endre på byggningene hvis du vil, trykk på den rød knappen når du er ferdig.", "Button", new System.Func<bool> (() => {
                 if(activeTaskObject.GetComponent<HoverButton>().engaged) {
+
+                    foreach(GameObject go in GameObject.FindGameObjectsWithTag("Arrow"))
+                    {
+                        go.SetActive(false);
+                    }
+
                     onChangeScene();
                     TaskManager.taskManager.nextTask();
                     return true;

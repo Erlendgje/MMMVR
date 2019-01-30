@@ -88,7 +88,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1015005380214745820}
   m_LocalRotation: {x: -0.6186521, y: 0.34244663, z: 0.34244645, w: 0.61865205}
-  m_LocalPosition: {x: -17.69, y: 22.649136, z: -12.37}
+  m_LocalPosition: {x: -25.2, y: 22.646, z: -2.2199988}
   m_LocalScale: {x: 100.00006, y: 100.00011, z: 100.000046}
   m_Children:
   - {fileID: 968556476442416514}
@@ -272,7 +272,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6520508111306173169}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18.92, y: 22.663136, z: -10.77}
+  m_LocalPosition: {x: -26.43, y: 22.66, z: -0.62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7135385319430484996}
@@ -340,7 +340,7 @@ GameObject:
   - component: {fileID: 768094340481738682}
   m_Layer: 9
   m_Name: TaskObject
-  m_TagString: Arrow
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -948,7 +948,7 @@ GameObject:
   - component: {fileID: 8545552975138380590}
   m_Layer: 9
   m_Name: TaskObject
-  m_TagString: Arrow
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2848,7 +2848,7 @@ GameObject:
   - component: {fileID: 8545552976475343756}
   m_Layer: 9
   m_Name: TaskObject
-  m_TagString: Arrow
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
