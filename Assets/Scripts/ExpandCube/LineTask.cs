@@ -5,7 +5,6 @@ using UnityEngine;
 public class LineTask : Tasks {
     public override void onChangeScene()
     {
-        throw new System.NotImplementedException();
     }
 
     // Use this for initialization
@@ -15,12 +14,13 @@ public class LineTask : Tasks {
 
 			new Task("Dra nå i håndtakene for å lage et areal på 1 kvadratmeter", NONE, new System.Func<bool>(() => {
                 if(activeTaskObject.transform.localScale.x * activeTaskObject.transform.localScale.y == 1f) {
+                    text.GetComponentInParent<MoveCanvas>().moveText();
 					return true;
 				}
 				return false;
 			})),
 
-			new Task("Bra! Se på kuben til høyre. Bruk de fargede spakene til å lage en kube med volum på 100 kubikkdesimeter", "Volume", new System.Func<bool>(() => {
+			new Task("Bra! Bruk de fargede spakene til å lage en kube med volum på 100 kubikkdesimeter", "Volume", new System.Func<bool>(() => {
 				if(activeTaskObject.transform.localScale.x * activeTaskObject.transform.localScale.y * activeTaskObject.transform.localScale.z == 0.1f) {
 					return true;
 				}
@@ -29,19 +29,20 @@ public class LineTask : Tasks {
 
 			new Task("Bra! Lag nå en kube på 1 kubikkmeter", NONE, new System.Func<bool>(() => {
 				if(activeTaskObject.transform.localScale.x * activeTaskObject.transform.localScale.y * activeTaskObject.transform.localScale.z == 1f) {
-					return true;
+                    text.GetComponentInParent<MoveCanvas>().moveText();
+                    return true;
 				}
 				return false;
 			})),
 
-			new Task("En kubikkmeter inneholder 1000 kuber på 1 kubikkdesemeter. Trykk på den sorte knappen.", "1000Cubes", new System.Func<bool>(() => {
-                if(activeTaskObject.GetComponentInChildren<Rigidbody>() != null)
+			new Task("En kubikkmeter inneholder 1000 kuber på 1 kubikkdesemeter. Hver kube kan tas ut av kuben. Trykk på den rød knappen på bordet for å fortsette!", "1000Cubes", new System.Func<bool>(() => {
+                if(activeTaskObject.GetComponentsInChildren<Rigidbody>() != null)
                 {
                     return true;
                 }
                 return false;
 			})),
-            new Task("Prøv å trykk på knappen igjen.", NONE, new System.Func<bool>(() => {
+            new Task("En kubikkmeter inneholder 1000 kuber på 1 kubikkdesemeter. Hver kube kan tas ut av kuben. Prøv å trykk på knappen igjen.", NONE, new System.Func<bool>(() => {
                 if (!activeTaskObject.GetComponentInChildren<Rigidbody>().isKinematic)
                 {
                     TaskManager.taskManager.mathWorldDone = true;

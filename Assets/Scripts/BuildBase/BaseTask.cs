@@ -24,7 +24,7 @@ public class BaseTask : Tasks
                 }
                 return false;
             })),
-            new Task ("Vi trenger vann til potetene. Sett ut en vanntank som rommer 100 liter", "WaterTank", new System.Func<bool> (() => {
+            new Task ("Vi trenger vann til potetene. Sett ut en vanntank som rommer 100 kubikkmeter", "WaterTank", new System.Func<bool> (() => {
                 if(activeTaskObject.GetComponent<ExpandBase>().inside && !activeTaskObject.GetComponent<ExpandBase>().outside && !activeTaskObject.GetComponent<ExpandBase>().overlap) {
                     if (Mathf.RoundToInt(activeTaskObject.transform.localScale.x * activeTaskObject.transform.localScale.y * activeTaskObject.transform.localScale.z)== 100)
                     {
