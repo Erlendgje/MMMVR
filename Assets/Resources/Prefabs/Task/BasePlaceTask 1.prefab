@@ -335,12 +335,13 @@ GameObject:
   - component: {fileID: 7323161042644859988}
   - component: {fileID: 7323161042644859987}
   - component: {fileID: 7323161042644859986}
+  - component: {fileID: 4922613374878004948}
   - component: {fileID: 3066191678020872119}
   - component: {fileID: 7323161042644859996}
   - component: {fileID: 768094340481738682}
   m_Layer: 9
   m_Name: TaskObject
-  m_TagString: Untagged
+  m_TagString: Base
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -417,6 +418,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &4922613374878004948
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7323161042644859984}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9796292, y: 1, z: 0.97949505}
+  m_Center: {x: 0.0025118194, y: 0, z: 0.00015306473}
 --- !u!114 &3066191678020872119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -443,6 +457,7 @@ MonoBehaviour:
   insideMaterial: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   inside: 0
   outside: 0
+  overlap: 0
   setColor: 1
 --- !u!114 &7323161042644859996
 MonoBehaviour:
@@ -681,7 +696,7 @@ GameObject:
   - component: {fileID: 8545552974961961760}
   m_Layer: 0
   m_Name: WaterTank
-  m_TagString: Base
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -946,9 +961,10 @@ GameObject:
   - component: {fileID: 8545552975138380576}
   - component: {fileID: 8545552975138380591}
   - component: {fileID: 8545552975138380590}
+  - component: {fileID: 734056166715098259}
   m_Layer: 9
   m_Name: TaskObject
-  m_TagString: Untagged
+  m_TagString: Base
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1051,6 +1067,7 @@ MonoBehaviour:
   insideMaterial: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   inside: 0
   outside: 0
+  overlap: 0
   setColor: 1
 --- !u!114 &8545552975138380591
 MonoBehaviour:
@@ -1081,6 +1098,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &734056166715098259
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8545552975138380588}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9793536, y: 1, z: 0.9822458}
+  m_Center: {x: 0.0011437734, y: 0, z: -0.0007397334}
 --- !u!1 &8545552975180458255
 GameObject:
   m_ObjectHideFlags: 0
@@ -1975,7 +2005,7 @@ GameObject:
   - component: {fileID: 8545552975997545937}
   m_Layer: 0
   m_Name: Compost
-  m_TagString: Base
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2846,9 +2876,10 @@ GameObject:
   - component: {fileID: 8545552976475343758}
   - component: {fileID: 8545552976475343757}
   - component: {fileID: 8545552976475343756}
+  - component: {fileID: 980192189294663570}
   m_Layer: 9
   m_Name: TaskObject
-  m_TagString: Untagged
+  m_TagString: Base
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2951,6 +2982,7 @@ MonoBehaviour:
   insideMaterial: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   inside: 0
   outside: 0
+  overlap: 0
   setColor: 1
 --- !u!114 &8545552976475343757
 MonoBehaviour:
@@ -2981,6 +3013,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &980192189294663570
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8545552976475343754}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.97327363, y: 1, z: 0.97306365}
+  m_Center: {x: -0.00067170465, y: 0, z: 0.005685409}
 --- !u!1 &8545552976479404755
 GameObject:
   m_ObjectHideFlags: 0
@@ -4083,36 +4128,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 2
---- !u!1 &8865454545709473741
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8865454545709473742}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8865454545709473742
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8865454545709473741}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8865454546175881804}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8865454545742509989
 GameObject:
   m_ObjectHideFlags: 0
@@ -4653,7 +4668,7 @@ GameObject:
   - component: {fileID: 6202324597800010897}
   m_Layer: 0
   m_Name: Greenhouse
-  m_TagString: Base
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4675,7 +4690,6 @@ Transform:
   - {fileID: 8865454545171862659}
   - {fileID: 8865454546717171042}
   - {fileID: 8865454545512526618}
-  - {fileID: 8865454545709473742}
   m_Father: {fileID: 7135385319430484996}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
