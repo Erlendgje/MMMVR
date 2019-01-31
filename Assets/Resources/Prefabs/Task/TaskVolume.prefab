@@ -6466,6 +6466,11 @@ PrefabInstance:
       propertyPath: onButtonDown.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 5736714739712631799, guid: 75e89a8471b825345ba11968d1faf570,
+        type: 3}
+      propertyPath: localMoveDistance.y
+      value: -0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 114171819367528810, guid: 75e89a8471b825345ba11968d1faf570,
         type: 3}
       propertyPath: onButtonUp.m_PersistentCalls.m_Calls.Array.size
