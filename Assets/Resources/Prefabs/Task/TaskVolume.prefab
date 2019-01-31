@@ -6312,6 +6312,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5622691616134684697, guid: 75e89a8471b825345ba11968d1faf570,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.0013541282
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622691616134684697, guid: 75e89a8471b825345ba11968d1faf570,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.0026585027
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622691616134684697, guid: 75e89a8471b825345ba11968d1faf570,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.0013308015
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622691616134684697, guid: 75e89a8471b825345ba11968d1faf570,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.01144
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622691616134684697, guid: 75e89a8471b825345ba11968d1faf570,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.002474
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622691616134684697, guid: 75e89a8471b825345ba11968d1faf570,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.004182
+      objectReference: {fileID: 0}
     - target: {fileID: 1895232141083086, guid: 75e89a8471b825345ba11968d1faf570, type: 3}
       propertyPath: m_Name
       value: TaskObject
@@ -6435,6 +6465,11 @@ PrefabInstance:
         type: 3}
       propertyPath: onButtonDown.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5736714739712631799, guid: 75e89a8471b825345ba11968d1faf570,
+        type: 3}
+      propertyPath: localMoveDistance.y
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 114171819367528810, guid: 75e89a8471b825345ba11968d1faf570,
         type: 3}
