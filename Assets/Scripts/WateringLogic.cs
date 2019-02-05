@@ -73,7 +73,7 @@ public class WateringLogic : MonoBehaviour
                 onContainerInBox.Invoke();
             }
 
-            other.gameObject.SetActive(false);
+            //other.gameObject.SetActive(false);
 
             yield return new WaitForSeconds(0.4f);
 
