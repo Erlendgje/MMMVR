@@ -436,7 +436,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 3f5766a8b67794141ac19c1a51d27083, type: 2}
-  - {fileID: 2100000, guid: 097b51d400f87c24193f3686d4e2478f, type: 2}
+  - {fileID: 2100000, guid: b0c0de612a297004e8d48c5fec5c2c2b, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -865,7 +865,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1748424818510364}
-  m_Mesh: {fileID: 4300004, guid: b0c0de612a297004e8d48c5fec5c2c2b, type: 3}
+  m_Mesh: {fileID: 4300000, guid: b0c0de612a297004e8d48c5fec5c2c2b, type: 3}
 --- !u!23 &23285446406045374
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -884,7 +884,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 35b88b238316ffb45bee3086c8968e8c, type: 2}
-  - {fileID: 2100000, guid: 097b51d400f87c24193f3686d4e2478f, type: 2}
+  - {fileID: 2100000, guid: b0c0de612a297004e8d48c5fec5c2c2b, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -933,7 +933,7 @@ MeshCollider:
   serializedVersion: 3
   m_Convex: 1
   m_CookingOptions: 14
-  m_Mesh: {fileID: 4300004, guid: b0c0de612a297004e8d48c5fec5c2c2b, type: 3}
+  m_Mesh: {fileID: 4300000, guid: b0c0de612a297004e8d48c5fec5c2c2b, type: 3}
 --- !u!114 &114482085833552864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1155,7 +1155,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a8f782ec419f7d044bdeaaf19373a612, type: 2}
-  - {fileID: 2100000, guid: 097b51d400f87c24193f3686d4e2478f, type: 2}
+  - {fileID: 2100000, guid: b0c0de612a297004e8d48c5fec5c2c2b, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1607,7 +1607,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: c6899f44fd13b2349aba9d442dee5fa5, type: 2}
-  - {fileID: 2100000, guid: 097b51d400f87c24193f3686d4e2478f, type: 2}
+  - {fileID: 2100000, guid: b0c0de612a297004e8d48c5fec5c2c2b, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1850,10 +1850,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4637602568662340}
     m_Modifications:
-    - target: {fileID: 125956, guid: 73ac470d3d909d645a6c89a4664b6849, type: 3}
-      propertyPath: m_Name
-      value: TeleportPoint
-      objectReference: {fileID: 0}
     - target: {fileID: 428928, guid: 73ac470d3d909d645a6c89a4664b6849, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.4
@@ -1897,6 +1893,14 @@ PrefabInstance:
     - target: {fileID: 428928, guid: 73ac470d3d909d645a6c89a4664b6849, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 125956, guid: 73ac470d3d909d645a6c89a4664b6849, type: 3}
+      propertyPath: m_Name
+      value: TeleportPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 13593758, guid: 73ac470d3d909d645a6c89a4664b6849, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73ac470d3d909d645a6c89a4664b6849, type: 3}
