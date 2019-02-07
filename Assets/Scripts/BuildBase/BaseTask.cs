@@ -72,6 +72,6 @@ public class BaseTask : Tasks
             }))
         };
 
-        spawnObject();
-    }
+		loadTask(TaskManager.taskManager.activeTask);
+	}
 }

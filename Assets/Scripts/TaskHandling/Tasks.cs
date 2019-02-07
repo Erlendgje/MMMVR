@@ -42,6 +42,7 @@ public abstract class Tasks : MonoBehaviour{
 				spawnObject(i);
 			}
 		}
+		task = taskState;
 	}
 
     public abstract void onChangeScene();

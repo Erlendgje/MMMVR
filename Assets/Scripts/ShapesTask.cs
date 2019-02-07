@@ -21,7 +21,7 @@ public class ShapesTask : Tasks {
 
             }))
         };
-		spawnObject();
+		loadTask(TaskManager.taskManager.activeTask);
 	}
 }
 

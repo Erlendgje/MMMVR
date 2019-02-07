@@ -43,6 +43,6 @@ public class PyramidTask : Tasks {
 				return false;
 			}))
 		};
-		spawnObject();
+		loadTask(TaskManager.taskManager.activeTask);
 	}
 }

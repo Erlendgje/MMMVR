@@ -5,6 +5,7 @@ using UnityEngine;
 public class LineTask : Tasks {
     public override void onChangeScene()
     {
+		TaskManager.taskManager.activeTask = task;
     }
 
     // Use this for initialization
