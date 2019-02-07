@@ -43,7 +43,7 @@ public class LineTask : Tasks {
                 }
                 return false;
 			})),
-            new Task("En kubikkmeter inneholder 1000 kuber på 1 kubikkdesemeter. Hver kube kan tas ut av kuben. Prøv å trykk på knappen igjen.", NONE, new System.Func<bool>(() => {
+            new Task("En kubikkmeter inneholder 1000 kuber på 1 kubikkdesemeter. Hver kube kan tas ut av kuben. Prøv å trykke på knappen igjen.", NONE, new System.Func<bool>(() => {
                 if (!activeTaskObject.GetComponentInChildren<Rigidbody>().isKinematic)
                 {
                     TaskManager.taskManager.mathWorldDone = true;
