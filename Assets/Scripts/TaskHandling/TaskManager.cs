@@ -8,6 +8,7 @@ public class TaskManager : MonoBehaviour
 	public List<MarsTask> marsTasks;
 	public GameObject activeObject;
 	public bool mathWorldDone;
+	public int mathWorldTask;
 
 	public static TaskManager taskManager;
 	public int activeTask = 0;

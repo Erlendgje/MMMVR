@@ -54,6 +54,6 @@ public class LineTask : Tasks {
 				return false;
 			}))};
 
-		spawnObject();
+		loadTask(TaskManager.taskManager.activeTask);
 	}
 }
