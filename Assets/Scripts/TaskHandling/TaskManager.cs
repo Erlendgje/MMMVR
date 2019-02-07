@@ -7,7 +7,9 @@ public class TaskManager : MonoBehaviour
 
 	public List<MarsTask> marsTasks;
 	public GameObject activeObject;
+    public GameObject mathTask;
 	public bool mathWorldDone;
+	public int mathWorldTask;
 
 	public static TaskManager taskManager;
 	public int activeTask = 0;
@@ -25,7 +27,8 @@ public class TaskManager : MonoBehaviour
 	public void nextTask() {
 		activeTask++;
 		mathWorldDone = false;
-		activeObject.GetComponent<Tasks>().enabled = false;
+        mathWorldTask = 0;
+        activeObject.GetComponent<Tasks>().enabled = false;
 		activeObject = null;
 	}
 
