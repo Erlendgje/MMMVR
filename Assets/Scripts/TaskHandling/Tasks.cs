@@ -37,7 +37,7 @@ public abstract class Tasks : MonoBehaviour{
 	}
 
 	public void loadTask(int taskState) {
-		for(int i = 0; i < taskState; i++) {
+		for(int i = 0; i < taskState + 1; i++) {
 			if(tasks[i].prefab != NONE) {
 				spawnObject(i);
 			}

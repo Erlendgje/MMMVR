@@ -21,6 +21,14 @@ public class MyHandScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update() {
 		if(GetChangeScene()) {
+            if(TaskManager.taskManager.activeObject != null)
+            {
+                TaskManager.taskManager.activeObject.GetComponent<Tasks>().onChangeScene();
+            }
+            if (TaskManager.taskManager.mathTask != null)
+            {
+                TaskManager.taskManager.mathTask.GetComponent<Tasks>().onChangeScene();
+            }
 			if(!mathWorldActivated) {
 				mathWorldActivated = true;
 				TaskManager.taskManager.setActive(false);

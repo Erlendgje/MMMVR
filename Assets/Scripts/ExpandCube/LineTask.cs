@@ -5,7 +5,7 @@ using UnityEngine;
 public class LineTask : Tasks {
     public override void onChangeScene()
     {
-		TaskManager.taskManager.activeTask = task;
+		TaskManager.taskManager.mathWorldTask = task;
     }
 
     // Use this for initialization
@@ -55,6 +55,6 @@ public class LineTask : Tasks {
 				return false;
 			}))};
 
-		loadTask(TaskManager.taskManager.activeTask);
+		loadTask(TaskManager.taskManager.mathWorldTask);
 	}
 }
