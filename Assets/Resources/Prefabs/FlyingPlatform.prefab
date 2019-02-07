@@ -391,6 +391,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8527302762186642594}
   - component: {fileID: 7779300735400345374}
+  - component: {fileID: 5928325580006965888}
   m_Layer: 0
   m_Name: FlyingPlatform
   m_TagString: Untagged
@@ -439,6 +440,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5928325580006965888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3612772285386271359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db1e4ce8e79ebe844bfbdec86e257d6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformEndPosition: {x: -23.74, y: 22.5, z: -2.17}
+  playerEndPosition: {x: 7.2, y: 22.6, z: -1.5}
 --- !u!1 &4098869688940922740
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,6 +769,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8527302762186642594}
     m_Modifications:
+    - target: {fileID: 125956, guid: 73ac470d3d909d645a6c89a4664b6849, type: 3}
+      propertyPath: m_Name
+      value: TeleportPoint
+      objectReference: {fileID: 0}
     - target: {fileID: 428928, guid: 73ac470d3d909d645a6c89a4664b6849, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.007
@@ -797,10 +816,6 @@ PrefabInstance:
     - target: {fileID: 428928, guid: 73ac470d3d909d645a6c89a4664b6849, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 125956, guid: 73ac470d3d909d645a6c89a4664b6849, type: 3}
-      propertyPath: m_Name
-      value: TeleportPoint
       objectReference: {fileID: 0}
     - target: {fileID: 435704, guid: 73ac470d3d909d645a6c89a4664b6849, type: 3}
       propertyPath: m_LocalPosition.x

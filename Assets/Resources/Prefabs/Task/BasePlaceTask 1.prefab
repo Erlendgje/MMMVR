@@ -246,20 +246,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: a047a1361d8cf1f4ea82d638bcf6fa1a, type: 3}
---- !u!114 &9069908220644464344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5953235163421992397}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db1e4ce8e79ebe844bfbdec86e257d6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  platformEndPosition: {x: -23.74, y: 22.5, z: -2.17}
-  playerEndPosition: {x: 7, y: 22.6, z: -2.5}
 --- !u!1 &7323161042644859984
 GameObject:
   m_ObjectHideFlags: 0
@@ -5474,6 +5460,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1016487853404043292}
     m_Modifications:
+    - target: {fileID: 1000014042078020, guid: 88075a54c7fb1484ba25db394b612917, type: 3}
+      propertyPath: m_Name
+      value: TaskObject
+      objectReference: {fileID: 0}
     - target: {fileID: 4000014195058408, guid: 88075a54c7fb1484ba25db394b612917, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.00033
@@ -5529,10 +5519,6 @@ PrefabInstance:
     - target: {fileID: 4000014195058408, guid: 88075a54c7fb1484ba25db394b612917, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.0035468095
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000014042078020, guid: 88075a54c7fb1484ba25db394b612917, type: 3}
-      propertyPath: m_Name
-      value: TaskObject
       objectReference: {fileID: 0}
     - target: {fileID: 114000013988111622, guid: 88075a54c7fb1484ba25db394b612917,
         type: 3}
@@ -5663,7 +5649,7 @@ PrefabInstance:
         type: 3}
       propertyPath: onButtonDown.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 9069908220644464344}
+      objectReference: {fileID: 3672863767024078130}
     - target: {fileID: 8833248879592626373, guid: 0329b85a5835ed948b1ad541ba8da9d8,
         type: 3}
       propertyPath: onButtonDown.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -5688,7 +5674,7 @@ PrefabInstance:
         type: 3}
       propertyPath: onButtonIsPressed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 9069908220644464344}
+      objectReference: {fileID: 3672863767024078130}
     - target: {fileID: 8833248879592626373, guid: 0329b85a5835ed948b1ad541ba8da9d8,
         type: 3}
       propertyPath: onButtonIsPressed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -5722,15 +5708,21 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 7779300735400345374, guid: 0329b85a5835ed948b1ad541ba8da9d8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0329b85a5835ed948b1ad541ba8da9d8, type: 3}
---- !u!1 &5953235163421992397 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3612772285386271359, guid: 0329b85a5835ed948b1ad541ba8da9d8,
-    type: 3}
-  m_PrefabInstance: {fileID: 6970735041583435698}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1651156646256532240 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8527302762186642594, guid: 0329b85a5835ed948b1ad541ba8da9d8,
     type: 3}
   m_PrefabInstance: {fileID: 6970735041583435698}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3672863767024078130 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5928325580006965888, guid: 0329b85a5835ed948b1ad541ba8da9d8,
+    type: 3}
+  m_PrefabInstance: {fileID: 6970735041583435698}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db1e4ce8e79ebe844bfbdec86e257d6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

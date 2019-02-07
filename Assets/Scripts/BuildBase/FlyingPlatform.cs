@@ -12,7 +12,7 @@ public class FlyingPlatform : MonoBehaviour
 
     void Start()
     {
-        platformStartPosition = transform.position;
+        platformStartPosition = transform.localPosition;
     }
 
     public void MovePlatform()
