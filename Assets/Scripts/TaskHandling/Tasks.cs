@@ -9,7 +9,7 @@ using Valve.VR.InteractionSystem;
 public abstract class Tasks : MonoBehaviour{
 
 	public List<Task> tasks;
-	private int task = 0;
+	public int task = 0;
 	public Text text;
 	public GameObject activeObject;
 	public GameObject activeTaskObject;
@@ -24,16 +24,25 @@ public abstract class Tasks : MonoBehaviour{
 			text.text = tasks[task].text;
 			if(tasks[task].prefab != NONE) {
 				//Destroy(activeObject);
-				spawnObject();
+				spawnObject(task);
 			}
 		}
 	}
 
-	public void spawnObject() {
+	public void spawnObject(int task) {
 		activeObject = GetComponentsInChildren<Transform>(true).Where(x => x.name == tasks[task].prefab).ToList()[0].gameObject;
 		activeObject.SetActive(true);
 		activeTaskObject = activeObject.transform.Find("TaskObject").gameObject;
 		text.text = tasks[task].text;
+	}
+
+	public void loadTask(int taskState) {
+		for(int i = 0; i < taskState + 1; i++) {
+			if(tasks[i].prefab != NONE) {
+				spawnObject(i);
+			}
+		}
+		task = taskState;
 	}
 
     public abstract void onChangeScene();

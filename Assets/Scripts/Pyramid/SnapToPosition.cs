@@ -19,11 +19,7 @@ public class SnapToPosition : MonoBehaviour {
 	void Start () {
         rgdb = this.GetComponent<Rigidbody>();
 
-        if (snappedObjects == null)
-        {
-            snappedObjects = new List<GameObject>();
-        }
-
+        snappedObjects = new List<GameObject>();
     }
 
     void OnTriggerStay(Collider other)

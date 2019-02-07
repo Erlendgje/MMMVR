@@ -888,7 +888,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1074873944692884}
   m_LocalRotation: {x: -0, y: -0, z: -0.99998593, w: -0.0053144167}
-  m_LocalPosition: {x: 0, y: -0.1, z: 0.0018}
+  m_LocalPosition: {x: 0, y: -0.1088, z: 0.0018}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4093515405533150}
@@ -3295,7 +3295,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1672968990276772}
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.1042, y: 0, z: 0.0001}
+  m_LocalPosition: {x: 0.1088, y: 0, z: 0.0001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4318137591060658}
@@ -6588,6 +6588,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4702919179907030}
     m_Modifications:
+    - target: {fileID: 125956, guid: 73ac470d3d909d645a6c89a4664b6849, type: 3}
+      propertyPath: m_Name
+      value: TeleportPoint (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 428928, guid: 73ac470d3d909d645a6c89a4664b6849, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.20500019
@@ -6640,10 +6644,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 125956, guid: 73ac470d3d909d645a6c89a4664b6849, type: 3}
-      propertyPath: m_Name
-      value: TeleportPoint (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 13593758, guid: 73ac470d3d909d645a6c89a4664b6849, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -6663,6 +6663,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4480969664979556}
     m_Modifications:
+    - target: {fileID: 125956, guid: 73ac470d3d909d645a6c89a4664b6849, type: 3}
+      propertyPath: m_Name
+      value: TeleportPoint
+      objectReference: {fileID: 0}
     - target: {fileID: 428928, guid: 73ac470d3d909d645a6c89a4664b6849, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.068000086
@@ -6715,10 +6719,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 125956, guid: 73ac470d3d909d645a6c89a4664b6849, type: 3}
-      propertyPath: m_Name
-      value: TeleportPoint
-      objectReference: {fileID: 0}
     - target: {fileID: 13593758, guid: 73ac470d3d909d645a6c89a4664b6849, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -6738,6 +6738,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4116854412334364}
     m_Modifications:
+    - target: {fileID: 125956, guid: 73ac470d3d909d645a6c89a4664b6849, type: 3}
+      propertyPath: m_Name
+      value: TeleportPoint (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 428928, guid: 73ac470d3d909d645a6c89a4664b6849, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.007388614
@@ -6793,10 +6797,6 @@ PrefabInstance:
     - target: {fileID: 428928, guid: 73ac470d3d909d645a6c89a4664b6849, type: 3}
       propertyPath: m_LocalScale.y
       value: 0.013378087
-      objectReference: {fileID: 0}
-    - target: {fileID: 125956, guid: 73ac470d3d909d645a6c89a4664b6849, type: 3}
-      propertyPath: m_Name
-      value: TeleportPoint (2)
       objectReference: {fileID: 0}
     - target: {fileID: 13593758, guid: 73ac470d3d909d645a6c89a4664b6849, type: 3}
       propertyPath: m_IsTrigger
