@@ -22,6 +22,11 @@ public class FlyingPlatform : MonoBehaviour
         teleportPlayer(playerEndPosition);
     }
 
+    public void MovePlatformBack()
+    {
+        transform.localPosition = platformStartPosition;
+    }
+
     private void teleportPlayer(Vector3 position)
     {
         GameObject.FindGameObjectWithTag("Player").transform.position = position;

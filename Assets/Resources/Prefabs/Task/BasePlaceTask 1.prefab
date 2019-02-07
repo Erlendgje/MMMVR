@@ -5644,6 +5644,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FlyingPlatform
       objectReference: {fileID: 0}
+    - target: {fileID: 3612772285386271359, guid: 0329b85a5835ed948b1ad541ba8da9d8,
+        type: 3}
+      propertyPath: m_TagString
+      value: FlyingPlatform
+      objectReference: {fileID: 0}
     - target: {fileID: 8833248879592626373, guid: 0329b85a5835ed948b1ad541ba8da9d8,
         type: 3}
       propertyPath: onButtonIsPressed.m_PersistentCalls.m_Calls.Array.size

@@ -9,7 +9,9 @@ public class BaseTask : Tasks
     {
         GameObject.FindGameObjectWithTag("GameController").GetComponent<BaseArrow>().enabled = !GameObject.FindGameObjectWithTag("GameController").GetComponent<BaseArrow>().enabled;
         GameObject.FindGameObjectWithTag("GameController").GetComponent<LineRenderer>().enabled = !GameObject.FindGameObjectWithTag("GameController").GetComponent<LineRenderer>().enabled;
-		GameObject.FindGameObjectWithTag ("FlyingPlatform").GetComponent<FlyingPlatform> ().MovePlatformBack ();
+        if(GameObject.Find("FlyingPlatform")) { 
+		    GameObject.Find("FlyingPlatform").GetComponent<FlyingPlatform> ().MovePlatformBack ();
+        }
     }
 
     // Use this for initialization

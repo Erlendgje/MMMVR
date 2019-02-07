@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18068151, g: 0.22618926, b: 0.30713537, a: 1}
+  m_IndirectSpecularColor: {r: 0.18068196, g: 0.22618999, b: 0.30713663, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -170,7 +170,6 @@ GameObject:
   - component: {fileID: 500806584}
   - component: {fileID: 500806583}
   - component: {fileID: 500806581}
-  - component: {fileID: 500806580}
   - component: {fileID: 500806579}
   m_Layer: 0
   m_Name: Plane
@@ -190,20 +189,6 @@ TerrainCollider:
   m_Enabled: 1
   m_TerrainData: {fileID: 0}
   m_EnableTreeColliders: 1
---- !u!114 &500806580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 500806578}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84a4f15a3179f1d4993aded11f4d0232, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  locked: 0
-  markerActive: 1
 --- !u!64 &500806581
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -691,7 +676,7 @@ MonoBehaviour:
   marsTasks:
   - task: {fileID: 879937787344037824, guid: eb763416b5b47f748afc604a35756a45, type: 3}
     position: {x: 31, y: 0, z: 0}
-    playerPosition: {x: 4, y: 23, z: 0}
+    playerPosition: {x: 4, y: 0.5, z: 0}
   - task: {fileID: 219733804260828619, guid: 313c4aee2b398ca4a9f7cff9ff86d561, type: 3}
     position: {x: 27, y: 3, z: -14}
     playerPosition: {x: 18, y: 0, z: -18}
