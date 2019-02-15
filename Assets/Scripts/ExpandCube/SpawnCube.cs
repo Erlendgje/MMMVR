@@ -6,10 +6,19 @@ public class SpawnCube : MonoBehaviour {
 
 	[SerializeField] GameObject cube;
 	[SerializeField] int x, y, z = 10;
+    [SerializeField] bool spawn;
 
     private bool first = true;
     private bool reset;
     private bool spawning;
+
+    private void Start()
+    {
+        if (spawn)
+        {
+            StartCoroutine("spawnCubes", first);
+        }
+    }
 
     public void buttonLogic()
     {
@@ -39,6 +48,13 @@ public class SpawnCube : MonoBehaviour {
                     if (first)
                     {
                         Instantiate(cube, this.transform).transform.localPosition = new Vector3(l * 0.101f, i * 0.101f, k * 0.101f);
+                        if (spawn)
+                        {
+                            foreach (Rigidbody r in this.GetComponentsInChildren<Rigidbody>())
+                            {
+                                r.isKinematic = false;
+                            }
+                        }
                     }
                     else
                     {
@@ -47,7 +63,7 @@ public class SpawnCube : MonoBehaviour {
                         transform.GetChild(i * 100 + k * 10 + l).GetComponent<Rigidbody>().isKinematic = true;
                     }
                     
-                    yield return new WaitForSeconds(0.01f);
+                    yield return new WaitForSeconds(0.001f);
                 }
             }
         }
