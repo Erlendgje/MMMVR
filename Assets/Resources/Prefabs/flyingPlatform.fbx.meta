@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 97a00f4f73b72e34495e72d6d3cac73f
+guid: 7937f1189260eeb42a2f7917f9ec5fd6
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -9,18 +9,16 @@ ModelImporter:
     400000: Cube
     400002: //RootNode
     400004: Sphere
-    2100000: Material_003
-    2100002: Material_002
-    2100004: Material_004
+    2100000: Material.003
+    2100002: Material.002
+    2100004: Material.004
     2300000: Cube
     2300002: Sphere
     3300000: Cube
     3300002: Sphere
     4300000: Sphere
     4300002: Cube
-    7400000: Default Take
     9500000: //RootNode
-    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -73,7 +71,7 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
+    previousCalculatedGlobalScale: 0.01
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
