@@ -75,6 +75,6 @@ public class BaseTask : Tasks
             }))
         };
 
-		loadTask(TaskManager.taskManager.activeTask);
+		loadTask(0);
 	}
 }

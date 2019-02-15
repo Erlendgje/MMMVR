@@ -721,6 +721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 352b5e998c389a347ad71bd4b288e3f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  task: 0
   text: {fileID: 114469706939183542}
   activeObject: {fileID: 0}
   activeTaskObject: {fileID: 1679534693035470}
@@ -1387,7 +1388,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 620640554978232919}
   m_LocalRotation: {x: -0, y: 0.70709974, z: -0, w: 0.70711386}
-  m_LocalPosition: {x: -0.2369999, y: 0.36099994, z: 0.22300003}
+  m_LocalPosition: {x: -0.237, y: 0.36099994, z: 0.281}
   m_LocalScale: {x: 0.14173138, y: 0.14173126, z: 0.14173138}
   m_Children: []
   m_Father: {fileID: 4749976638448334}
@@ -1438,9 +1439,9 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 620640554978232919}
-  m_Text: FEIL!
+  m_Text: Dette ser ikke riktig ut
   m_OffsetZ: 0
-  m_CharacterSize: 0.07
+  m_CharacterSize: 0.02
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0
@@ -1850,6 +1851,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4637602568662340}
     m_Modifications:
+    - target: {fileID: 125956, guid: 73ac470d3d909d645a6c89a4664b6849, type: 3}
+      propertyPath: m_Name
+      value: TeleportPoint
+      objectReference: {fileID: 0}
     - target: {fileID: 428928, guid: 73ac470d3d909d645a6c89a4664b6849, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.4
@@ -1893,10 +1898,6 @@ PrefabInstance:
     - target: {fileID: 428928, guid: 73ac470d3d909d645a6c89a4664b6849, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 125956, guid: 73ac470d3d909d645a6c89a4664b6849, type: 3}
-      propertyPath: m_Name
-      value: TeleportPoint
       objectReference: {fileID: 0}
     - target: {fileID: 13593758, guid: 73ac470d3d909d645a6c89a4664b6849, type: 3}
       propertyPath: m_IsTrigger

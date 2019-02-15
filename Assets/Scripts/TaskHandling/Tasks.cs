@@ -16,7 +16,7 @@ public abstract class Tasks : MonoBehaviour{
 	public static string NONE = "";
 
 	public void onDetach() {
-		if(tasks[task].taskCheck()) {
+        if (tasks[task].taskCheck()) {
             if(task <= tasks.Count)
             {
                 task++;

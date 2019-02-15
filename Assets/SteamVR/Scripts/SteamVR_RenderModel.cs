@@ -61,6 +61,7 @@ namespace Valve.VR
         // The hashtable is preserving its entries, but the mesh and material
         // variables are going null.
 
+        [SerializeField]
         public class RenderModel
         {
             public RenderModel(Mesh mesh, Material material)
