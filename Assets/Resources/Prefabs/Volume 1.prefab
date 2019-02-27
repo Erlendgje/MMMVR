@@ -528,7 +528,7 @@ MonoBehaviour:
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 7e90f10e44a186a49a00679d068515ed,
+          m_ObjectArgument: {fileID: 2100000, guid: 35b88b238316ffb45bee3086c8968e8c,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
@@ -546,7 +546,7 @@ MonoBehaviour:
   onDetachedFromHand:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1093018806479877379}
         m_MethodName: onDetach
         m_Mode: 1
         m_Arguments:
@@ -1058,7 +1058,7 @@ MonoBehaviour:
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 7e90f10e44a186a49a00679d068515ed,
+          m_ObjectArgument: {fileID: 2100000, guid: c6899f44fd13b2349aba9d442dee5fa5,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
@@ -1076,7 +1076,7 @@ MonoBehaviour:
   onDetachedFromHand:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1093018806479877379}
         m_MethodName: onDetach
         m_Mode: 1
         m_Arguments:
@@ -1417,6 +1417,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4846236653472700}
+  - component: {fileID: 1093018806479877379}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -1441,6 +1442,19 @@ Transform:
   m_Father: {fileID: 4375378779777220}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1093018806479877379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590959636906402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6578fd933a7af3e49903f59662a87cd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plane: 0
 --- !u!1 &1609790425996356
 GameObject:
   m_ObjectHideFlags: 0
@@ -2309,7 +2323,7 @@ MonoBehaviour:
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 7e90f10e44a186a49a00679d068515ed,
+          m_ObjectArgument: {fileID: 2100000, guid: a8f782ec419f7d044bdeaaf19373a612,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
@@ -2327,7 +2341,7 @@ MonoBehaviour:
   onDetachedFromHand:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1093018806479877379}
         m_MethodName: onDetach
         m_Mode: 1
         m_Arguments:
