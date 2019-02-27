@@ -5,11 +5,11 @@ using UnityEngine;
 public class Task : MonoBehaviour {
 
 	[SerializeField] private bool plane;
-	private float solution;
-	private bool answerSpaceCorrect;
-	private bool taskComplete;
+	public float solution;
+	public bool answerSpaceCorrect;
+	public bool taskComplete;
 	private TaskHandler taskHandler;
-	private int index;
+	public int index;
 
 	// Start is called before the first frame update
 	void Start() {

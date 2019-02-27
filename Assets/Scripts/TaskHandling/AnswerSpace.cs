@@ -1,20 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class AnswerSpace : MonoBehaviour {
 
-	public Dictionary<Space, Task> answers;
+	[SerializeField] private List<Space> spaces;
+	[SerializeField] private List<Task> tasks;
 
-	// Start is called before the first frame update
-	void Start() {
-
-	}
-
-	// Update is called once per frame
-	void Update() {
-
-	}
 
 	public void valueChanged(bool value, Space space) {
 		valueChanged(value, space, 0);
@@ -22,8 +15,8 @@ public class AnswerSpace : MonoBehaviour {
 
 	public void valueChanged(bool value, Space space, float solution) {
 		Task task;
-		answers.TryGetValue(space, out task);
-		task.setAnswerSpaceCorrect(value);
+		task = tasks[spaces.FindIndex(s => s == space)];
 		task.changeSolution(solution);
+		task.setAnswerSpaceCorrect(value);
 	}
 }

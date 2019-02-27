@@ -1,23 +1,26 @@
-﻿using System.Collections;
-using System.Linq;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
+
 
 public class Space : MonoBehaviour {
 
 	private AnswerSpace answerSpace;
-	private List<Answers> answers;
-	private bool correct;
+	[SerializeField] private List<Answers> answers;
+	public bool correct;
+	public bool checkValueChanged;
 
 	// Start is called before the first frame update
 	void Start() {
 		answerSpace = GetComponentInParent<AnswerSpace>();
-		answers = new List<Answers>();
+		//answers = new List<Answers>();
 	}
 
 	// Update is called once per frame
 	void Update() {
-
+		if (checkValueChanged) {
+			checkSolution();
+			checkValueChanged = false;
+		}
 	}
 
 
