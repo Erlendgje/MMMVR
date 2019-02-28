@@ -26,24 +26,24 @@ public class ExpandPyramid : MonoBehaviour {
 	void Update () {
 		if(x) {
 
-			pyramid.localScale = new Vector3(lm.value + 1, pyramid.localScale.y,pyramid.localScale.z);
-			text.transform.localPosition = new Vector3(this.transform.localPosition.x / 2, starPosition.y, starPosition.z);
+			pyramid.localScale = new Vector3(lm.value + 0.5f , pyramid.localScale.y,pyramid.localScale.z);
+			text.transform.localPosition = new Vector3(starPosition.x, starPosition.y, starPosition.z);
 			handle1.localPosition = new Vector3(text.transform.localPosition.x, handle1.localPosition.y, handle1.localPosition.z);
 			handle2.localPosition = new Vector3(text.transform.localPosition.x, handle2.localPosition.y, handle2.localPosition.z);
 			text.GetComponent<TextMesh>().text = System.Math.Floor((lm.value * 2 * 10)) + "dm";
 		}
 
 		if(y) {
-			pyramid.localScale = new Vector3(pyramid.localScale.x, lm.value + 1,pyramid.localScale.z);
-			text.transform.localPosition = new Vector3(starPosition.x, this.transform.localPosition.y / 2, starPosition.z);
+			pyramid.localScale = new Vector3(pyramid.localScale.x, lm.value + 0.5f ,pyramid.localScale.z);
+			text.transform.localPosition = new Vector3(starPosition.x, starPosition.y, starPosition.z);
 			handle1.localPosition = new Vector3(handle1.localPosition.x, text.transform.localPosition.y, handle1.localPosition.z);
 			handle2.localPosition = new Vector3(handle2.localPosition.x, text.transform.localPosition.y, handle2.localPosition.z);
 			text.GetComponent<TextMesh>().text = System.Math.Floor(lm.value * 2 * 10) + "dm";
 		}
 
 		if(z) {
-			pyramid.localScale = new Vector3(pyramid.localScale.x , pyramid.localScale.y,lm.value + 1);
-			text.transform.localPosition = new Vector3(starPosition.x, starPosition.y, -this.transform.localPosition.x / 2);
+			pyramid.localScale = new Vector3(pyramid.localScale.x , pyramid.localScale.y, lm.value + 0.5f);
+			text.transform.localPosition = new Vector3(starPosition.x, starPosition.y, starPosition.z);
 			handle1.localPosition = new Vector3(handle1.localPosition.x, handle1.localPosition.y, text.transform.localPosition.z);
 			handle2.localPosition = new Vector3(handle2.localPosition.x, handle2.localPosition.y, text.transform.localPosition.z);
 			text.GetComponent<TextMesh>().text = System.Math.Floor(lm.value * 2 * 10) + "dm";
