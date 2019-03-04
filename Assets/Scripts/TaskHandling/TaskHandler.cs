@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TaskHandler : MonoBehaviour
 {
-	private List<bool> task;
+	public List<bool> task;
 
 	public void Awake() {
 		task = new List<bool>();

@@ -31,14 +31,15 @@ public class Space : MonoBehaviour {
 	}
 
 	public void checkSolution() {
-
-		if(answers.FindAll(a => a.answerInDm == answers[0].answerInDm && a.plane == answers[0].plane).Count == answers[0].numbersInGroup && answers.Count == answers[0].numbersInGroup) {
-			correct = true;
-			answerSpace.valueChanged(correct, this, answers[0].answerInDm);
-		}
-		else {
-			correct = false;
-			answerSpace.valueChanged(correct, this);
+		if(answers.Count != 0) {
+			if (answers.FindAll(a => a.answerInDm == answers[0].answerInDm && a.plane == answers[0].plane).Count == answers[0].numbersInGroup && answers.Count == answers[0].numbersInGroup) {
+				correct = true;
+				answerSpace.valueChanged(correct, this, answers[0].answerInDm);
+			}
+			else {
+				correct = false;
+				answerSpace.valueChanged(correct, this);
+			}
 		}
 	}
 
