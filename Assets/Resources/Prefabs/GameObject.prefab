@@ -569,6 +569,18 @@ MonoBehaviour:
   handFollowTransformRotation: 1
   highlightOnHover: 1
   hideHighlight: []
+--- !u!114 &5876384803412974608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3718453481034516421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ac8765c86fb1d7419d8574854b3c9b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7783495232602109610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -626,18 +638,6 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   snapAttachEaseInCompleted: 0
   interactable: {fileID: 0}
---- !u!114 &5876384803412974608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3718453481034516421}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ac8765c86fb1d7419d8574854b3c9b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5274588570405757654
 GameObject:
   m_ObjectHideFlags: 0
@@ -1873,6 +1873,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PyramidStand
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7aa3cdda6b33af74d84b1438e306eff3, type: 3}
+      propertyPath: m_TagString
+      value: Pillar
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7aa3cdda6b33af74d84b1438e306eff3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.13269615
@@ -2035,6 +2039,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PyramidStand (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7aa3cdda6b33af74d84b1438e306eff3, type: 3}
+      propertyPath: m_TagString
+      value: Pillar
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7aa3cdda6b33af74d84b1438e306eff3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.13269615
@@ -2115,6 +2123,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7aa3cdda6b33af74d84b1438e306eff3, type: 3}
       propertyPath: m_Name
       value: PyramidStand (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7aa3cdda6b33af74d84b1438e306eff3, type: 3}
+      propertyPath: m_TagString
+      value: Pillar
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7aa3cdda6b33af74d84b1438e306eff3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2439,6 +2451,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7aa3cdda6b33af74d84b1438e306eff3, type: 3}
       propertyPath: m_Name
       value: PyramidStand (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7aa3cdda6b33af74d84b1438e306eff3, type: 3}
+      propertyPath: m_TagString
+      value: Pillar
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7aa3cdda6b33af74d84b1438e306eff3, type: 3}
       propertyPath: m_LocalPosition.x
