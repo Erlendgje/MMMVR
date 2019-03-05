@@ -9,6 +9,8 @@ TagManager:
   - Base
   - Inside
   - Outside
+  - FlyingPlatform
+  - Pillar
   layers:
   - Default
   - TransparentFX
