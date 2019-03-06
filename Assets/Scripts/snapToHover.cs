@@ -24,7 +24,7 @@ public class snapToHover : MonoBehaviour
    
             transform.position = new Vector3(other.transform.position.x, 1.7f, other.transform.position.z);
             
-            transform.Rotate (0, Time.deltaTime*8, 0, Space.World);
+            transform.Rotate (0, Time.deltaTime*8, 0, UnityEngine.Space.World);
 		}
 
 	}

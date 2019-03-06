@@ -4,7 +4,108 @@ using UnityEngine;
 using Valve.VR.InteractionSystem;
 
 public class ExpandLine : MonoBehaviour {
-	
+
+    enum dimension { x, y, z };
+    private List<string[]> planes;
+    private List<int[]> meshDimensions;
+
+    [SerializeField] private GameObject text;
+    [SerializeField] private Transform handle1;
+    [SerializeField] private Transform handle2;
+    [SerializeField] private Transform cube;
+    [SerializeField] dimension myDimension;
+    [SerializeField] bool d3;
+    private Vector3 position, scale;
+
+    public bool isAttached;
+
+    private void Start()
+    {
+
+        planes = new List<string[]> { new string[] { "PlaneY", "PlaneZ" }, new string[] { "PlaneX", "PlaneZ" }, new string[] { "PlaneX", "PlaneY" } };
+        meshDimensions = new List<int[]> { new int[] { 0, 0 }, new int[] {0, 1 }, new int[] { 1, 1 } };
+
+        onAttach();
+        onDetach();
+    }
+
+    public void onAttach()
+    {
+        isAttached = true;
+        StartCoroutine(changeSize());
+    }
+
+    public void onDetach()
+    {
+        isAttached = false;
+    }
+
+    private IEnumerator changeSize()
+    {
+        while (isAttached)
+        {
+
+            switch (myDimension)
+            {
+                case dimension.x:
+                    changeCube(0);
+                    break;
+                case dimension.y:
+                    changeCube(1);
+                    break;
+                case dimension.z:
+                    changeCube(2);
+                    break;
+            }
+
+            yield return null;
+        }
+        
+    }
+
+
+    private void changeCube(int index)
+    {
+        Vector3 scale = cube.transform.localScale;
+        scale[index] = Mathf.Floor((this.transform.localPosition[index] - 0.005f) * 10f) / 10;
+        cube.transform.localScale = scale;
+
+        Vector3 position = text.transform.localPosition;
+        position[index] = scale[index] / 2;
+        text.transform.localPosition = position;
+
+        Vector3 handle1Position = handle1.localPosition;
+        handle1Position[index] = scale[index] / 2;
+        handle1.localPosition = handle1Position;
+
+        Vector3 handle2Position = handle1.localPosition;
+        handle2Position[index] = scale[index] / 2;
+        handle2.localPosition = handle2Position;
+
+        text.GetComponent<TextMesh>().text = scale[index] * 10 + "dm";
+
+
+        if (d3)
+        {
+
+            for(int i = 0; i < planes[index].Length; i++){
+                
+                foreach(MeshRenderer mr in cube.Find(planes[index][i]).GetComponentsInChildren<MeshRenderer>())
+                {
+                    Vector2 test = mr.material.mainTextureScale;
+                    test[meshDimensions[index][i]] = scale[index] * 10;
+
+                }
+            }
+        }
+        else
+        {
+            cube.GetComponentInChildren<MeshRenderer>().material.mainTextureScale = new Vector2(scale[index] * 10, cube.GetComponentInChildren<MeshRenderer>().material.mainTextureScale.y);
+        }
+
+    }
+
+    /*
 	[SerializeField] private GameObject text;
 	[SerializeField] private LinearMapping lm;
 	[SerializeField] private Transform handle1;
@@ -40,6 +141,7 @@ public class ExpandLine : MonoBehaviour {
 			else {
 				mr.material.mainTextureScale = new Vector2((float)System.Math.Round(lm.value * 2 - 0.05f, 1) + 0.005f, mr.material.mainTextureScale.y);
 			}
+            Debug.Log(this.transform.localPosition.x - 0.05f);
 			background.localScale = new Vector3((float)System.Math.Round(this.transform.localPosition.x - 0.05f, 1), background.localScale.y, background.localScale.z);
 			text.transform.localPosition = new Vector3(this.transform.localPosition.x / 2, starPosition.y, starPosition.z);
 			handle1.localPosition = new Vector3(text.transform.localPosition.x, handle1.localPosition.y, handle1.localPosition.z);
@@ -87,4 +189,5 @@ public class ExpandLine : MonoBehaviour {
 			text.GetComponent<TextMesh>().text = System.Math.Floor(lm.value * 2 * 10) + "dm";
 		}
 	}
+    */
 }
