@@ -18,6 +18,7 @@ public class ExpandLine : MonoBehaviour {
     private Vector3 position, scale;
 
     public bool isAttached;
+	public bool go;
 
     private void Start()
     {
@@ -29,7 +30,14 @@ public class ExpandLine : MonoBehaviour {
         onDetach();
     }
 
-    public void onAttach()
+	public void Update() {
+		if(isAttached && go) {
+			StartCoroutine(changeSize());
+			go = false;
+		}
+	}
+
+	public void onAttach()
     {
         isAttached = true;
         StartCoroutine(changeSize());
@@ -44,7 +52,6 @@ public class ExpandLine : MonoBehaviour {
     {
         while (isAttached)
         {
-
             switch (myDimension)
             {
                 case dimension.x:
@@ -66,23 +73,26 @@ public class ExpandLine : MonoBehaviour {
 
     private void changeCube(int index)
     {
+		
         Vector3 scale = cube.transform.localScale;
-        scale[index] = Mathf.Floor((this.transform.localPosition[index] - 0.005f) * 10f) / 10;
-        cube.transform.localScale = scale;
+		float negative = this.transform.localPosition[index] / Mathf.Abs(this.transform.localPosition[index]);
+        scale[index] = Mathf.Floor(Mathf.Abs(this.transform.localPosition[index]) * 10f) / 10;
+		cube.transform.localScale = scale;
 
-        Vector3 position = text.transform.localPosition;
-        position[index] = scale[index] / 2;
+
+		Vector3 position = text.transform.localPosition;
+        position[index] = scale[index] / 2 * negative;
         text.transform.localPosition = position;
 
         Vector3 handle1Position = handle1.localPosition;
-        handle1Position[index] = scale[index] / 2;
+        handle1Position[index] = scale[index] / 2 * negative;
         handle1.localPosition = handle1Position;
 
-        Vector3 handle2Position = handle1.localPosition;
-        handle2Position[index] = scale[index] / 2;
+        Vector3 handle2Position = handle2.localPosition;
+        handle2Position[index] = scale[index] / 2 * negative;
         handle2.localPosition = handle2Position;
 
-        text.GetComponent<TextMesh>().text = scale[index] * 10 + "dm";
+		text.GetComponent<TextMesh>().text = scale[index] * 10 + "dm";
 
 
         if (d3)
@@ -93,14 +103,14 @@ public class ExpandLine : MonoBehaviour {
                 foreach(MeshRenderer mr in cube.Find(planes[index][i]).GetComponentsInChildren<MeshRenderer>())
                 {
                     Vector2 test = mr.material.mainTextureScale;
-                    test[meshDimensions[index][i]] = scale[index] * 10;
-
+                    test[meshDimensions[index][i]] = scale[index] * 10 + 0.05f;
+					mr.material.mainTextureScale = test;
                 }
             }
         }
         else
         {
-            cube.GetComponentInChildren<MeshRenderer>().material.mainTextureScale = new Vector2(scale[index] * 10, cube.GetComponentInChildren<MeshRenderer>().material.mainTextureScale.y);
+            cube.GetComponentInChildren<MeshRenderer>().material.mainTextureScale = new Vector2(scale[0] * 10 + 0.05f, scale[1] * 10 + 0.05f);
         }
 
     }

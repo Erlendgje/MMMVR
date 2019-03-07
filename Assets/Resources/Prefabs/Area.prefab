@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1049405297302678}
   m_LocalRotation: {x: -0, y: -0, z: -0.99998593, w: -0.0053144167}
-  m_LocalPosition: {x: 0, y: -2, z: 0.0018000074}
+  m_LocalPosition: {x: 0, y: -2.05, z: 0.0018000074}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4406298229543212}
@@ -54,7 +54,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1068953211495842}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.0001}
+  m_LocalPosition: {x: 0.105, y: 0, z: 0.0001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4388001124923172}
@@ -583,7 +583,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1222138549490528}
   m_LocalRotation: {x: -0, y: -0, z: -0.99998593, w: -0.0053144167}
-  m_LocalPosition: {x: 0, y: 0, z: 0.0018}
+  m_LocalPosition: {x: 0, y: -0.105, z: 0.0018}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4406298229543212}
@@ -1356,9 +1356,10 @@ MonoBehaviour:
   handle1: {fileID: 4388001124923172}
   handle2: {fileID: 4406298229543212}
   cube: {fileID: 0}
-  d3: 0
   myDimension: 0
+  d3: 0
   isAttached: 0
+  go: 0
 --- !u!1 &1638330735323534
 GameObject:
   m_ObjectHideFlags: 0
@@ -1383,7 +1384,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1638330735323534}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2, y: 0, z: 0.0001}
+  m_LocalPosition: {x: 2.05, y: 0, z: 0.0001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4388001124923172}
@@ -1786,9 +1787,10 @@ MonoBehaviour:
   handle1: {fileID: 4406298229543212}
   handle2: {fileID: 4128588031449554}
   cube: {fileID: 4911644112877576}
-  d3: 0
   myDimension: 0
+  d3: 0
   isAttached: 0
+  go: 0
 --- !u!1 &1741052278042528
 GameObject:
   m_ObjectHideFlags: 0
@@ -2168,9 +2170,10 @@ MonoBehaviour:
   handle1: {fileID: 4388001124923172}
   handle2: {fileID: 4128588031449554}
   cube: {fileID: 4911644112877576}
-  d3: 0
   myDimension: 1
+  d3: 0
   isAttached: 0
+  go: 0
 --- !u!1 &1916663261754786
 GameObject:
   m_ObjectHideFlags: 0
