@@ -1082,14 +1082,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 672577248763124889}
-  lm: {fileID: 632068362630005505}
   handle1: {fileID: 675077759124266991}
   handle2: {fileID: 667075744390243389}
-  background: {fileID: 0}
-  x: 0
-  y: 0
-  z: 1
+  cube: {fileID: 0}
+  myDimension: 0
   d3: 1
+  isAttached: 0
 --- !u!114 &906426547932397680
 MonoBehaviour:
   m_ObjectHideFlags: 0
