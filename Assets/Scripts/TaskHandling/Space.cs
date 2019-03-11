@@ -41,6 +41,10 @@ public class Space : MonoBehaviour {
 				answerSpace.valueChanged(correct, this);
 			}
 		}
+		else {
+			correct = false;
+			answerSpace.valueChanged(correct, this);
+		}
 	}
 
 
