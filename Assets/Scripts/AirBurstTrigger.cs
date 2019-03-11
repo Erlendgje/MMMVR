@@ -5,9 +5,15 @@ using UnityEngine;
 public class AirBurstTrigger : MonoBehaviour
 {
 
-    public void PlayParticle(GameObject par)
+	[SerializeField] public GameObject particle1;
+	[SerializeField] public List<GameObject> particles;
+
+    public void PlayParticle(int index)
     {
-        //activate particlesystem
+		//activate particlesystem
+		Debug.Log("Particle System" + index);
+		//particle1.GetComponent<ParticleSystem>().Play();
+		particles[index].GetComponent<ParticleSystem>().Play();
     }
 
 }
