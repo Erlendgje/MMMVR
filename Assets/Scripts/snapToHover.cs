@@ -15,24 +15,23 @@ public class snapToHover : MonoBehaviour
 	}
 
 	void OnTriggerStay(Collider other) {
-        Debug.Log("before");
 		if (other.transform.tag == "Pillar" && !inHand) {
-            Debug.Log("after");
 
-            rgdb.constraints = RigidbodyConstraints.FreezeRotation;
-			rgdb.constraints = RigidbodyConstraints.FreezePosition;
-   
-            transform.position = new Vector3(other.transform.position.x, 1.7f, other.transform.position.z);
-            
-            transform.Rotate (0, Time.deltaTime*8, 0, Space.World);
+			rgdb.velocity = Vector3.zero;
+			rgdb.useGravity = false;
+			
+			if(this.transform.position != new Vector3(other.transform.position.x, other.transform.position.y, other.transform.position.z)) {
+				this.transform.position = Vector3.MoveTowards(this.transform.position, new Vector3(other.transform.position.x, other.transform.position.y, other.transform.position.z), speed * Time.deltaTime);
+			}
+
+            transform.Rotate (0, Time.deltaTime*8, 0, UnityEngine.Space.World);
 		}
 
 	}
 
 	public void OnPickUp() {
-        Debug.Log("pickup");
-        inHand = true;
-		rgdb.constraints = RigidbodyConstraints.None;
+		rgdb.useGravity = true;
+		inHand = true;
 	}
 
     public void OnDetach()
