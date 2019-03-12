@@ -40,13 +40,13 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1134501514233324893}
   serializedVersion: 6
-  lengthInSec: 5
+  lengthInSec: 11
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -865,7 +865,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 200
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -4712,7 +4712,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b807029632ce6bd4bb9be454f9ec0273, type: 2}
+  - {fileID: 2100000, guid: 0ac01a70d96bba845b6d4db4fabd65ce, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -9468,7 +9468,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3ccefb5611d1b784e925b933e142a484, type: 2}
+  - {fileID: 0}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -9524,7 +9524,7 @@ GameObject:
   - component: {fileID: 1134501514803382835}
   - component: {fileID: 1134501514803382834}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: Dust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
