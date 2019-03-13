@@ -37,7 +37,7 @@ public class Task : MonoBehaviour {
 				volume = size.x * size.y * size.z * 1000;
 			}
 
-			if(volume == solution) {
+			if(Mathf.Round(volume) == Mathf.Round(solution)) {
 				taskComplete = true;
 			}
 			else {

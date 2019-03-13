@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1049405297302678}
   m_LocalRotation: {x: -0, y: -0, z: -0.99998593, w: -0.0053144167}
-  m_LocalPosition: {x: 0, y: -2, z: 0.0018000074}
+  m_LocalPosition: {x: 0, y: -2.05, z: 0.0018000074}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4406298229543212}
@@ -54,7 +54,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1068953211495842}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.0001}
+  m_LocalPosition: {x: 0.105, y: 0, z: 0.0001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4388001124923172}
@@ -583,7 +583,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1222138549490528}
   m_LocalRotation: {x: -0, y: -0, z: -0.99998593, w: -0.0053144167}
-  m_LocalPosition: {x: 0, y: 0, z: 0.0018}
+  m_LocalPosition: {x: 0, y: -0.105, z: 0.0018}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4406298229543212}
@@ -1353,14 +1353,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1676414411358762}
-  lm: {fileID: 114165083768590680}
   handle1: {fileID: 4388001124923172}
   handle2: {fileID: 4406298229543212}
-  background: {fileID: 4911644112877576}
-  x: 0
-  y: 0
-  z: 0
+  cube: {fileID: 0}
+  myDimension: 0
   d3: 0
+  isAttached: 0
+  go: 0
 --- !u!1 &1638330735323534
 GameObject:
   m_ObjectHideFlags: 0
@@ -1385,7 +1384,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1638330735323534}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2, y: 0, z: 0.0001}
+  m_LocalPosition: {x: 2.05, y: 0, z: 0.0001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4388001124923172}
@@ -1604,7 +1603,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1704670626166934}
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.1042, y: 0, z: 0.0001}
+  m_LocalPosition: {x: 0.105, y: 0, z: 0.0001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4801094021245370}
@@ -1703,13 +1702,24 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   onAttachedToHand:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114421304959272216}
+        m_MethodName: onAttach
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   onDetachedFromHand:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8250646574632313893}
+      - m_Target: {fileID: 114421304959272216}
         m_MethodName: onDetach
         m_Mode: 1
         m_Arguments:
@@ -1720,7 +1730,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8250646574632313893}
         m_MethodName: onDetach
         m_Mode: 1
         m_Arguments:
@@ -1785,14 +1795,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1460983593473182}
-  lm: {fileID: 114061056917377894}
   handle1: {fileID: 4406298229543212}
   handle2: {fileID: 4128588031449554}
-  background: {fileID: 4911644112877576}
-  x: 1
-  y: 0
-  z: 0
+  cube: {fileID: 4911644112877576}
+  myDimension: 0
   d3: 0
+  isAttached: 0
+  go: 0
 --- !u!1 &1741052278042528
 GameObject:
   m_ObjectHideFlags: 0
@@ -2087,12 +2096,34 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   onAttachedToHand:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114209200379712978}
+        m_MethodName: onAttach
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   onDetachedFromHand:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 114209200379712978}
+        m_MethodName: onDetach
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 8250646574632313893}
         m_MethodName: onDetach
         m_Mode: 1
@@ -2158,14 +2189,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1099993393956946}
-  lm: {fileID: 114693289779572752}
   handle1: {fileID: 4388001124923172}
   handle2: {fileID: 4128588031449554}
-  background: {fileID: 4911644112877576}
-  x: 0
-  y: 1
-  z: 0
+  cube: {fileID: 4911644112877576}
+  myDimension: 1
   d3: 0
+  isAttached: 0
+  go: 0
 --- !u!1 &1916663261754786
 GameObject:
   m_ObjectHideFlags: 0

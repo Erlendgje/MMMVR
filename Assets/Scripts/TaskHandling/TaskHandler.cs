@@ -22,6 +22,7 @@ public class TaskHandler : MonoBehaviour
 		if(task.FindAll(t => t.Equals(true)).Count == task.Count) {
 			Debug.Log("TaskDone");
 			//DO SOMETHING HERE, TASK IS DONE
+			GameManager.gameManager.unlockNextTask();
 		}
 	}
 }
