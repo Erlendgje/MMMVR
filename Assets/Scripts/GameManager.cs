@@ -21,7 +21,6 @@ public class GameManager : MonoBehaviour
 			Destroy(this);
 		}
 
-        currentTask = 1;
         unlockNextTask();
 	}
 
