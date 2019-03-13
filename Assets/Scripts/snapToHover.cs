@@ -30,12 +30,13 @@ public class snapToHover : MonoBehaviour
 	}
 
 	public void OnPickUp() {
-		rgdb.useGravity = true;
 		inHand = true;
-	}
+        rgdb.useGravity = true;
+    }
 
     public void OnDetach()
     {
+        rgdb.useGravity = true;
         inHand = false;
     }
 
