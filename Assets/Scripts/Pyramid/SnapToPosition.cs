@@ -82,6 +82,7 @@ public class SnapToPosition : MonoBehaviour {
 
 			if(!errorText.activeInHierarchy && snappedObjects.Count == 3) {
 				//TASK DONE!!! DO SOMETHING HERE!!!
+				GameManager.gameManager.unlockNextTask();
 			}
 
         }
