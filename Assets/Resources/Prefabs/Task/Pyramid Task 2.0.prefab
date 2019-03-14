@@ -574,6 +574,26 @@ PrefabInstance:
       propertyPath: ShapeModule.radiusThickness
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1134501514233324895, guid: 08f5622ee94140f488c2072732bddf3c,
+        type: 3}
+      propertyPath: m_VertexStreams.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1134501514233324895, guid: 08f5622ee94140f488c2072732bddf3c,
+        type: 3}
+      propertyPath: m_UseCustomVertexStreams
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1134501514233324895, guid: 08f5622ee94140f488c2072732bddf3c,
+        type: 3}
+      propertyPath: m_VertexStreams.Array.data[1]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1134501514233324895, guid: 08f5622ee94140f488c2072732bddf3c,
+        type: 3}
+      propertyPath: m_VertexStreams.Array.data[2]
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1134501514247571209, guid: 08f5622ee94140f488c2072732bddf3c,
         type: 3}
       propertyPath: EmissionModule.m_Bursts.Array.size
@@ -683,26 +703,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1134501514233324895, guid: 08f5622ee94140f488c2072732bddf3c,
-        type: 3}
-      propertyPath: m_VertexStreams.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1134501514233324895, guid: 08f5622ee94140f488c2072732bddf3c,
-        type: 3}
-      propertyPath: m_UseCustomVertexStreams
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1134501514233324895, guid: 08f5622ee94140f488c2072732bddf3c,
-        type: 3}
-      propertyPath: m_VertexStreams.Array.data[1]
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1134501514233324895, guid: 08f5622ee94140f488c2072732bddf3c,
-        type: 3}
-      propertyPath: m_VertexStreams.Array.data[2]
-      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08f5622ee94140f488c2072732bddf3c, type: 3}
@@ -962,10 +962,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.7478093
       objectReference: {fileID: 0}
-    - target: {fileID: 331283691591269823, guid: e8c8db26ace54f34b8e9dff5c7ee437e,
+    - target: {fileID: 3406582483139292784, guid: e8c8db26ace54f34b8e9dff5c7ee437e,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3281008939612624319, guid: e8c8db26ace54f34b8e9dff5c7ee437e,
         type: 3}
@@ -997,7 +997,33 @@ PrefabInstance:
       propertyPath: m_textInfo.wordCount
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 3281008939612624319, guid: e8c8db26ace54f34b8e9dff5c7ee437e,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3281008939612624319, guid: e8c8db26ace54f34b8e9dff5c7ee437e,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3281008939612624319, guid: e8c8db26ace54f34b8e9dff5c7ee437e,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3281008939612624319, guid: e8c8db26ace54f34b8e9dff5c7ee437e,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
+      objectReference: {fileID: 0}
+    - target: {fileID: 331283691591269823, guid: e8c8db26ace54f34b8e9dff5c7ee437e,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6542078291864781534, guid: e8c8db26ace54f34b8e9dff5c7ee437e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e8c8db26ace54f34b8e9dff5c7ee437e, type: 3}
 --- !u!4 &1952000785439244815 stripped
 Transform:
@@ -1072,10 +1098,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 331283691591269823, guid: e8c8db26ace54f34b8e9dff5c7ee437e,
+    - target: {fileID: 3406582483139292784, guid: e8c8db26ace54f34b8e9dff5c7ee437e,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3281008939612624319, guid: e8c8db26ace54f34b8e9dff5c7ee437e,
         type: 3}
@@ -1097,7 +1123,33 @@ PrefabInstance:
       propertyPath: m_textInfo.characterCount
       value: 5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 3281008939612624319, guid: e8c8db26ace54f34b8e9dff5c7ee437e,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3281008939612624319, guid: e8c8db26ace54f34b8e9dff5c7ee437e,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3281008939612624319, guid: e8c8db26ace54f34b8e9dff5c7ee437e,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3281008939612624319, guid: e8c8db26ace54f34b8e9dff5c7ee437e,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
+      objectReference: {fileID: 0}
+    - target: {fileID: 331283691591269823, guid: e8c8db26ace54f34b8e9dff5c7ee437e,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6542078291864781534, guid: e8c8db26ace54f34b8e9dff5c7ee437e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e8c8db26ace54f34b8e9dff5c7ee437e, type: 3}
 --- !u!4 &2577629019823228244 stripped
 Transform:
@@ -1187,10 +1239,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.7478093
       objectReference: {fileID: 0}
-    - target: {fileID: 331283691591269823, guid: e8c8db26ace54f34b8e9dff5c7ee437e,
+    - target: {fileID: 3406582483139292784, guid: e8c8db26ace54f34b8e9dff5c7ee437e,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3281008939612624319, guid: e8c8db26ace54f34b8e9dff5c7ee437e,
         type: 3}
@@ -1227,7 +1279,33 @@ PrefabInstance:
       propertyPath: m_textInfo.wordCount
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 3281008939612624319, guid: e8c8db26ace54f34b8e9dff5c7ee437e,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3281008939612624319, guid: e8c8db26ace54f34b8e9dff5c7ee437e,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3281008939612624319, guid: e8c8db26ace54f34b8e9dff5c7ee437e,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3281008939612624319, guid: e8c8db26ace54f34b8e9dff5c7ee437e,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
+      objectReference: {fileID: 0}
+    - target: {fileID: 331283691591269823, guid: e8c8db26ace54f34b8e9dff5c7ee437e,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6542078291864781534, guid: e8c8db26ace54f34b8e9dff5c7ee437e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e8c8db26ace54f34b8e9dff5c7ee437e, type: 3}
 --- !u!4 &5477257510685138960 stripped
 Transform:
@@ -1382,6 +1460,26 @@ PrefabInstance:
       propertyPath: ShapeModule.radiusThickness
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1134501514233324895, guid: 08f5622ee94140f488c2072732bddf3c,
+        type: 3}
+      propertyPath: m_VertexStreams.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1134501514233324895, guid: 08f5622ee94140f488c2072732bddf3c,
+        type: 3}
+      propertyPath: m_UseCustomVertexStreams
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1134501514233324895, guid: 08f5622ee94140f488c2072732bddf3c,
+        type: 3}
+      propertyPath: m_VertexStreams.Array.data[1]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1134501514233324895, guid: 08f5622ee94140f488c2072732bddf3c,
+        type: 3}
+      propertyPath: m_VertexStreams.Array.data[2]
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1134501514247571209, guid: 08f5622ee94140f488c2072732bddf3c,
         type: 3}
       propertyPath: EmissionModule.m_Bursts.Array.size
@@ -1491,26 +1589,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1134501514233324895, guid: 08f5622ee94140f488c2072732bddf3c,
-        type: 3}
-      propertyPath: m_VertexStreams.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1134501514233324895, guid: 08f5622ee94140f488c2072732bddf3c,
-        type: 3}
-      propertyPath: m_UseCustomVertexStreams
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1134501514233324895, guid: 08f5622ee94140f488c2072732bddf3c,
-        type: 3}
-      propertyPath: m_VertexStreams.Array.data[1]
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1134501514233324895, guid: 08f5622ee94140f488c2072732bddf3c,
-        type: 3}
-      propertyPath: m_VertexStreams.Array.data[2]
-      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08f5622ee94140f488c2072732bddf3c, type: 3}
@@ -1667,6 +1745,26 @@ PrefabInstance:
       propertyPath: ShapeModule.radiusThickness
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1134501514233324895, guid: 08f5622ee94140f488c2072732bddf3c,
+        type: 3}
+      propertyPath: m_VertexStreams.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1134501514233324895, guid: 08f5622ee94140f488c2072732bddf3c,
+        type: 3}
+      propertyPath: m_UseCustomVertexStreams
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1134501514233324895, guid: 08f5622ee94140f488c2072732bddf3c,
+        type: 3}
+      propertyPath: m_VertexStreams.Array.data[1]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1134501514233324895, guid: 08f5622ee94140f488c2072732bddf3c,
+        type: 3}
+      propertyPath: m_VertexStreams.Array.data[2]
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1134501514247571209, guid: 08f5622ee94140f488c2072732bddf3c,
         type: 3}
       propertyPath: EmissionModule.m_Bursts.Array.size
@@ -1777,26 +1875,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 1134501514233324895, guid: 08f5622ee94140f488c2072732bddf3c,
-        type: 3}
-      propertyPath: m_VertexStreams.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1134501514233324895, guid: 08f5622ee94140f488c2072732bddf3c,
-        type: 3}
-      propertyPath: m_UseCustomVertexStreams
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1134501514233324895, guid: 08f5622ee94140f488c2072732bddf3c,
-        type: 3}
-      propertyPath: m_VertexStreams.Array.data[1]
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1134501514233324895, guid: 08f5622ee94140f488c2072732bddf3c,
-        type: 3}
-      propertyPath: m_VertexStreams.Array.data[2]
-      value: 4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08f5622ee94140f488c2072732bddf3c, type: 3}
 --- !u!4 &4946140665473908503 stripped
@@ -1887,10 +1965,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.7478093
       objectReference: {fileID: 0}
-    - target: {fileID: 331283691591269823, guid: e8c8db26ace54f34b8e9dff5c7ee437e,
+    - target: {fileID: 3406582483139292784, guid: e8c8db26ace54f34b8e9dff5c7ee437e,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3281008939612624319, guid: e8c8db26ace54f34b8e9dff5c7ee437e,
         type: 3}
@@ -1912,7 +1990,33 @@ PrefabInstance:
       propertyPath: m_textInfo.characterCount
       value: 5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 3281008939612624319, guid: e8c8db26ace54f34b8e9dff5c7ee437e,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3281008939612624319, guid: e8c8db26ace54f34b8e9dff5c7ee437e,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3281008939612624319, guid: e8c8db26ace54f34b8e9dff5c7ee437e,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3281008939612624319, guid: e8c8db26ace54f34b8e9dff5c7ee437e,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
+      objectReference: {fileID: 0}
+    - target: {fileID: 331283691591269823, guid: e8c8db26ace54f34b8e9dff5c7ee437e,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6542078291864781534, guid: e8c8db26ace54f34b8e9dff5c7ee437e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e8c8db26ace54f34b8e9dff5c7ee437e, type: 3}
 --- !u!4 &5953875190654357171 stripped
 Transform:
@@ -2067,6 +2171,26 @@ PrefabInstance:
       propertyPath: ShapeModule.radiusThickness
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1134501514233324895, guid: 08f5622ee94140f488c2072732bddf3c,
+        type: 3}
+      propertyPath: m_VertexStreams.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1134501514233324895, guid: 08f5622ee94140f488c2072732bddf3c,
+        type: 3}
+      propertyPath: m_UseCustomVertexStreams
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1134501514233324895, guid: 08f5622ee94140f488c2072732bddf3c,
+        type: 3}
+      propertyPath: m_VertexStreams.Array.data[1]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1134501514233324895, guid: 08f5622ee94140f488c2072732bddf3c,
+        type: 3}
+      propertyPath: m_VertexStreams.Array.data[2]
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1134501514247571209, guid: 08f5622ee94140f488c2072732bddf3c,
         type: 3}
       propertyPath: EmissionModule.m_Bursts.Array.size
@@ -2176,26 +2300,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1134501514233324895, guid: 08f5622ee94140f488c2072732bddf3c,
-        type: 3}
-      propertyPath: m_VertexStreams.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1134501514233324895, guid: 08f5622ee94140f488c2072732bddf3c,
-        type: 3}
-      propertyPath: m_UseCustomVertexStreams
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1134501514233324895, guid: 08f5622ee94140f488c2072732bddf3c,
-        type: 3}
-      propertyPath: m_VertexStreams.Array.data[1]
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1134501514233324895, guid: 08f5622ee94140f488c2072732bddf3c,
-        type: 3}
-      propertyPath: m_VertexStreams.Array.data[2]
-      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08f5622ee94140f488c2072732bddf3c, type: 3}

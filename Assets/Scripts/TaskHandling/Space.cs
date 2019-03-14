@@ -6,6 +6,7 @@ public class Space : MonoBehaviour {
 
 	private AnswerSpace answerSpace;
 	private List<AnswerCube> answers;
+	private Animator anim;
 	public bool correct;
 	public bool checkValueChanged;
 
@@ -13,6 +14,7 @@ public class Space : MonoBehaviour {
 	void Start() {
 		answerSpace = GetComponentInParent<AnswerSpace>();
 		answers = new List<AnswerCube>();
+		anim = GetComponent<Animator>();
 	}
 
 
@@ -33,8 +35,10 @@ public class Space : MonoBehaviour {
 	public void checkSolution() {
 		if(answers.Count != 0) {
 			if (answers.FindAll(a => a.answerInDm == answers[0].answerInDm && a.plane == answers[0].plane).Count == answers[0].numbersInGroup && answers.Count == answers[0].numbersInGroup) {
+				Debug.Log ("correct");
 				correct = true;
 				answerSpace.valueChanged(correct, this, answers[0].answerInDm);
+				anim.enabled = true;
 			}
 			else {
 				correct = false;
