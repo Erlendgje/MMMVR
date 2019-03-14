@@ -79,6 +79,12 @@ public class SnapToPosition : MonoBehaviour {
                 }
             }
             snappedObjects.Add(this.gameObject);
+
+			if(!errorText.activeInHierarchy && snappedObjects.Count == 3) {
+				//TASK DONE!!! DO SOMETHING HERE!!!
+				GameManager.gameManager.unlockNextTask();
+			}
+
         }
 	}
 
