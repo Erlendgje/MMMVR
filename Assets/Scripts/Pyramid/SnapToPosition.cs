@@ -5,13 +5,13 @@ using UnityEngine;
 public class SnapToPosition : MonoBehaviour {
 
     [SerializeField] GameObject errorText;
-    public GameObject point;
+	[SerializeField] GameObject ghostPyramid;
+	public GameObject point;
 	private Rigidbody rgdb;
     private bool isPickedUp = false;
 	private bool inTrigger = false;
     public static List<GameObject> snappedObjects;
    
-
     private float distance = 0.1f;
 
 
@@ -64,10 +64,16 @@ public class SnapToPosition : MonoBehaviour {
             errorText.SetActive(false);
         }
         isPickedUp = true;
+
+		if(snappedObjects.Count == 0) {
+			ghostPyramid.SetActive(true);
+			ghostPyramid.GetComponent<MaterialBlinking>().startBlinking();
+		}
 	}
 
 	public void onDetach() {
         isPickedUp = false;
+		ghostPyramid.SetActive(false);
 		if(inTrigger) {
 			rgdb.constraints = RigidbodyConstraints.FreezeAll;
 

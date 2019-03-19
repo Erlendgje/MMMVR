@@ -13,6 +13,7 @@ public class MenuLaser : MonoBehaviour
 
     public RectTransform dictionaryScrollContent;
 	private float handEnterPosition;
+
    
     public bool GetTrackpadTouched()
     {
@@ -29,12 +30,7 @@ public class MenuLaser : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Scrolling in the menu
-        if (GetTrackpadTouched())
-        {
-            if (dictionaryScrollContent.gameObject.activeInHierarchy)
-                ScrollScrollContent(dictionaryScrollContent);
-        }
+ 
     }
 
     private void ScrollScrollContent(RectTransform scrollContent)
@@ -66,7 +62,7 @@ public class MenuLaser : MonoBehaviour
         float paddingTop = scrollContent.GetComponent<VerticalLayoutGroup>().padding.top;
         return scrollContent.childCount * (childHeight) + paddingBottom + paddingTop;
     }
-
+		
 	void OnTriggerEnter(Collider other) {
 
 		if (other.tag == "controller") {
@@ -105,3 +101,4 @@ scrollPos = curScrollContentPos + handPosEffect
 
 
  */
+

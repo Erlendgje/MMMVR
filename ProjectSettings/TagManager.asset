@@ -11,6 +11,9 @@ TagManager:
   - Outside
   - FlyingPlatform
   - Pillar
+  - projectile
+  - FxTemporaire
+  - GhostPyramid
   layers:
   - Default
   - TransparentFX
