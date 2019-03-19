@@ -65,40 +65,26 @@ public class MenuLaser : MonoBehaviour
 		
 	void OnTriggerEnter(Collider other) {
 
-		if (other.tag == "controller") {
+		if (other.tag == "GameController") {
 			handEnterPosition = other.transform.position.y;
 		}
 
 	}
 
-	void OnTriggerStay(Collider other) {
+	void OnTriggerStay (Collider other)
+	{
 		
-		if (other.tag == "controller") {
-			if (dictionaryScrollContent.gameObject.activeInHierarchy){
+		if (other.tag == "GameController") {
+			if (dictionaryScrollContent.gameObject.activeInHierarchy) {
 
 				float drag = other.transform.position.y - handEnterPosition;
-				dictionaryScrollContent.transform.localPosition += new Vector3(0f, drag, 0f);
+				dictionaryScrollContent.transform.localPosition += new Vector3 (0f, drag, 0f);
+
+			}
 
 		}
 
 	}
-
 }
-
-
-/*  
-triggerEnter
-var startPosHand
-
-triggerStay
-var curHandPos
-var handPosEffect = curHandPos - startPos
-var curScrollContentPos
-
-scrollPos = curScrollContentPos + handPosEffect
-
-
-
-
- */
+		
 
