@@ -16,7 +16,7 @@ public class AnswerSpace : MonoBehaviour {
 	public void valueChanged(bool value, Space space, float solution) {
 		Task task;
 		task = tasks[spaces.FindIndex(s => s == space)];
-		task.changeSolution(solution);
+		task.changeSolution(solution, space.answerIsPlane());
 		task.setAnswerSpaceCorrect(value);
 	}
 }
