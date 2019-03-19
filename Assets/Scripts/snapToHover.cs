@@ -5,20 +5,24 @@ using UnityEngine;
 public class snapToHover : MonoBehaviour
 {
 	private bool inHand = false;
+	private bool detached = false;
 
 	public float speed = 1;
-	private Rigidbody rgdb;
 
 	void Start() {
-		rgdb = this.GetComponent<Rigidbody>();
 	}
 
 	void OnTriggerStay(Collider other) {
 		if (other.transform.tag == "Pillar" && !inHand) {
-			other.transform.SetParent(this.transform.parent);
-			rgdb.velocity = Vector3.zero;
-			rgdb.useGravity = false;
-			
+            if (detached)
+            {
+                this.transform.SetParent(other.transform);
+                this.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                this.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+                this.GetComponent<Rigidbody>().useGravity = false;
+                detached = false;
+            }
+
 			if(this.transform.position != new Vector3(other.transform.position.x, other.transform.position.y, other.transform.position.z)) {
 				this.transform.position = Vector3.MoveTowards(this.transform.position, new Vector3(other.transform.position.x, other.transform.position.y, other.transform.position.z), speed * Time.deltaTime);
 			}
@@ -30,7 +34,7 @@ public class snapToHover : MonoBehaviour
 
 	public void OnPickUp() {
 		inHand = true;
-        rgdb.useGravity = true;
+        this.GetComponent<Rigidbody>().useGravity = true;
 
 		foreach(GameObject go in GameObject.FindGameObjectsWithTag("GhostPyramid")) {
 			if(go.transform.parent.GetComponentInChildren<AnswerCube>() == null) {
@@ -41,12 +45,12 @@ public class snapToHover : MonoBehaviour
 
     public void OnDetach()
     {
-
+        detached = true;
 		foreach(GameObject go in GameObject.FindGameObjectsWithTag("GhostPyramid")) {
 			go.GetComponent<MeshRenderer>().enabled = false;
 		}
 
-		rgdb.useGravity = true;
+        this.GetComponent<Rigidbody>().useGravity = true;
         inHand = false;
     }
 
