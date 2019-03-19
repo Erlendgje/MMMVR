@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class snapToHover : MonoBehaviour
 {
-
 	private bool inHand = false;
 
 	public float speed = 1;
@@ -16,7 +15,7 @@ public class snapToHover : MonoBehaviour
 
 	void OnTriggerStay(Collider other) {
 		if (other.transform.tag == "Pillar" && !inHand) {
-
+			other.transform.SetParent(this.transform.parent);
 			rgdb.velocity = Vector3.zero;
 			rgdb.useGravity = false;
 			
@@ -32,11 +31,22 @@ public class snapToHover : MonoBehaviour
 	public void OnPickUp() {
 		inHand = true;
         rgdb.useGravity = true;
+
+		foreach(GameObject go in GameObject.FindGameObjectsWithTag("GhostPyramid")) {
+			if(go.transform.parent.GetComponentInChildren<AnswerCube>() == null) {
+				go.GetComponent<MeshRenderer>().enabled = true;
+			}
+		}
     }
 
     public void OnDetach()
     {
-        rgdb.useGravity = true;
+
+		foreach(GameObject go in GameObject.FindGameObjectsWithTag("GhostPyramid")) {
+			go.GetComponent<MeshRenderer>().enabled = false;
+		}
+
+		rgdb.useGravity = true;
         inHand = false;
     }
 
