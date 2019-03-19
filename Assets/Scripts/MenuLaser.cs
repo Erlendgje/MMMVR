@@ -12,7 +12,7 @@ public class MenuLaser : MonoBehaviour
     public SteamVR_Action_Vector2 touchDirectionInput;
 
     public RectTransform dictionaryScrollContent;
-	private float handEnterPosition;
+	private Vector3 handEnterPosition;
 
    
     public bool GetTrackpadTouched()
@@ -66,7 +66,7 @@ public class MenuLaser : MonoBehaviour
 	void OnTriggerEnter(Collider other) {
 
 		if (other.tag == "GameController") {
-			handEnterPosition = other.transform.position.y;
+			handEnterPosition = other.transform.position;
 		}
 
 	}
@@ -77,8 +77,8 @@ public class MenuLaser : MonoBehaviour
 		if (other.tag == "GameController") {
 			if (dictionaryScrollContent.gameObject.activeInHierarchy) {
 
-				float drag = other.transform.position.y - handEnterPosition;
-				dictionaryScrollContent.transform.localPosition += new Vector3 (0f, drag, 0f);
+                float drag = Vector3.Distance(other.transform.position, handEnterPosition);
+				dictionaryScrollContent.transform.localPosition = new Vector3 (drag, 0f, 0f);
 
 			}
 
