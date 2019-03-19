@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 	public static GameManager gameManager;
 	private int currentTask = 0;
 
+	[SerializeField] private int spawnTaskNumber;
 	[SerializeField] private List<TaskAndLocation> tasks;
 
     // Start is called before the first frame update
@@ -21,7 +22,7 @@ public class GameManager : MonoBehaviour
 			Destroy(this);
 		}
 
-		for(int i = 0; i < 2; i++) {
+		for(int i = 0; i < spawnTaskNumber; i++) {
 			unlockNextTask();
 		}
 	}
