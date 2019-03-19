@@ -892,6 +892,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveDuration: 15
   moveUpwards: 2.69
+  dontActivateRigidBody: 1
 --- !u!54 &975123558118150001
 Rigidbody:
   m_ObjectHideFlags: 0

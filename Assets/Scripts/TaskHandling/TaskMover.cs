@@ -6,12 +6,17 @@ public class TaskMover : MonoBehaviour
 {
 	[SerializeField] float moveDuration;
 	[SerializeField] float moveUpwards;
+    [SerializeField] bool dontActivateRigidBody;
 
     // Start is called before the first frame update
     void Start()
     {
 		iTween.MoveBy(this.gameObject, iTween.Hash("y", moveUpwards, "islocal", true, "time", moveDuration));
-        StartCoroutine(setNotKinematic());
+        if (!dontActivateRigidBody)
+        {
+            StartCoroutine(setNotKinematic());
+        }
+        
 	}
 
 
