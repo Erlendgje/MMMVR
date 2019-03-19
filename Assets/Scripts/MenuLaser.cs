@@ -12,6 +12,7 @@ public class MenuLaser : MonoBehaviour
     public SteamVR_Action_Vector2 touchDirectionInput;
 
     public RectTransform dictionaryScrollContent;
+	private float handEnterPosition;
 
    
     public bool GetTrackpadTouched()
@@ -29,15 +30,7 @@ public class MenuLaser : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        // Scrolling in the menu
-        if (GetTrackpadTouched())
-        {
-            if (dictionaryScrollContent.gameObject.activeInHierarchy)
-                ScrollScrollContent(dictionaryScrollContent);
-           
-        }
-
+ 
     }
 
     private void ScrollScrollContent(RectTransform scrollContent)
@@ -69,5 +62,43 @@ public class MenuLaser : MonoBehaviour
         float paddingTop = scrollContent.GetComponent<VerticalLayoutGroup>().padding.top;
         return scrollContent.childCount * (childHeight) + paddingBottom + paddingTop;
     }
+		
+	void OnTriggerEnter(Collider other) {
+
+		if (other.tag == "controller") {
+			handEnterPosition = other.transform.position.y;
+		}
+
+	}
+
+	void OnTriggerStay(Collider other) {
+		
+		if (other.tag == "controller") {
+			if (dictionaryScrollContent.gameObject.activeInHierarchy){
+
+				float drag = other.transform.position.y - handEnterPosition;
+				dictionaryScrollContent.transform.localPosition += new Vector3(0f, drag, 0f);
+
+		}
+
+	}
 
 }
+
+
+/*  
+triggerEnter
+var startPosHand
+
+triggerStay
+var curHandPos
+var handPosEffect = curHandPos - startPos
+var curScrollContentPos
+
+scrollPos = curScrollContentPos + handPosEffect
+
+
+
+
+ */
+
