@@ -63,4 +63,13 @@ public class Space : MonoBehaviour {
 			removeAnswer(other.gameObject.GetComponent<AnswerCube>());
 		}
 	}
+
+	public bool answerIsPlane() {
+		if(correct) {
+			return answers[0].plane; 
+		}
+		else {
+			return false;
+		}
+	}
 }

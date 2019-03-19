@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Task : MonoBehaviour {
 
@@ -10,6 +8,10 @@ public class Task : MonoBehaviour {
 	public bool taskComplete;
 	private TaskHandler taskHandler;
 	public int index;
+	[SerializeField] private GameObject textZ;
+	[SerializeField] private GameObject handleX;
+	[SerializeField] private GameObject handleY;
+	[SerializeField] private GameObject handleZ;
 
 	// Start is called before the first frame update
 	void Start() {
@@ -17,7 +19,22 @@ public class Task : MonoBehaviour {
 		index = taskHandler.registerTask();
 	}
 
-	public void changeSolution(float solution) {
+	public void changeSolution(float solution, bool plane) {
+		this.plane = plane;
+		if(plane) {
+			textZ.SetActive(false);
+			handleZ.SetActive(false);
+			this.transform.localScale = new Vector3(this.transform.localScale.x, this.transform.localScale.y, 0.01f);
+			handleX.transform.localPosition = new Vector3(handleX.transform.localPosition.x, handleX.transform.localPosition.y, 0);
+			handleY.transform.localPosition = new Vector3(handleY.transform.localPosition.x, handleY.transform.localPosition.y, 0);
+		}
+		else {
+			textZ.SetActive(true);
+			handleZ.SetActive(true);
+			ExpandLine el = handleZ.GetComponentInChildren<ExpandLine>();
+			el.onAttach();
+			el.onDetach();
+		}
 		this.solution = solution;
 	}
 
