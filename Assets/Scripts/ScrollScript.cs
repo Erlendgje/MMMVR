@@ -19,10 +19,10 @@ public class ScrollScript : MonoBehaviour
             if (isTriggered)
             {
                 if (isOnTop) {
-                    dictionaryScrollContent.localPosition += new Vector3(scrollLenght, 0f, 0f);
+                    dictionaryScrollContent.localPosition -= new Vector3(scrollLenght, 0f, 0f);
                 } else
                 {
-                    dictionaryScrollContent.localPosition -= new Vector3(scrollLenght, 0f, 0f);
+                    dictionaryScrollContent.localPosition += new Vector3(scrollLenght, 0f, 0f);
                 }
                 isTriggered = false;
             }
@@ -34,5 +34,9 @@ public class ScrollScript : MonoBehaviour
 
     }
 
-    
+    private void OnTriggerExit(Collider other)
+    {
+        isTriggered = false;
+    }
+
 }
