@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
 	}
 
 
-	public void unlockNextTask() {
+    public void unlockNextTask() {
 		currentTask++;
 		if(currentTask < tasks.Count) {
 			Instantiate(tasks[currentTask].task, tasks[currentTask].position.transform);
