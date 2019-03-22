@@ -1,20 +1,22 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-
+using System.Linq;
+using System;
+using UnityEngine.Events;
 
 public class Space : MonoBehaviour {
 
 	private AnswerSpace answerSpace;
 	private List<AnswerCube> answers;
-	private Animator anim;
 	public bool correct;
 	public bool checkValueChanged;
+
+	[SerializeField] UnityEvent onCorrect;
 
 	// Start is called before the first frame update
 	void Start() {
 		answerSpace = GetComponentInParent<AnswerSpace>();
 		answers = new List<AnswerCube>();
-		anim = GetComponent<Animator>();
 	}
 
 
@@ -38,7 +40,7 @@ public class Space : MonoBehaviour {
 				Debug.Log ("correct");
 				correct = true;
 				answerSpace.valueChanged(correct, this, answers[0].answerInDm);
-				anim.enabled = true;
+				onCorrect.Invoke();
 			}
 			else {
 				correct = false;

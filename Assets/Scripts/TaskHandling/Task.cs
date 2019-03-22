@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 public class Task : MonoBehaviour {
 
@@ -12,6 +13,7 @@ public class Task : MonoBehaviour {
 	[SerializeField] private GameObject handleX;
 	[SerializeField] private GameObject handleY;
 	[SerializeField] private GameObject handleZ;
+	[SerializeField] private UnityEvent onCorrect;
 
 	// Start is called before the first frame update
 	void Start() {
@@ -66,6 +68,7 @@ public class Task : MonoBehaviour {
 
 			if(Mathf.Round(volume) == Mathf.Round(solution)) {
 				taskComplete = true;
+				onCorrect.Invoke();
 			}
 			else {
 				taskComplete = false;

@@ -69,6 +69,13 @@ ModelImporter:
     100126: pCube53
     100128: pCube54
     100130: pCube55
+    100132: pCube56
+    100134: pCube57
+    100136: pCube58
+    100138: pCube59
+    100140: pCube60
+    100142: pCube61
+    100144: pCube62
     400000: //RootNode
     400002: group1
     400004: group2
@@ -135,8 +142,17 @@ ModelImporter:
     400126: pCube53
     400128: pCube54
     400130: pCube55
+    400132: pCube56
+    400134: pCube57
+    400136: pCube58
+    400138: pCube59
+    400140: pCube60
+    400142: pCube61
+    400144: pCube62
     2100000: lambert2
     2100002: lambert1
+    2100004: lambert3
+    2100006: lambert4
     2300000: pCube45
     2300002: pCube46
     2300004: pCube47
@@ -154,6 +170,13 @@ ModelImporter:
     2300028: pCube53
     2300030: pCube54
     2300032: pCube55
+    2300034: pCube56
+    2300036: pCube57
+    2300038: pCube58
+    2300040: pCube59
+    2300042: pCube60
+    2300044: pCube61
+    2300046: pCube62
     3300000: pCube45
     3300002: pCube46
     3300004: pCube47
@@ -171,6 +194,13 @@ ModelImporter:
     3300028: pCube53
     3300030: pCube54
     3300032: pCube55
+    3300034: pCube56
+    3300036: pCube57
+    3300038: pCube58
+    3300040: pCube59
+    3300042: pCube60
+    3300044: pCube61
+    3300046: pCube62
     4300000: pCube45
     4300002: pCube46
     4300004: pCube47
@@ -188,6 +218,13 @@ ModelImporter:
     4300028: pCube53
     4300030: pCube54
     4300032: pCube55
+    4300034: pCube56
+    4300036: pCube57
+    4300038: pCube58
+    4300040: pCube59
+    4300042: pCube60
+    4300044: pCube61
+    4300046: pCube62
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
