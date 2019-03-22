@@ -26,4 +26,9 @@ public class CorrectCubes : MonoBehaviour
 		Array.Find(cable.materials, m => m.name.Equals("CableLight (Instance)")).EnableKeyword("_EMISSION");
 		Array.Find(this.GetComponent<MeshRenderer>().materials, m => m.name.Equals("CableLight (Instance)")).EnableKeyword("_EMISSION");
 	}
+
+	public void onWrong() {
+		Array.Find(cable.materials, m => m.name.Equals("CableLight (Instance)")).DisableKeyword("_EMISSION");
+		Array.Find(this.GetComponent<MeshRenderer>().materials, m => m.name.Equals("CableLight (Instance)")).DisableKeyword("_EMISSION");
+	}
 }
