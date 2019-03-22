@@ -12,6 +12,7 @@ public class Space : MonoBehaviour {
 	public bool checkValueChanged;
 
 	[SerializeField] UnityEvent onCorrect;
+	[SerializeField] UnityEvent onWrong;
 
 	// Start is called before the first frame update
 	void Start() {
@@ -44,11 +45,13 @@ public class Space : MonoBehaviour {
 			}
 			else {
 				correct = false;
+				onWrong.Invoke();
 				answerSpace.valueChanged(correct, this);
 			}
 		}
 		else {
 			correct = false;
+			onWrong.Invoke();
 			answerSpace.valueChanged(correct, this);
 		}
 	}

@@ -22,12 +22,13 @@ public class CorrectCubes : MonoBehaviour
 
 
 	public void onCorrect() {
-		anim.enabled = true;
+		anim.SetBool("correct", true);
 		Array.Find(cable.materials, m => m.name.Equals("CableLight (Instance)")).EnableKeyword("_EMISSION");
 		Array.Find(this.GetComponent<MeshRenderer>().materials, m => m.name.Equals("CableLight (Instance)")).EnableKeyword("_EMISSION");
 	}
 
 	public void onWrong() {
+		anim.SetBool("correct", false);
 		Array.Find(cable.materials, m => m.name.Equals("CableLight (Instance)")).DisableKeyword("_EMISSION");
 		Array.Find(this.GetComponent<MeshRenderer>().materials, m => m.name.Equals("CableLight (Instance)")).DisableKeyword("_EMISSION");
 	}

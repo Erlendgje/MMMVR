@@ -14,6 +14,7 @@ public class Task : MonoBehaviour {
 	[SerializeField] private GameObject handleY;
 	[SerializeField] private GameObject handleZ;
 	[SerializeField] private UnityEvent onCorrect;
+	[SerializeField] private UnityEvent onWrong;
 
 	// Start is called before the first frame update
 	void Start() {
@@ -72,10 +73,12 @@ public class Task : MonoBehaviour {
 			}
 			else {
 				taskComplete = false;
+				onWrong.Invoke();
 			}
 		}
 		else {
 			taskComplete = false;
+			onWrong.Invoke();
 		}
 
 		taskHandler.updateTask(index, taskComplete);
