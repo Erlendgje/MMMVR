@@ -1,8 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SnapToPosition : MonoBehaviour {
+
+	private static bool taskDone = false;
+	private static UnityEvent onCorrectStatic;
+	private static UnityEvent onWrongStatic;
+
+	[SerializeField] private UnityEvent onCorrect;
+	[SerializeField] private UnityEvent onWrong;
 
     [SerializeField] GameObject errorText;
 	[SerializeField] GameObject ghostPyramid;
@@ -19,8 +27,13 @@ public class SnapToPosition : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        rgdb = this.GetComponent<Rigidbody>();
 
+		if(onCorrectStatic != null && onCorrect != null) {
+			onCorrectStatic = onCorrect;
+			onWrongStatic = onWrong;
+		}
+
+        rgdb = this.GetComponent<Rigidbody>();
         snappedObjects = new List<GameObject>();
     }
 
@@ -90,16 +103,20 @@ public class SnapToPosition : MonoBehaviour {
             
             if (!errorText.activeInHierarchy) {
                 SoundManager.instance.PlaySingle(snapSound);
-                if  (snappedObjects.Count == 3) {
-				    //TASK DONE!!! DO SOMETHING HERE!!!
+                if  (snappedObjects.Count == 3 && !taskDone) {
+					//TASK DONE!!!
+					taskDone = true;
+					onCorrectStatic.Invoke();
 				    GameManager.gameManager.unlockNextTask();
                 
 			    }
             } 
             else{
                 SoundManager.instance.PlaySingle(failSound);
+				if(!taskDone) {
+					onWrongStatic.Invoke();
+				}
             }
-
         }
 	}
 

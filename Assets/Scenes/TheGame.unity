@@ -374,6 +374,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube-task-2.0 With spray
       objectReference: {fileID: 0}
+    - target: {fileID: 237387692, guid: 4b210056246ad43439c7813082b1794d, type: 3}
+      propertyPath: keepCurrentColor
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8545654978932856412, guid: 4b210056246ad43439c7813082b1794d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2058,6 +2062,18 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1022080130, guid: 4b210056246ad43439c7813082b1794d, type: 3}
+      propertyPath: keepCurrentColor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1056902961, guid: 4b210056246ad43439c7813082b1794d, type: 3}
+      propertyPath: keepCurrentColor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193761875, guid: 4b210056246ad43439c7813082b1794d, type: 3}
+      propertyPath: keepCurrentColor
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7337890347443355307, guid: 4b210056246ad43439c7813082b1794d, type: 3}

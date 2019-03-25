@@ -13,7 +13,8 @@ public class Space : MonoBehaviour {
 
 	[SerializeField] UnityEvent onCorrect;
 	[SerializeField] UnityEvent onWrong;
-
+	[SerializeField] UnityEvent onRegisterdAnswer;
+	[SerializeField] private bool useRegisterdAnswer;
 	// Start is called before the first frame update
 	void Start() {
 		answerSpace = GetComponentInParent<AnswerSpace>();
@@ -38,14 +39,23 @@ public class Space : MonoBehaviour {
 	public void checkSolution() {
 		if(answers.Count != 0) {
 			if (answers.FindAll(a => a.answerInDm == answers[0].answerInDm && a.plane == answers[0].plane).Count == answers[0].numbersInGroup && answers.Count == answers[0].numbersInGroup) {
-				Debug.Log ("correct");
 				correct = true;
+				if(useRegisterdAnswer) {
+					onRegisterdAnswer.Invoke();
+				}
+				else {
+					onCorrect.Invoke();
+				}
 				answerSpace.valueChanged(correct, this, answers[0].answerInDm);
-				onCorrect.Invoke();
 			}
 			else {
 				correct = false;
-				onWrong.Invoke();
+				if(useRegisterdAnswer) {
+					onRegisterdAnswer.Invoke();
+				}
+				else {
+					onWrong.Invoke();
+				}
 				answerSpace.valueChanged(correct, this);
 			}
 		}
