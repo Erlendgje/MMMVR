@@ -11,6 +11,8 @@ public class SnapToPosition : MonoBehaviour {
     private bool isPickedUp = false;
 	private bool inTrigger = false;
     public static List<GameObject> snappedObjects;
+    public AudioClip snapSound;
+    public AudioClip failSound;
    
     private float distance = 0.1f;
 
@@ -85,11 +87,18 @@ public class SnapToPosition : MonoBehaviour {
                 }
             }
             snappedObjects.Add(this.gameObject);
-
-			if(!errorText.activeInHierarchy && snappedObjects.Count == 3) {
-				//TASK DONE!!! DO SOMETHING HERE!!!
-				GameManager.gameManager.unlockNextTask();
-			}
+            
+            if (!errorText.activeInHierarchy) {
+                SoundManager.instance.PlaySingle(snapSound);
+                if  (snappedObjects.Count == 3) {
+				    //TASK DONE!!! DO SOMETHING HERE!!!
+				    GameManager.gameManager.unlockNextTask();
+                
+			    }
+            } 
+            else{
+                SoundManager.instance.PlaySingle(failSound);
+            }
 
         }
 	}
