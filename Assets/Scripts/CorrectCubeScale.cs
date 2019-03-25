@@ -5,8 +5,17 @@ using UnityEngine;
 
 public class CorrectCubeScale : MonoBehaviour
 {
-	public void onCorrect() {
+
+    private AudioSource sound;
+
+    private void Start()
+    {
+        sound = this.GetComponent<AudioSource>();
+    }
+
+    public void onCorrect() {
 		Array.Find(this.GetComponent<MeshRenderer>().materials, m => m.name.Equals("CableLight (Instance)")).EnableKeyword("_EMISSION");
+		sound.PlayDelayed (0.2f);
 	}
 
 	public void onWrong() {

@@ -364,6 +364,8 @@ MonoBehaviour:
   errorText: {fileID: 620640554978232919}
   ghostPyramid: {fileID: 9024830424573390932}
   point: {fileID: 2221445372826852971}
+  snapSound: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}
+  failSound: {fileID: 8300000, guid: 89e6bc608da7b47d4914f3d9c2484e48, type: 3}
 --- !u!1 &1634401195024398
 GameObject:
   m_ObjectHideFlags: 0
@@ -784,6 +786,8 @@ MonoBehaviour:
   errorText: {fileID: 620640554978232919}
   ghostPyramid: {fileID: 9024830424573390932}
   point: {fileID: 2345817771129983014}
+  snapSound: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}
+  failSound: {fileID: 8300000, guid: 89e6bc608da7b47d4914f3d9c2484e48, type: 3}
 --- !u!114 &114479383076045620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1082,6 +1086,8 @@ MonoBehaviour:
   errorText: {fileID: 620640554978232919}
   ghostPyramid: {fileID: 9024830424573390932}
   point: {fileID: 6941710941048852707}
+  snapSound: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}
+  failSound: {fileID: 8300000, guid: 89e6bc608da7b47d4914f3d9c2484e48, type: 3}
 --- !u!1 &620640554978232919
 GameObject:
   m_ObjectHideFlags: 0
@@ -1535,6 +1541,8 @@ MonoBehaviour:
   errorText: {fileID: 620640554978232919}
   ghostPyramid: {fileID: 9024830424573390932}
   point: {fileID: 1029065811769046105}
+  snapSound: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}
+  failSound: {fileID: 8300000, guid: 89e6bc608da7b47d4914f3d9c2484e48, type: 3}
 --- !u!1 &6941710941048852707
 GameObject:
   m_ObjectHideFlags: 0
@@ -1615,6 +1623,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveDuration: 10
   moveUpwards: 1.368
+  dontActivateRigidBody: 0
 --- !u!82 &6112550231640532652
 AudioSource:
   m_ObjectHideFlags: 0
