@@ -7,6 +7,7 @@ public class TaskHandler : MonoBehaviour
 {
 	public List<bool> task;
 	[SerializeField] private UnityEvent onCorrect;
+    private bool done = false;
 
 	public void Awake() {
 		task = new List<bool>();
@@ -22,10 +23,13 @@ public class TaskHandler : MonoBehaviour
 		task[index] = value;
 
 		if(task.FindAll(t => t.Equals(true)).Count == task.Count) {
-			Debug.Log("TaskDone");
-			//DO SOMETHING HERE, TASK IS DONE
-			onCorrect.Invoke();
-			GameManager.gameManager.unlockNextTask();
+            //DO SOMETHING HERE, TASK IS DONE'
+            onCorrect.Invoke();
+            if (!done)
+            {
+                GameManager.gameManager.unlockNextTask();
+                done = true;
+            }
 		}
 	}
 }

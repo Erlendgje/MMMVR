@@ -12,7 +12,7 @@ public class TaskCorrect : MonoBehaviour
 
     private void Start()
     {
-        sound = this.GetComponent<AudioSource>();
+        //sound = this.GetComponent<AudioSource>();
 		if(keepCurrentColor) {
 			material = Array.Find(this.GetComponent<MeshRenderer>().materials, m => m.name.Equals("CableLight (Instance)"));
 			onCorrectColor = material.GetColor("_EmissionColor");
@@ -22,7 +22,7 @@ public class TaskCorrect : MonoBehaviour
     public void onCorrect() {
 		material.EnableKeyword("_EMISSION");
 		material.SetColor("_EmissionColor", onCorrectColor);
-		sound.PlayDelayed (0.2f);
+		///sound.PlayDelayed (0.2f);
 	}
 
 	public void onWrong() {

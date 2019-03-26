@@ -6,8 +6,6 @@ using UnityEngine.Events;
 public class SnapToPosition : MonoBehaviour {
 
 	private static bool taskDone = false;
-	private static UnityEvent onCorrectStatic;
-	private static UnityEvent onWrongStatic;
 
 	[SerializeField] private UnityEvent onCorrect;
 	[SerializeField] private UnityEvent onWrong;
@@ -27,12 +25,6 @@ public class SnapToPosition : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
-		if(onCorrectStatic != null && onCorrect != null) {
-			onCorrectStatic = onCorrect;
-			onWrongStatic = onWrong;
-		}
-
         rgdb = this.GetComponent<Rigidbody>();
         snappedObjects = new List<GameObject>();
     }
@@ -106,7 +98,7 @@ public class SnapToPosition : MonoBehaviour {
                 if  (snappedObjects.Count == 3 && !taskDone) {
 					//TASK DONE!!!
 					taskDone = true;
-					onCorrectStatic.Invoke();
+					onCorrect.Invoke();
 				    GameManager.gameManager.unlockNextTask();
                 
 			    }
@@ -114,7 +106,7 @@ public class SnapToPosition : MonoBehaviour {
             else{
                 SoundManager.instance.PlaySingle(failSound);
 				if(!taskDone) {
-					onWrongStatic.Invoke();
+					onWrong.Invoke();
 				}
             }
         }

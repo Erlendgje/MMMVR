@@ -2276,7 +2276,7 @@ PrefabInstance:
     - target: {fileID: 7227601620054850934, guid: 1e81c48f901931445b8787f319b4b809,
         type: 3}
       propertyPath: spawnTaskNumber
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e81c48f901931445b8787f319b4b809, type: 3}
