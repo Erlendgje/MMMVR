@@ -66,16 +66,36 @@ public class Space : MonoBehaviour {
 		}
 	}
 
-
+	/*
 	private void OnTriggerEnter(Collider other) {
 		if(other.gameObject.GetComponent<AnswerCube>() != null) {
 			addAnswer(other.gameObject.GetComponent<AnswerCube>());
 		}
 	}
+	*/
+
+	private void OnTriggerStay(Collider other) {
+		
+		if(other.gameObject.GetComponent<AnswerCube>() != null) {
+			AnswerCube ac = other.gameObject.GetComponent<AnswerCube>();
+			if(!answers.Contains(ac)) {
+				if(ac.getHasCollided()) {
+					addAnswer(ac);
+				}
+			}
+			else {
+				if(!ac.getHasCollided()) {
+					removeAnswer(ac);
+				}
+			}
+		}
+	}
 
 	private void OnTriggerExit(Collider other) {
 		if (other.gameObject.GetComponent<AnswerCube>() != null) {
-			removeAnswer(other.gameObject.GetComponent<AnswerCube>());
+			if(answers.Contains(other.gameObject.GetComponent<AnswerCube>())) {
+				removeAnswer(other.gameObject.GetComponent<AnswerCube>());
+			}
 		}
 	}
 
