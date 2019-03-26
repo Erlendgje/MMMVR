@@ -21,7 +21,7 @@ public class TaskCorrect : MonoBehaviour
     public void onCorrect() {
 		material.EnableKeyword("_EMISSION");
 		material.SetColor("_EmissionColor", onCorrectColor);
-		SoundManager.instance.PlaySingle(successSound);
+		SoundManager.instance.PlaySingleDelayed(successSound, 0.2f);
 	}
 
 	public void onWrong() {

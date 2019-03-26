@@ -15,10 +15,10 @@ public class ExpandLine : MonoBehaviour {
     [SerializeField] private Transform cube;
     [SerializeField] dimension myDimension;
     [SerializeField] bool d3;
+    [SerializeField] public AudioClip snapSound;
     private Vector3 position, scale;
 
     public bool isAttached;
-	public bool go;
 
     private void Start()
     {
@@ -29,13 +29,6 @@ public class ExpandLine : MonoBehaviour {
         onAttach();
         onDetach();
     }
-
-	public void Update() {
-		if(isAttached && go) {
-			StartCoroutine(changeSize());
-			go = false;
-		}
-	}
 
 	public void onAttach()
     {
@@ -79,10 +72,15 @@ public class ExpandLine : MonoBehaviour {
         scale[index] = Mathf.Floor(Mathf.Abs(this.transform.localPosition[index]) * 10f) / 10;
 		cube.transform.localScale = scale;
 
-
+        
 		Vector3 position = text.transform.localPosition;
         position[index] = scale[index] / 2 * negative;
-        text.transform.localPosition = position;
+
+        if(text.transform.localPosition != position)
+        {
+            SoundManager.instance.PlaySingle(snapSound);
+            text.transform.localPosition = position;
+        }
 
         Vector3 handle1Position = handle1.localPosition;
         handle1Position[index] = scale[index] / 2 * negative;
