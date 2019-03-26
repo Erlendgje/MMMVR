@@ -6,6 +6,7 @@ public class Tablet : MonoBehaviour
 	[SerializeField] private RectTransform position;
 	private Vector3 fromPosition;
 
+
 	private void OnTriggerEnter(Collider other) {
 		if(other.gameObject.CompareTag("GameController")) {
 			fromPosition = other.transform.position;
@@ -14,8 +15,15 @@ public class Tablet : MonoBehaviour
 
 	private void OnTriggerStay(Collider other) {
 		if(other.gameObject.CompareTag("GameController")) {
-			Vector3 scrollValue = Vector3.Cross(this.transform.position, other.transform.rotation.eulerAngles / 360) - Vector3.Cross(fromPosition, other.transform.rotation.eulerAngles / 360);
-			position.position = new Vector3(scrollValue.x, position.position.y, position.position.z);
+			Quaternion rotation = this.transform.rotation;
+			Matrix4x4 m = Matrix4x4.Rotate(rotation);
+			Vector3 tabletDirection = m.MultiplyPoint(Vector3.right);
+			Vector3 scrollDirection = other.transform.position - fromPosition;
+			float scrollValue = Vector3.Dot(tabletDirection, scrollDirection);
+
+			Vector3 tempPosition = position.localPosition;
+			tempPosition[0] = scrollValue;
+			position.localPosition = tempPosition;
 		}
 	}
 }
