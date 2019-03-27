@@ -10,7 +10,6 @@ public class Tablet : MonoBehaviour
 		if(other.gameObject.CompareTag("GameController")) {
 			fromPosition = other.transform.position;
 			startScrollPosition = position.localPosition;
-			Debug.Log(fromPosition);
 		}
 	}
 

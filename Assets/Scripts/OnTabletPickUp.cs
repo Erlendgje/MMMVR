@@ -8,6 +8,11 @@ public class OnTabletPickUp : MonoBehaviour
 
 	[SerializeField] private iTweenAnimation hover;
 
+    private void Start()
+    {
+        hover.stopTweensOnDisable = true;
+    }
+
     public void onPickUp() {
 		hover.enabled = false;
 		GetComponent<Throwable>().currentHand.GetComponent<BoxCollider>().enabled = false;
