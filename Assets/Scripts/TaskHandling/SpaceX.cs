@@ -4,7 +4,7 @@ using System.Linq;
 using System;
 using UnityEngine.Events;
 
-public class Space : MonoBehaviour {
+public class SpaceX : MonoBehaviour {
 
 	private AnswerSpace answerSpace;
 	private List<AnswerCube> answers;

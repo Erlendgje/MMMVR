@@ -5,15 +5,15 @@ using UnityEngine;
 
 public class AnswerSpace : MonoBehaviour {
 
-	[SerializeField] private List<Space> spaces;
+	[SerializeField] private List<SpaceX> spaces;
 	[SerializeField] private List<Task> tasks;
 
 
-	public void valueChanged(bool value, Space space) {
+	public void valueChanged(bool value, SpaceX space) {
 		valueChanged(value, space, 0);
 	}
 
-	public void valueChanged(bool value, Space space, float solution) {
+	public void valueChanged(bool value, SpaceX space, float solution) {
 		Task task;
 		task = tasks[spaces.FindIndex(s => s == space)];
 		task.changeSolution(solution, space.answerIsPlane());
