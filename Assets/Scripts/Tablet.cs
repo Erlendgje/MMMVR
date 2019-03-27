@@ -2,14 +2,15 @@
 
 public class Tablet : MonoBehaviour
 {
-	[SerializeField] private float speed;
 	[SerializeField] private RectTransform position;
 	private Vector3 fromPosition;
-
+	private Vector3 startScrollPosition;
 
 	private void OnTriggerEnter(Collider other) {
 		if(other.gameObject.CompareTag("GameController")) {
 			fromPosition = other.transform.position;
+			startScrollPosition = position.localPosition;
+			Debug.Log(fromPosition);
 		}
 	}
 
@@ -22,7 +23,7 @@ public class Tablet : MonoBehaviour
 			float scrollValue = Vector3.Dot(tabletDirection, scrollDirection);
 
 			Vector3 tempPosition = position.localPosition;
-			tempPosition[0] = scrollValue;
+			tempPosition[0] = startScrollPosition.x + scrollValue;
 			position.localPosition = tempPosition;
 		}
 	}

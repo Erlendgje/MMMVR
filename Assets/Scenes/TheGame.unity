@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18068194, g: 0.22618997, b: 0.30713663, a: 1}
+  m_IndirectSpecularColor: {r: 0.18068151, g: 0.22618926, b: 0.30713537, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3884,6 +3884,21 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1384723466136331113, guid: daad980f2698e774dbd96182485f9f6a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.06660515
+      objectReference: {fileID: 0}
+    - target: {fileID: 1384723466136331113, guid: daad980f2698e774dbd96182485f9f6a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.00000009767124
+      objectReference: {fileID: 0}
+    - target: {fileID: 1384723466136331113, guid: daad980f2698e774dbd96182485f9f6a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 437920, guid: daad980f2698e774dbd96182485f9f6a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.086
@@ -4022,26 +4037,15 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 1384723466136331113, guid: daad980f2698e774dbd96182485f9f6a,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.06660515
-      objectReference: {fileID: 0}
-    - target: {fileID: 1384723466136331113, guid: daad980f2698e774dbd96182485f9f6a,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.00000009767124
-      objectReference: {fileID: 0}
-    - target: {fileID: 1384723466136331113, guid: daad980f2698e774dbd96182485f9f6a,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1718647691576372022, guid: daad980f2698e774dbd96182485f9f6a,
         type: 3}
       propertyPath: position
       value: 
       objectReference: {fileID: 871709303}
+    - target: {fileID: 5413636, guid: daad980f2698e774dbd96182485f9f6a, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: daad980f2698e774dbd96182485f9f6a, type: 3}
 --- !u!114 &1929620435 stripped
