@@ -24,8 +24,15 @@ public class SoundManager : MonoBehaviour
     public void PlaySingle(AudioClip clip)
     {
         efxSource.clip = clip;
-
         efxSource.Play();
+    }
+
+    public void PlaySingleDelayed(AudioClip clip, float delay)
+    {
+        efxSource.clip = clip;
+
+        efxSource.PlayDelayed(delay);
+        Debug.Log("sound");
     }
 
 }

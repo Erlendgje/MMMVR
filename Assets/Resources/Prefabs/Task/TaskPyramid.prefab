@@ -1828,6 +1828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76617888e8101024085273038703eba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  successSound: {fileID: 8300000, guid: 1d2b2a3420d74da45be3592086136700, type: 3}
   onRegisterColor: {r: 0, g: 0, b: 0, a: 0}
   onCorrectColor: {r: 0, g: 0, b: 0, a: 0}
   keepCurrentColor: 1
@@ -2008,6 +2009,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4637602568662340}
     m_Modifications:
+    - target: {fileID: 9206763881186853373, guid: 40258ec08d9614b4d9c675e84fd71e4c,
+        type: 3}
+      propertyPath: m_Name
+      value: Dust Variant
+      objectReference: {fileID: 0}
     - target: {fileID: 9206763881186853368, guid: 40258ec08d9614b4d9c675e84fd71e4c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2072,11 +2078,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 1.0000002
-      objectReference: {fileID: 0}
-    - target: {fileID: 9206763881186853373, guid: 40258ec08d9614b4d9c675e84fd71e4c,
-        type: 3}
-      propertyPath: m_Name
-      value: Dust Variant
       objectReference: {fileID: 0}
     - target: {fileID: 9206763880668925125, guid: 40258ec08d9614b4d9c675e84fd71e4c,
         type: 3}

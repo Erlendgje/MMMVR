@@ -8,6 +8,7 @@ public class snapToHover : MonoBehaviour
 	private bool detached = false;
 
 	public float speed = 1;
+	[SerializeField] public AudioClip snapSound;
 
 	void Start() {
 	}
@@ -21,6 +22,7 @@ public class snapToHover : MonoBehaviour
                 this.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
                 this.GetComponent<Rigidbody>().useGravity = false;
                 detached = false;
+				SoundManager.instance.PlaySingle (snapSound);
             }
 
 			if(this.transform.position != new Vector3(other.transform.position.x, other.transform.position.y, other.transform.position.z)) {
