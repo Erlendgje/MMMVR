@@ -17,12 +17,12 @@ public class Tablet : MonoBehaviour
 		if(other.gameObject.CompareTag("GameController")) {
 			Quaternion rotation = this.transform.rotation;
 			Matrix4x4 m = Matrix4x4.Rotate(rotation);
-			Vector3 tabletDirection = m.MultiplyPoint(Vector3.right);
+			Vector3 tabletDirection = m.MultiplyPoint(Vector3.up);
 			Vector3 scrollDirection = other.transform.position - fromPosition;
 			float scrollValue = Vector3.Dot(tabletDirection, scrollDirection);
 
 			Vector3 tempPosition = position.localPosition;
-			tempPosition[0] = startScrollPosition.x + scrollValue;
+			tempPosition[1] = startScrollPosition.y + scrollValue;
 			position.localPosition = tempPosition;
 		}
 	}
