@@ -11,28 +11,34 @@ public class OnTabletPickUp : MonoBehaviour
 	[SerializeField] private float distance;
 	[SerializeField] private float magnitudeThreshold;
 	[SerializeField] private float secondsAfterThrow;
+    private bool isThrowing = false;
 
     public void onPickUp() {
 		hover.enabled = false;
+        moveTo.enabled = false;
 		GetComponent<Throwable>().currentHand.GetComponent<BoxCollider>().enabled = false;
 	}
 
 	public void onDrop() {
-		hover.enabled = true;
+		
 		GetComponent<Throwable>().currentHand.GetComponent<BoxCollider>().enabled = true;
 		if(GetComponent<VelocityEstimator>().GetVelocityEstimate().magnitude > magnitudeThreshold) {
 			StartCoroutine(disableKinematicForSeconds(secondsAfterThrow));
-		} 
+		}
+        else
+        {
+            hover.enabled = true;
+        }
 	}
 
 	private IEnumerator disableKinematicForSeconds(float seconds) {
-
+        isThrowing = true;
 		GetComponent<Rigidbody>().isKinematic = false;
 
 		yield return new WaitForSeconds(seconds);
 
 		GetComponent<Rigidbody>().isKinematic = true;
-
+        isThrowing = false;
 	}
 
 
@@ -41,7 +47,7 @@ public class OnTabletPickUp : MonoBehaviour
 	}
 
 	public void startMoveTo() {
-		StartCoroutine(changeAnimation(moveTo, hover));
+        StartCoroutine(changeAnimation(moveTo, hover));
 	}
 
 	private IEnumerator changeAnimation(iTweenAnimation start, iTweenAnimation stop) {
@@ -51,8 +57,13 @@ public class OnTabletPickUp : MonoBehaviour
 	}
 
 	private void Update() {
-		if(Vector3.Distance(this.transform.position, Camera.main.transform.position) > distance && !moveTo.enabled) {
+		if(Vector3.Distance(this.transform.position, Camera.main.transform.position) > distance && !moveTo.enabled && !isThrowing) {
 			startMoveTo();
 		}
+
+        if(hover.enabled && moveTo.enabled)
+        {
+            moveTo.enabled = false;
+        }
 	}
 }
