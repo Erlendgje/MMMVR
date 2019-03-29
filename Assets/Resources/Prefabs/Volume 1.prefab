@@ -638,8 +638,8 @@ MonoBehaviour:
   cube: {fileID: 4846236653472700}
   myDimension: 1
   d3: 1
+  snapSound: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}
   isAttached: 0
-  go: 0
 --- !u!1 &1240489809166122
 GameObject:
   m_ObjectHideFlags: 0
@@ -1189,8 +1189,8 @@ MonoBehaviour:
   cube: {fileID: 4846236653472700}
   myDimension: 2
   d3: 1
+  snapSound: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}
   isAttached: 0
-  go: 0
 --- !u!1 &1454708131531362
 GameObject:
   m_ObjectHideFlags: 0
@@ -1500,6 +1500,20 @@ MonoBehaviour:
   answerSpaceCorrect: 0
   taskComplete: 0
   index: 0
+  textZ: {fileID: 0}
+  handleX: {fileID: 0}
+  handleY: {fileID: 0}
+  handleZ: {fileID: 0}
+  onCorrect:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onWrong:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1609790425996356
 GameObject:
   m_ObjectHideFlags: 0
@@ -2478,8 +2492,8 @@ MonoBehaviour:
   cube: {fileID: 4846236653472700}
   myDimension: 0
   d3: 1
+  snapSound: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}
   isAttached: 0
-  go: 0
 --- !u!1 &1873819229221488
 GameObject:
   m_ObjectHideFlags: 0

@@ -22,7 +22,6 @@ public class MaterialBlinking : MonoBehaviour
 	private IEnumerator blink() {
 		while(true) {
 			while(c.a < to) {
-				Debug.Log(c.a + " : " + c[3]);
 				c[3] = c.a + speed * Time.deltaTime;
 				this.GetComponent<MeshRenderer>().material.color = c;
 				yield return null;

@@ -300,6 +300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76617888e8101024085273038703eba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  successSound: {fileID: 8300000, guid: 1d2b2a3420d74da45be3592086136700, type: 3}
   onRegisterColor: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 0}
   onCorrectColor: {r: 0, g: 0, b: 0, a: 0}
   keepCurrentColor: 1
@@ -479,6 +480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76617888e8101024085273038703eba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  successSound: {fileID: 8300000, guid: 1d2b2a3420d74da45be3592086136700, type: 3}
   onRegisterColor: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 0}
   onCorrectColor: {r: 0, g: 0, b: 0, a: 0}
   keepCurrentColor: 1
@@ -539,6 +541,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  snapSound: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}
 --- !u!82 &435960284182482335
 AudioSource:
   m_ObjectHideFlags: 0
@@ -715,6 +718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76617888e8101024085273038703eba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  successSound: {fileID: 8300000, guid: 1d2b2a3420d74da45be3592086136700, type: 3}
   onRegisterColor: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 0}
   onCorrectColor: {r: 0, g: 0, b: 0, a: 0}
   keepCurrentColor: 1
@@ -853,6 +857,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76617888e8101024085273038703eba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  successSound: {fileID: 8300000, guid: 1d2b2a3420d74da45be3592086136700, type: 3}
   onRegisterColor: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 0}
   onCorrectColor: {r: 0, g: 0, b: 0, a: 0}
   keepCurrentColor: 1
@@ -954,6 +959,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  snapSound: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}
 --- !u!54 &306998074784400911
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -996,6 +1002,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  snapSound: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}
 --- !u!114 &3996514584799525504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1248,6 +1255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  snapSound: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}
 --- !u!114 &8761233827505482820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1327,10 +1335,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6373129096145967985}
     m_Modifications:
-    - target: {fileID: 100000, guid: f22fe7dad845b3947b68388011094d66, type: 3}
-      propertyPath: m_Name
-      value: PyramidSkewed (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f22fe7dad845b3947b68388011094d66, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.085
@@ -1387,6 +1391,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.30000007
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f22fe7dad845b3947b68388011094d66, type: 3}
+      propertyPath: m_Name
+      value: PyramidSkewed (2)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f22fe7dad845b3947b68388011094d66, type: 3}
 --- !u!1 &293994274 stripped
@@ -1408,10 +1416,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6373129096145967985}
     m_Modifications:
-    - target: {fileID: 100000, guid: b0c0de612a297004e8d48c5fec5c2c2b, type: 3}
-      propertyPath: m_Name
-      value: Pyramid (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b0c0de612a297004e8d48c5fec5c2c2b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16.556
@@ -1468,6 +1472,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b0c0de612a297004e8d48c5fec5c2c2b, type: 3}
+      propertyPath: m_Name
+      value: Pyramid (2)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0c0de612a297004e8d48c5fec5c2c2b, type: 3}
 --- !u!1 &1267133632 stripped
@@ -1489,6 +1497,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1241451116609034825}
     m_Modifications:
+    - target: {fileID: 1134501514803382833, guid: 08f5622ee94140f488c2072732bddf3c,
+        type: 3}
+      propertyPath: m_Name
+      value: Dust
+      objectReference: {fileID: 0}
     - target: {fileID: 1134501514803382836, guid: 08f5622ee94140f488c2072732bddf3c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1553,11 +1566,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1134501514803382833, guid: 08f5622ee94140f488c2072732bddf3c,
-        type: 3}
-      propertyPath: m_Name
-      value: Dust
       objectReference: {fileID: 0}
     - target: {fileID: 1134501514233324880, guid: 08f5622ee94140f488c2072732bddf3c,
         type: 3}
@@ -1775,10 +1783,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6373129096145967985}
     m_Modifications:
-    - target: {fileID: 100000, guid: b0c0de612a297004e8d48c5fec5c2c2b, type: 3}
-      propertyPath: m_Name
-      value: Pyramid (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b0c0de612a297004e8d48c5fec5c2c2b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17.304
@@ -1835,6 +1839,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.30000013
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b0c0de612a297004e8d48c5fec5c2c2b, type: 3}
+      propertyPath: m_Name
+      value: Pyramid (3)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0c0de612a297004e8d48c5fec5c2c2b, type: 3}
 --- !u!4 &1439054334 stripped
@@ -1856,10 +1864,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6373129096145967985}
     m_Modifications:
-    - target: {fileID: 100000, guid: f22fe7dad845b3947b68388011094d66, type: 3}
-      propertyPath: m_Name
-      value: PyramidSkewed (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f22fe7dad845b3947b68388011094d66, type: 3}
       propertyPath: m_LocalPosition.x
       value: 18.89
@@ -1915,6 +1919,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: f22fe7dad845b3947b68388011094d66, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.30000007
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f22fe7dad845b3947b68388011094d66, type: 3}
+      propertyPath: m_Name
+      value: PyramidSkewed (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f22fe7dad845b3947b68388011094d66, type: 3}
@@ -2894,14 +2902,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2135594786980961062}
     m_Modifications:
-    - target: {fileID: 100000, guid: b0c0de612a297004e8d48c5fec5c2c2b, type: 3}
-      propertyPath: m_Name
-      value: Pyramid (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: b0c0de612a297004e8d48c5fec5c2c2b, type: 3}
-      propertyPath: m_TagString
-      value: GhostPyramid
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b0c0de612a297004e8d48c5fec5c2c2b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2957,6 +2957,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: b0c0de612a297004e8d48c5fec5c2c2b, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b0c0de612a297004e8d48c5fec5c2c2b, type: 3}
+      propertyPath: m_Name
+      value: Pyramid (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b0c0de612a297004e8d48c5fec5c2c2b, type: 3}
+      propertyPath: m_TagString
+      value: GhostPyramid
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: b0c0de612a297004e8d48c5fec5c2c2b, type: 3}
       propertyPath: m_Enabled
@@ -2981,14 +2989,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2395768983714014176}
     m_Modifications:
-    - target: {fileID: 100000, guid: b0c0de612a297004e8d48c5fec5c2c2b, type: 3}
-      propertyPath: m_Name
-      value: Pyramid (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: b0c0de612a297004e8d48c5fec5c2c2b, type: 3}
-      propertyPath: m_TagString
-      value: GhostPyramid
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b0c0de612a297004e8d48c5fec5c2c2b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3044,6 +3044,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: b0c0de612a297004e8d48c5fec5c2c2b, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b0c0de612a297004e8d48c5fec5c2c2b, type: 3}
+      propertyPath: m_Name
+      value: Pyramid (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b0c0de612a297004e8d48c5fec5c2c2b, type: 3}
+      propertyPath: m_TagString
+      value: GhostPyramid
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: b0c0de612a297004e8d48c5fec5c2c2b, type: 3}
       propertyPath: m_Enabled
@@ -3068,14 +3076,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1952000785439244815}
     m_Modifications:
-    - target: {fileID: 100000, guid: b0c0de612a297004e8d48c5fec5c2c2b, type: 3}
-      propertyPath: m_Name
-      value: Pyramid (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: b0c0de612a297004e8d48c5fec5c2c2b, type: 3}
-      propertyPath: m_TagString
-      value: GhostPyramid
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b0c0de612a297004e8d48c5fec5c2c2b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3131,6 +3131,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: b0c0de612a297004e8d48c5fec5c2c2b, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b0c0de612a297004e8d48c5fec5c2c2b, type: 3}
+      propertyPath: m_Name
+      value: Pyramid (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b0c0de612a297004e8d48c5fec5c2c2b, type: 3}
+      propertyPath: m_TagString
+      value: GhostPyramid
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: b0c0de612a297004e8d48c5fec5c2c2b, type: 3}
       propertyPath: m_Enabled
@@ -3474,6 +3482,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1241451116609034825}
     m_Modifications:
+    - target: {fileID: 1134501514803382833, guid: 08f5622ee94140f488c2072732bddf3c,
+        type: 3}
+      propertyPath: m_Name
+      value: Dust
+      objectReference: {fileID: 0}
     - target: {fileID: 1134501514803382836, guid: 08f5622ee94140f488c2072732bddf3c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3538,11 +3551,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1134501514803382833, guid: 08f5622ee94140f488c2072732bddf3c,
-        type: 3}
-      propertyPath: m_Name
-      value: Dust
       objectReference: {fileID: 0}
     - target: {fileID: 1134501514233324880, guid: 08f5622ee94140f488c2072732bddf3c,
         type: 3}
@@ -3759,6 +3767,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1241451116609034825}
     m_Modifications:
+    - target: {fileID: 1134501514803382833, guid: 08f5622ee94140f488c2072732bddf3c,
+        type: 3}
+      propertyPath: m_Name
+      value: Dust
+      objectReference: {fileID: 0}
     - target: {fileID: 1134501514803382836, guid: 08f5622ee94140f488c2072732bddf3c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3823,11 +3836,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1134501514803382833, guid: 08f5622ee94140f488c2072732bddf3c,
-        type: 3}
-      propertyPath: m_Name
-      value: Dust
       objectReference: {fileID: 0}
     - target: {fileID: 1134501514233324880, guid: 08f5622ee94140f488c2072732bddf3c,
         type: 3}
@@ -4044,14 +4052,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 788572258755297293}
     m_Modifications:
-    - target: {fileID: 100000, guid: b0c0de612a297004e8d48c5fec5c2c2b, type: 3}
-      propertyPath: m_Name
-      value: Pyramid (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: b0c0de612a297004e8d48c5fec5c2c2b, type: 3}
-      propertyPath: m_TagString
-      value: GhostPyramid
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b0c0de612a297004e8d48c5fec5c2c2b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4108,6 +4108,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b0c0de612a297004e8d48c5fec5c2c2b, type: 3}
+      propertyPath: m_Name
+      value: Pyramid (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b0c0de612a297004e8d48c5fec5c2c2b, type: 3}
+      propertyPath: m_TagString
+      value: GhostPyramid
+      objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: b0c0de612a297004e8d48c5fec5c2c2b, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -4131,6 +4139,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1241451116609034825}
     m_Modifications:
+    - target: {fileID: 1134501514803382833, guid: 08f5622ee94140f488c2072732bddf3c,
+        type: 3}
+      propertyPath: m_Name
+      value: Dust
+      objectReference: {fileID: 0}
     - target: {fileID: 1134501514803382836, guid: 08f5622ee94140f488c2072732bddf3c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4195,11 +4208,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1134501514803382833, guid: 08f5622ee94140f488c2072732bddf3c,
-        type: 3}
-      propertyPath: m_Name
-      value: Dust
       objectReference: {fileID: 0}
     - target: {fileID: 1134501514233324880, guid: 08f5622ee94140f488c2072732bddf3c,
         type: 3}

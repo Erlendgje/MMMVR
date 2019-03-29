@@ -66,25 +66,17 @@ public class SpaceX : MonoBehaviour {
 		}
 	}
 
-	/*
-	private void OnTriggerEnter(Collider other) {
-		if(other.gameObject.GetComponent<AnswerCube>() != null) {
-			addAnswer(other.gameObject.GetComponent<AnswerCube>());
-		}
-	}
-	*/
-
 	private void OnTriggerStay(Collider other) {
 		
 		if(other.gameObject.GetComponent<AnswerCube>() != null) {
 			AnswerCube ac = other.gameObject.GetComponent<AnswerCube>();
 			if(!answers.Contains(ac)) {
-				if(ac.getHasCollided()) {
+				if(ac.getHasCollided() || useRegisterdAnswer) {
 					addAnswer(ac);
 				}
 			}
 			else {
-				if(!ac.getHasCollided()) {
+				if(!ac.getHasCollided() && !useRegisterdAnswer) {
 					removeAnswer(ac);
 				}
 			}
