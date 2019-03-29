@@ -17,7 +17,7 @@ public class OnTabletPickUp : MonoBehaviour
     public void onPickUp() {
 		hover.enabled = false;
         moveTo.enabled = false;
-        GetComponent<MeshRenderer>().enabled = true;
+        StopAllCoroutines();
         GetComponent<Throwable>().currentHand.GetComponent<BoxCollider>().enabled = false;
 	}
 
@@ -30,6 +30,8 @@ public class OnTabletPickUp : MonoBehaviour
         else
         {
             hover.enabled = true;
+            isThrowing = false;
+            GetComponent<Rigidbody>().isKinematic = true;
         }
 	}
 
