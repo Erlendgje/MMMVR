@@ -12,7 +12,6 @@ public class OnTabletPickUp : MonoBehaviour
 	[SerializeField] private float distance;
 	[SerializeField] private float magnitudeThreshold;
 	[SerializeField] private float secondsAfterThrow;
-	[SerializeField] private float speed;
     private bool isThrowing = false;
 
     public void onPickUp() {
@@ -86,9 +85,5 @@ public class OnTabletPickUp : MonoBehaviour
         {
             moveTo.enabled = false;
         }
-
-		if(hover.enabled) {
-			transform.LookAt(Camera.main.transform);
-		}
 	}
 }
