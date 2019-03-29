@@ -6,7 +6,7 @@ using Valve.VR.InteractionSystem;
 public class OnTabletPickUp : MonoBehaviour
 {
 
-    [SerializeField] private GameObject tabletMesh;
+    [SerializeField] private GameObject tabletMovePoint;
 	[SerializeField] private iTweenAnimation hover;
 	[SerializeField] private iTweenAnimation moveTo;
 	[SerializeField] private float distance;
@@ -17,7 +17,6 @@ public class OnTabletPickUp : MonoBehaviour
     public void onPickUp() {
 		hover.enabled = false;
         moveTo.enabled = false;
-        tabletMesh.SetActive(false);
         GetComponent<MeshRenderer>().enabled = true;
         GetComponent<Throwable>().currentHand.GetComponent<BoxCollider>().enabled = false;
 	}
@@ -46,14 +45,12 @@ public class OnTabletPickUp : MonoBehaviour
 
 
 	public void stopMoveTo() {
-        tabletMesh.SetActive(false);
-        GetComponent<MeshRenderer>().enabled = true;
 		StartCoroutine(changeAnimation(hover, moveTo));
 	}
 
 	public void startMoveTo() {
-        tabletMesh.SetActive(true);
-        GetComponent<MeshRenderer>().enabled = false;
+		tabletMovePoint.transform.position = this.transform.position;
+		tabletMovePoint.transform.rotation = this.transform.rotation;
         StartCoroutine(changeAnimation(moveTo, hover));
         StartCoroutine(follow());
 	}
@@ -64,11 +61,8 @@ public class OnTabletPickUp : MonoBehaviour
         yield return new WaitUntil(() => moveTo.enabled);
         while (moveTo.enabled)
         {
-            Debug.Log("KJØRER");
-            this.transform.position = tabletMesh.transform.position;
-            tabletMesh.transform.position = Vector3.zero;
-            this.transform.rotation = tabletMesh.transform.rotation;
-            tabletMesh.transform.rotation = Quaternion.Euler(Vector3.zero);
+            this.transform.position = tabletMovePoint.transform.position;
+            this.transform.rotation = tabletMovePoint.transform.rotation;
 
             yield return null;
         }

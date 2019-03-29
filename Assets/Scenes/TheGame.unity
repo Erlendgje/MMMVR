@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18068194, g: 0.22618997, b: 0.30713663, a: 1}
+  m_IndirectSpecularColor: {r: 0.18068151, g: 0.22618926, b: 0.30713537, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3693,10 +3693,25 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3877968052497791793, guid: daad980f2698e774dbd96182485f9f6a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706891797836523293, guid: daad980f2698e774dbd96182485f9f6a,
+        type: 3}
+      propertyPath: tabletMesh
+      value: 
+      objectReference: {fileID: 1850265461}
+    - target: {fileID: 7706891797836523293, guid: daad980f2698e774dbd96182485f9f6a,
+        type: 3}
+      propertyPath: tabletMovePoint
+      value: 
+      objectReference: {fileID: 1850265461}
     - target: {fileID: 6303698362699624008, guid: daad980f2698e774dbd96182485f9f6a,
         type: 3}
       propertyPath: itweenDatas.Array.data[0].allArgs.Array.size
-      value: 11
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6303698362699624008, guid: daad980f2698e774dbd96182485f9f6a,
         type: 3}
@@ -3731,52 +3746,52 @@ PrefabInstance:
     - target: {fileID: 6303698362699624008, guid: daad980f2698e774dbd96182485f9f6a,
         type: 3}
       propertyPath: itweenDatas.Array.data[0].allArgs.Array.data[8].argName
-      value: onstarttarget
+      value: onstart
       objectReference: {fileID: 0}
     - target: {fileID: 6303698362699624008, guid: daad980f2698e774dbd96182485f9f6a,
         type: 3}
       propertyPath: itweenDatas.Array.data[0].allArgs.Array.data[8].argDisplayName
-      value: On Start Target
+      value: On Start
       objectReference: {fileID: 0}
     - target: {fileID: 6303698362699624008, guid: daad980f2698e774dbd96182485f9f6a,
         type: 3}
       propertyPath: itweenDatas.Array.data[0].allArgs.Array.data[8].typeOfArg
-      value: 45
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 6303698362699624008, guid: daad980f2698e774dbd96182485f9f6a,
         type: 3}
       propertyPath: itweenDatas.Array.data[0].allArgs.Array.data[8].allowedDisplayTypes.Array.data[0]
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6303698362699624008, guid: daad980f2698e774dbd96182485f9f6a,
         type: 3}
       propertyPath: itweenDatas.Array.data[0].allArgs.Array.data[8].typeOfDisplay
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6303698362699624008, guid: daad980f2698e774dbd96182485f9f6a,
         type: 3}
       propertyPath: itweenDatas.Array.data[0].allArgs.Array.data[9].argName
-      value: onstartparams
+      value: onstart
       objectReference: {fileID: 0}
     - target: {fileID: 6303698362699624008, guid: daad980f2698e774dbd96182485f9f6a,
         type: 3}
       propertyPath: itweenDatas.Array.data[0].allArgs.Array.data[9].argDisplayName
-      value: On Start Params
+      value: On Start
       objectReference: {fileID: 0}
     - target: {fileID: 6303698362699624008, guid: daad980f2698e774dbd96182485f9f6a,
         type: 3}
       propertyPath: itweenDatas.Array.data[0].allArgs.Array.data[9].typeOfArg
-      value: 46
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 6303698362699624008, guid: daad980f2698e774dbd96182485f9f6a,
         type: 3}
       propertyPath: itweenDatas.Array.data[0].allArgs.Array.data[9].allowedDisplayTypes.Array.data[0]
-      value: 7
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6303698362699624008, guid: daad980f2698e774dbd96182485f9f6a,
         type: 3}
       propertyPath: itweenDatas.Array.data[0].allArgs.Array.data[9].typeOfDisplay
-      value: 7
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6303698362699624008, guid: daad980f2698e774dbd96182485f9f6a,
         type: 3}
@@ -3803,16 +3818,6 @@ PrefabInstance:
       propertyPath: itweenDatas.Array.data[0].allArgs.Array.data[10].typeOfDisplay
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 3877968052497791793, guid: daad980f2698e774dbd96182485f9f6a,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7706891797836523293, guid: daad980f2698e774dbd96182485f9f6a,
-        type: 3}
-      propertyPath: tabletMesh
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: daad980f2698e774dbd96182485f9f6a, type: 3}
 --- !u!1 &1850265461
@@ -3825,7 +3830,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1850265462}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: TabletMovePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
