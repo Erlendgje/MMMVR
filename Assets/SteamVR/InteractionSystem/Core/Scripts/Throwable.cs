@@ -60,6 +60,8 @@ namespace Valve.VR.InteractionSystem
         [HideInInspector]
         public Interactable interactable;
 
+		public GameObject currentHand;
+
 
         //-------------------------------------------------
         protected virtual void Awake()
@@ -142,8 +144,9 @@ namespace Valve.VR.InteractionSystem
             hadInterpolation = this.rigidbody.interpolation;
 
             attached = true;
+            currentHand = hand.gameObject;
 
-			onPickUp.Invoke();
+            onPickUp.Invoke();
 
 			hand.HoverLock( null );
             
@@ -170,6 +173,8 @@ namespace Valve.VR.InteractionSystem
             attached = false;
 
             onDetachFromHand.Invoke();
+
+            currentHand = null;
 
             hand.HoverUnlock(null);
             
