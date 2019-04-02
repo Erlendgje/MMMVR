@@ -17,6 +17,7 @@ public class OnTabletPickUp : MonoBehaviour
     public void onPickUp() {
 		hover.enabled = false;
         moveTo.enabled = false;
+		GetComponentInChildren<ParticleSystem>().Stop();
         StopAllCoroutines();
         GetComponent<Throwable>().currentHand.GetComponent<BoxCollider>().enabled = false;
 	}
@@ -38,21 +39,25 @@ public class OnTabletPickUp : MonoBehaviour
 	private IEnumerator disableKinematicForSeconds(float seconds) {
         isThrowing = true;
 		GetComponent<Rigidbody>().isKinematic = false;
+		GetComponentInChildren<ParticleSystem>().Play();
 
 		yield return new WaitForSeconds(seconds);
 
 		GetComponent<Rigidbody>().isKinematic = true;
         isThrowing = false;
+		GetComponentInChildren<ParticleSystem>().Stop();
 	}
 
 
 	public void stopMoveTo() {
+		GetComponentInChildren<ParticleSystem>().Stop();
 		StartCoroutine(changeAnimation(hover, moveTo));
 	}
 
 	public void startMoveTo() {
 		tabletMovePoint.transform.position = this.transform.position;
 		tabletMovePoint.transform.rotation = this.transform.rotation;
+		GetComponentInChildren<ParticleSystem>().Play();
         StartCoroutine(changeAnimation(moveTo, hover));
         StartCoroutine(follow());
 	}

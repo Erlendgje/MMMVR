@@ -4081,6 +4081,16 @@ PrefabInstance:
       propertyPath: itweenDatas.Array.data[0].allArgs.Array.data[10].typeOfDisplay
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6432810960276121362, guid: daad980f2698e774dbd96182485f9f6a,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6432810960276121362, guid: daad980f2698e774dbd96182485f9f6a,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.a
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: daad980f2698e774dbd96182485f9f6a, type: 3}
 --- !u!1 &1850265461
