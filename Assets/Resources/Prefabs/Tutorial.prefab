@@ -16,8 +16,9 @@ GameObject:
   - component: {fileID: 3391079186748149252}
   - component: {fileID: 2006825729501067684}
   - component: {fileID: 2206442115331640976}
+  - component: {fileID: 1716884728}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Battery
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +32,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3238034947269370685}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.631, y: -1.364, z: -9.592}
+  m_LocalPosition: {x: 2.948, y: -1.363, z: -9.782}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 4505580663986441529}
@@ -210,6 +211,18 @@ MonoBehaviour:
   snapAttachEaseInCompleted: 0
   interactable: {fileID: 0}
   currentHand: {fileID: 0}
+--- !u!114 &1716884728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3238034947269370685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ca17f1921838ab499ac51ff84d8bef6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3435124381620275284
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,13 +442,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8533660453657317609}
-  m_LocalRotation: {x: -0, y: 0.27423805, z: -0, w: 0.9616619}
-  m_LocalPosition: {x: 5.3, y: -0.65, z: -16.19}
+  m_LocalRotation: {x: -0, y: -0.51323515, z: -0, w: 0.858248}
+  m_LocalPosition: {x: -6.37, y: -0.79, z: -14.62}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 4505580663986441529}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 31.833002, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -61.759003, z: 0}
 --- !u!212 &8719653513689347389
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -492,7 +505,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8533660453657317609}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 301fa7bb970435142a5f7299c6b9dd67, type: 2}
   m_CullingMode: 0
