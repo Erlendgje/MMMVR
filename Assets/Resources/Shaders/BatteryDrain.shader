@@ -4,9 +4,9 @@
     {
         _MainTex ("Texture", 2D) = "white" {}
 		_PowerColor("Power Color", color) = (1,1,1,1)
-		_CurrentY("Current Y of effect", float) = 0
+		_UsedColor("Used Color", color) = (1,1,1,1)
+		_CurrentY("Current Y of effect", Range(-0.1,0.1)) = 0
 		_EffectSize("Size of effect", float) = 2
-		_StartY("Start Y of effect", float) = -1
     }
     SubShader
     {
@@ -36,8 +36,9 @@
 
             sampler2D _MainTex;
             float4 _MainTex_ST;
+            float4 _PowerColor;
+            float4 _UsedColor;
 			float _CurrentY;
-			float _StartY;
 			float _EffectSize;
 
             v2f vert (appdata v)
@@ -45,20 +46,14 @@
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 o.uv = TRANSFORM_TEX(v.uv, _MainTex);
-				o.worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
+				o.worldPos = mul(unity_ObjectToWorld, v.vertex.xyz);
                 return o;
             }
 
             fixed4 frag (v2f i) : SV_Target
             {
-				float transition = i.worldPos.y;
-                // sample the texture
-				if (_CurrentY < transition) {
-					discard;
-				}
-                fixed4 col = tex2D(_MainTex, i.uv);
 
-                return col;
+                return i.worldPos.y > _CurrentY ? _UsedColor : _PowerColor;
             }
             ENDCG
         }

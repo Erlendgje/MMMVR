@@ -23,5 +23,11 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors: []
+    m_Floats:
+    - _Amount: 0.87
+    - _CurrentY: 0.019
+    - _EffectSize: 2
+    - _StartY: -0.76
+    m_Colors:
+    - _PowerColor: {r: 0, g: 0.81451416, b: 1, a: 1}
+    - _UsedColor: {r: 0.1219295, g: 0.16007218, b: 0.18867922, a: 1}

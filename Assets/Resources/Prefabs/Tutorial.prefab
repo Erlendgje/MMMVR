@@ -1,20 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &5336733337897014864
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3337709803976073605}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 783750eec4c41da428b7651515146d14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocityAverageFrames: 5
-  angularVelocityAverageFrames: 11
-  estimateOnAwake: 0
 --- !u!54 &3110904422288547498
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -31,32 +16,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5304160625253564937
-MonoBehaviour:
+--- !u!64 &7555054517458889791
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3337709803976073605}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b93b6a877adcbf94c89a9d6e0c0e844d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activateActionSetOnAttach:
-    actionSetPath: 
-  hideHandOnAttach: 1
-  hideSkeletonOnAttach: 0
-  hideControllerOnAttach: 0
-  handAnimationOnPickup: 0
-  setRangeOfMotionOnPickup: -1
-  useHandObjectAttachmentPoint: 1
-  skeletonPose: {fileID: 0}
-  handFollowTransform: {fileID: 0}
-  handFollowTransformPosition: 1
-  handFollowTransformRotation: 1
-  highlightOnHover: 1
-  hideHighlight: []
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: dc44942561cb3114d80b64f0749eff80, type: 3}
 --- !u!114 &2415280645428510823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,20 +100,78 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ca17f1921838ab499ac51ff84d8bef6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!64 &7555054517458889791
-MeshCollider:
+--- !u!114 &5304160625253564937
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3337709803976073605}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: dc44942561cb3114d80b64f0749eff80, type: 3}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b93b6a877adcbf94c89a9d6e0c0e844d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateActionSetOnAttach:
+    actionSetPath: 
+  hideHandOnAttach: 1
+  hideSkeletonOnAttach: 0
+  hideControllerOnAttach: 0
+  handAnimationOnPickup: 0
+  setRangeOfMotionOnPickup: -1
+  useHandObjectAttachmentPoint: 1
+  skeletonPose: {fileID: 0}
+  handFollowTransform: {fileID: 0}
+  handFollowTransformPosition: 1
+  handFollowTransformRotation: 1
+  highlightOnHover: 1
+  hideHighlight: []
+--- !u!114 &5336733337897014864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3337709803976073605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 783750eec4c41da428b7651515146d14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocityAverageFrames: 5
+  angularVelocityAverageFrames: 11
+  estimateOnAwake: 0
+--- !u!1 &3383148657088744918
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5919841868325512124}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5919841868325512124
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3383148657088744918}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.258124, y: -0.97910273, z: -10.103964}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3337709803975916965}
+  m_Father: {fileID: 4505580663986441529}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3435124381620275284
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,7 +204,7 @@ Transform:
   - {fileID: 8982445935535884708}
   - {fileID: 8901881063004879062}
   - {fileID: 5007159955787308666}
-  - {fileID: 3337709803975916965}
+  - {fileID: 5919841868325512124}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -467,67 +498,67 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 4505580663986441529}
+    m_TransformParent: {fileID: 5919841868325512124}
     m_Modifications:
-    - target: {fileID: 100000, guid: dc44942561cb3114d80b64f0749eff80, type: 3}
-      propertyPath: m_Name
-      value: Battery
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dc44942561cb3114d80b64f0749eff80, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.882
+      value: 0.0048
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dc44942561cb3114d80b64f0749eff80, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.2201
+      value: -0.155
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dc44942561cb3114d80b64f0749eff80, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.535
+      value: 0.0024
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dc44942561cb3114d80b64f0749eff80, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: -0.61775756
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dc44942561cb3114d80b64f0749eff80, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.34405795
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dc44942561cb3114d80b64f0749eff80, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.33754545
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dc44942561cb3114d80b64f0749eff80, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071067
+      value: 0.62133956
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dc44942561cb3114d80b64f0749eff80, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dc44942561cb3114d80b64f0749eff80, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -90.602
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dc44942561cb3114d80b64f0749eff80, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 89.996994
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dc44942561cb3114d80b64f0749eff80, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -147.626
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dc44942561cb3114d80b64f0749eff80, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.1
+      value: 0.09999997
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dc44942561cb3114d80b64f0749eff80, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.1
+      value: 0.09999997
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dc44942561cb3114d80b64f0749eff80, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: dc44942561cb3114d80b64f0749eff80, type: 3}
+      propertyPath: m_Name
+      value: Battery
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: dc44942561cb3114d80b64f0749eff80, type: 3}
       propertyPath: m_Materials.Array.data[1]
