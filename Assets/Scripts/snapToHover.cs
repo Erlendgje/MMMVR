@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class snapToHover : MonoBehaviour
 {
+	private static bool playedStory = false;
+
 	private bool inHand = false;
 	private bool detached = false;
 
@@ -23,6 +25,10 @@ public class snapToHover : MonoBehaviour
                 this.GetComponent<Rigidbody>().useGravity = false;
                 detached = false;
 				SoundManager.instance.PlaySingle (snapSound);
+				if(!playedStory) {
+					GameManager.gameManager.GetDialogueHandler().playStory();
+					playedStory = true;
+				}
             }
 
 			if(this.transform.position != new Vector3(other.transform.position.x, other.transform.position.y, other.transform.position.z)) {

@@ -3,6 +3,6 @@
 [Serializable]
 public class Clue
 {
-	public int id;
-	public String text;
+	public string id;
+	public String[] text;
 }

@@ -25,23 +25,23 @@
 				},
 				{
 					"text": [
-						"Vi fikk inn seismiske målinger her. Hva er det som skjer?",
+						"Vi får inn seismiske målinger her. Hva er det som skjer?",
 						"Kanskje det har noe med at du klarte å aktivere artefakten."
 					]
 				}
 			],
 			"clue": [
 				{
-					"id": "0",
-					"text": "Er det mulig å endre størrelsen på disse svevende artefaktene på en måte?"
+					"id": "flying_artefacts",
+					"text": ["Er det mulig å endre størrelsen på disse svevende artefaktene på en måte?"]
 				},
 				{
-					"id": "1",
-					"text": "Kanskje det har noe med de kubene du plasserte på bordet?"
+					"id": "glowing_cubes",
+					"text": ["Kanskje det har noe med verdien på de lysende kubene du plasserte på bordet?"]
 				},
 				{
-					"id": "2",
-					"text": "Prøv å endre størrelsen på de svevende artefaktene slik at volumet blir det samme som verdiene på kubene."
+					"id": "solution",
+					"text": ["Prøv å endre størrelsen på de svevende artefaktene slik at volumet blir det samme som verdiene på de lysende kubene."]
 				}
 			]
 		},
@@ -49,7 +49,7 @@
 			"id": "1",
 			"message": [
 				{
-									"text": [ "En ny artefakt, den dukket sikkert opp når du aktiverte den andre artefakten." ]
+					"text": [ "En ny artefakt, den dukket sikkert opp når du aktiverte den andre artefakten." ]
 				},
 				{
 					"text": [
@@ -66,16 +66,16 @@
 			],
 			"clue": [
 				{
-					"id": "0",
-					"text": "Er det mulig å plukke opp pyramidene?"
+					"id": "pick-up",
+					"text": ["Er det mulig å plukke opp pyramidene?"]
 				},
 				{
-					"id": "1",
-					"text": "Passer pyramidene inn på midten av artefakten?"
+					"id": "place",
+					"text": ["Passer pyramidene inn på midten av artefakten?"]
 				},
 				{
-					"id": "2",
-					"text": "Prøv å plasser alle pyramidene med spissen mot hverandre."
+					"id": "solution",
+					"text": ["Prøv å plasser alle pyramidene med spissen mot hverandre."]
 				}
 			]
 		},
@@ -97,7 +97,7 @@
 				{
 					"text": [
 						"Hva skjedde?",
-						"Er det det vi tror det er? VANN?",
+						"Er det det vi tror det er? VANN!!!",
 						"Du har klart det agent 237. Du har funnet kilden til menneskets overlevelse på Mars.",
 						"Ditt oppdrag er nå fullført, bra jobbet agent 237! Du kan nå dra tilbake til Jorden."
 					]
@@ -105,16 +105,16 @@
 			],
 			"clue": [
 				{
-					"id": "0",
-					"text": "Se på verdien på søylene og prøv å plasser pyramiden med tilsvarende volum på søylen."
+					"id": "place",
+					"text": ["Se på verdien på søylene og prøv å plasser pyramiden med tilsvarende volum på søylen."]
 				},
 				{
-					"id": "1",
-					"text": "Hva er volumet til en pyramide? Hvor mange pyramider er det plass til i en kube?"
+					"id": "formula",
+					"text": ["Hva er volumet til en pyramide? Hvor mange pyramider er det plass til i en kube?"]
 				},
 				{
-					"id": "2",
-					"text": "Volumet til pyramiden vil da bli volumet til en cube delt på antall pyramider i en kube."
+					"id": "solution",
+					"text": ["Volumet til pyramiden vil da bli volumet til en cube delt på antall pyramider i en kube."]
 				}
 			]
 		}

@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
 	public static GameManager gameManager;
 	private int currentTask = 0;
 
+	[SerializeField] private TabletDialogueHandler tabletDialogueHandler;
 	[SerializeField] private int spawnTaskNumber;
 	[SerializeField] private List<TaskAndLocation> tasks;
 
@@ -34,6 +35,14 @@ public class GameManager : MonoBehaviour
 		if(currentTask < tasks.Count) {
 			Instantiate(tasks[currentTask].task, tasks[currentTask].position.transform);
 		}
+	}
+
+	public int getCurrentTask() {
+		return currentTask;
+	}
+
+	public TabletDialogueHandler GetDialogueHandler() {
+		return tabletDialogueHandler;
 	}
 
 
