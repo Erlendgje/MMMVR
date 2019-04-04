@@ -2112,6 +2112,21 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5607187117574835220, guid: 4b210056246ad43439c7813082b1794d,
+        type: 3}
+      propertyPath: from
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5607187117574835220, guid: 4b210056246ad43439c7813082b1794d,
+        type: 3}
+      propertyPath: to
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5607187117574835220, guid: 4b210056246ad43439c7813082b1794d,
+        type: 3}
+      propertyPath: intensity
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1142841403851805899, guid: 4b210056246ad43439c7813082b1794d,
         type: 3}
       propertyPath: m_Size.y
@@ -2841,6 +2856,11 @@ PrefabInstance:
     - target: {fileID: 3038621509269811608, guid: f710752d07416cb41be539e61207e8a6,
         type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3329627537911305645, guid: f710752d07416cb41be539e61207e8a6,
+        type: 3}
+      propertyPath: weight
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -8106,7 +8126,7 @@ Transform:
   - {fileID: 1832470018}
   - {fileID: 1615473102}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1001 &1320827120
 PrefabInstance:
@@ -8504,6 +8524,10 @@ PrefabInstance:
     - target: {fileID: 2014920, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_CullingMask.m_Bits
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 2014920, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_HDR
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
@@ -18774,7 +18798,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2001068984
 GameObject:

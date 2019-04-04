@@ -1075,6 +1075,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   snapAttachEaseInCompleted: 0
   interactable: {fileID: 0}
+  currentHand: {fileID: 0}
 --- !u!114 &6304243076638449496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1115,7 +1116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sharedProfile: {fileID: 0}
-  isGlobal: 0
+  isGlobal: 1
   blendDistance: 5
   weight: 1
   priority: 1
@@ -1132,9 +1133,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pulseSpeed: 5
-  from: 15
-  to: 30
-  intensity: 10
+  from: 1.5
+  to: 6
+  intensity: 1.5
   color: {r: 0.16470589, g: 0.8705883, b: 0.9960785, a: 0}
 --- !u!1 &7495078896874850386
 GameObject:
