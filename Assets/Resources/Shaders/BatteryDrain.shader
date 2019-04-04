@@ -3,10 +3,10 @@
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
-		_PowerColor("Power Color", color) = (1,1,1,1)
-		_UsedColor("Used Color", color) = (1,1,1,1)
+		_BackColor("Used Color", color) = (1,1,1,1)
 		_CurrentY("Current Y of effect", Range(-0.1,0.4)) = 0
 		_EffectSize("Size of effect", float) = 2
+		[HDR] _EmissionColor("Emission Color", color) = (0,0,0)
     }
     SubShader
     {
@@ -36,10 +36,11 @@
 
             sampler2D _MainTex;
             float4 _MainTex_ST;
-            float4 _PowerColor;
-            float4 _UsedColor;
+            float4 _BackColor;
+			float4 _EmissionColor;
 			float _CurrentY;
 			float _EffectSize;
+
 
             v2f vert (appdata v)
             {
@@ -53,7 +54,7 @@
             fixed4 frag (v2f i) : SV_Target
             {
 
-                return i.worldPos.y > _CurrentY ? _UsedColor : _PowerColor;
+				return i.worldPos.y > _CurrentY ? _BackColor : (_BackColor + _EmissionColor);
             }
             ENDCG
         }

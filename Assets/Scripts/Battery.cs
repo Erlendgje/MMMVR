@@ -10,6 +10,10 @@ public class Battery : MonoBehaviour
     public float currentY;
     public float minY;
 
+    private void Start()
+    {
+        batteryMaterial.SetFloat("_CurrentY", currentY);
+    }
 
     private void OnTriggerStay(Collider other)
     {
