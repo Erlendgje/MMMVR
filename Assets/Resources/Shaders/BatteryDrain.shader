@@ -5,7 +5,7 @@
         _MainTex ("Texture", 2D) = "white" {}
 		_PowerColor("Power Color", color) = (1,1,1,1)
 		_UsedColor("Used Color", color) = (1,1,1,1)
-		_CurrentY("Current Y of effect", Range(-0.1,0.1)) = 0
+		_CurrentY("Current Y of effect", Range(-0.1,0.4)) = 0
 		_EffectSize("Size of effect", float) = 2
     }
     SubShader

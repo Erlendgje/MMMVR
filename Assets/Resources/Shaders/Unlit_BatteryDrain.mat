@@ -25,7 +25,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Amount: 0.87
-    - _CurrentY: 0.019
+    - _CurrentY: -0.005
     - _EffectSize: 2
     - _StartY: -0.76
     m_Colors:
