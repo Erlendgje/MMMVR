@@ -5,7 +5,8 @@
 			{
 				"text": [
 					"Dette er bakkekontroll til agent 237.",
-					"Vi har funnet urgamle artefakter fra en forsvunnet avansert sivilisasjon her på Mars. Vi har grunn til å tro at denne artefakten inneholder hemmeligheten til vår overlevelse på Mars."
+									"Vi har funnet urgamle artefakter fra en forsvunnet avansert sivilisasjon her på Mars. Vi har grunn til å tro at denne artefakten inneholder hemmeligheten til vår overlevelse på Mars.",
+									"Du har også muligheten til å kontakte oss ved å trykke på hint knappen på kontrolleren din, prøv å gjøre det nå"
 				]
 			}
 		]
@@ -32,16 +33,19 @@
 			],
 			"clue": [
 				{
-					"id": "flying_artefacts",
-					"text": ["Er det mulig å endre størrelsen på disse svevende artefaktene på en måte?"]
+					"text": [
+						"Hvis du trykker på hint knappen kommer vi til å sende deg en melding om forslag til hva du kan gjøre.",
+						"Da er det bare å begynne på oppdraget ditt. Lykke til agent 237."
+					]
 				},
 				{
-					"id": "glowing_cubes",
-					"text": ["Kanskje det har noe med verdien på de lysende kubene du plasserte på bordet?"]
+					"text": [ "Er det mulig å endre størrelsen på disse svevende artefaktene på en måte?" ]
 				},
 				{
-					"id": "solution",
-					"text": ["Prøv å endre størrelsen på de svevende artefaktene slik at volumet blir det samme som verdiene på de lysende kubene."]
+					"text": [ "Kanskje det har noe med verdien på de lysende kubene du plasserte på bordet?" ]
+				},
+				{
+					"text": [ "Prøv å endre størrelsen på de svevende artefaktene slik at volumet blir det samme som verdiene på de lysende kubene." ]
 				}
 			]
 		},
@@ -66,16 +70,13 @@
 			],
 			"clue": [
 				{
-					"id": "pick-up",
-					"text": ["Er det mulig å plukke opp pyramidene?"]
+					"text": [ "Er det mulig å plukke opp pyramidene?" ]
 				},
 				{
-					"id": "place",
-					"text": ["Passer pyramidene inn på midten av artefakten?"]
+					"text": [ "Passer pyramidene inn på midten av artefakten?" ]
 				},
 				{
-					"id": "solution",
-					"text": ["Prøv å plasser alle pyramidene med spissen mot hverandre."]
+					"text": [ "Prøv å plasser alle pyramidene med spissen mot hverandre." ]
 				}
 			]
 		},
@@ -105,16 +106,13 @@
 			],
 			"clue": [
 				{
-					"id": "place",
-					"text": ["Se på verdien på søylene og prøv å plasser pyramiden med tilsvarende volum på søylen."]
+					"text": [ "Se på verdien på søylene og prøv å plasser pyramiden med tilsvarende volum på søylen." ]
 				},
 				{
-					"id": "formula",
-					"text": ["Hva er volumet til en pyramide? Hvor mange pyramider er det plass til i en kube?"]
+					"text": [ "Hva er volumet til en pyramide? Hvor mange pyramider er det plass til i en kube?" ]
 				},
 				{
-					"id": "solution",
-					"text": ["Volumet til pyramiden vil da bli volumet til en cube delt på antall pyramider i en kube."]
+					"text": [ "Volumet til pyramiden vil da bli volumet til en cube delt på antall pyramider i en kube." ]
 				}
 			]
 		}

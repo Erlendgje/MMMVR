@@ -4,6 +4,7 @@ using System.IO;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Valve.VR;
 
 public class TabletDialogueHandler : MonoBehaviour
 {
@@ -17,6 +18,16 @@ public class TabletDialogueHandler : MonoBehaviour
 	[SerializeField] private ScrollRect scrollRect;
 
 	private int storyProgress = 0;
+	private int clueProgress = 0;
+
+
+	public SteamVR_Input_Sources handType;
+	public SteamVR_Action_Boolean changeAction;
+
+	public bool getClueDown() {
+		return changeAction.GetLastStateDown(handType);
+	}
+
 
 	// Start is called before the first frame update
 	void Start()
@@ -32,6 +43,12 @@ public class TabletDialogueHandler : MonoBehaviour
 		playIntro();
 	}
 
+	private void Update() {
+		if(getClueDown()) {
+			playClue();
+		}
+	}
+
 	public void playIntro() {
 		StartCoroutine(addToChat(dialogue.intro.message[0].text));
 	}
@@ -43,13 +60,17 @@ public class TabletDialogueHandler : MonoBehaviour
 
 			if(dialogue.taskDialouge[GameManager.gameManager.getCurrentTask()].message.Length == storyProgress) {
 				storyProgress = 0;
+				clueProgress = 0;
 			}
 		}
 	}
 
-	public void playClue(String id) {
-		Clue c = Array.Find<Clue>(dialogue.taskDialouge[GameManager.gameManager.getCurrentTask()].clue, clue => clue.id.CompareTo(id) == 0);
-		StartCoroutine(addToChat(c.text));
+	public void playClue() {
+
+		if(dialogue.taskDialouge[GameManager.gameManager.getCurrentTask()].clue.Length < clueProgress) {
+			StartCoroutine(addToChat(dialogue.taskDialouge[GameManager.gameManager.getCurrentTask()].clue[clueProgress].text));
+			clueProgress++;
+		}
 	}
 
 	private IEnumerator addToChat(String[] messages) {
@@ -60,7 +81,6 @@ public class TabletDialogueHandler : MonoBehaviour
 			yield return null;
 			LayoutRebuilder.ForceRebuildLayoutImmediate(scrollView);
 			yield return null;
-			//scrollRect.normalizedPosition = new Vector2(0.0f, 0.0f);
 			StartCoroutine(scrollDown());
 
 			GetComponent<AudioSource>().Play();
