@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Valve.VR;
+using Valve.VR.InteractionSystem;
 
 public class TabletDialogueHandler : MonoBehaviour
 {
@@ -16,6 +18,7 @@ public class TabletDialogueHandler : MonoBehaviour
 	[SerializeField] private float secondsBetweenMessages;
 	[SerializeField] private RectTransform scrollView;
 	[SerializeField] private ScrollRect scrollRect;
+	[SerializeField] private List<Hand> hands;
 
 	private int storyProgress = 0;
 	private int clueProgress = 0;
@@ -51,6 +54,7 @@ public class TabletDialogueHandler : MonoBehaviour
 
 	public void playIntro() {
 		StartCoroutine(addToChat(dialogue.intro.message[0].text));
+		StartCoroutine(showHint(dialogue.intro.message[0].text.Length * secondsBetweenMessages));
 	}
 
 	public void playStory() {
@@ -98,5 +102,25 @@ public class TabletDialogueHandler : MonoBehaviour
 
 			yield return null;
 		}
+	}
+
+	private IEnumerator showHint(float seconds) {
+		yield return new WaitForSeconds(seconds);
+		foreach(Hand h in hands) {
+			showButtonHint(h, changeAction, "Hint");
+			h.TriggerHapticPulse(700);
+		}
+	}
+
+	private void showButtonHint(Hand hand, SteamVR_Action_Boolean action, string text) {
+		if(!ControllerButtonHints.IsButtonHintActive(hand, action)) {
+			ControllerButtonHints.ShowButtonHint(hand, action);
+			ControllerButtonHints.ShowTextHint(hand, action, text, true);
+		}
+	}
+
+	private void hideButtonHint(Hand hand) {
+		ControllerButtonHints.HideAllButtonHints(hand);
+		ControllerButtonHints.HideAllTextHints(hand);
 	}
 }
