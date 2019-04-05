@@ -28,6 +28,7 @@ public class Battery : MonoBehaviour
             else
             {
                 other.transform.GetComponent<OnTabletPickUp>().enabled = true;
+				other.transform.GetComponent<TabletDialogueHandler>().enabled = true;
             }
         }
     }
