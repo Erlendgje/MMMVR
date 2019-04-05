@@ -48,6 +48,10 @@ public class TabletDialogueHandler : MonoBehaviour
 
 	private void Update() {
 		if(getClueDown()) {
+            foreach(Hand h in hands)
+            {
+                hideButtonHint(h);
+            }
 			playClue();
 		}
 	}
@@ -58,7 +62,7 @@ public class TabletDialogueHandler : MonoBehaviour
 	}
 
 	public void playStory() {
-		if(dialogue.taskDialouge[GameManager.gameManager.getCurrentTask()].message.Length < storyProgress) {
+		if(dialogue.taskDialouge[GameManager.gameManager.getCurrentTask()].message.Length > storyProgress) {
 			StartCoroutine(addToChat(dialogue.taskDialouge[GameManager.gameManager.getCurrentTask()].message[storyProgress].text));
 			storyProgress++;
 
@@ -70,8 +74,7 @@ public class TabletDialogueHandler : MonoBehaviour
 	}
 
 	public void playClue() {
-
-		if(dialogue.taskDialouge[GameManager.gameManager.getCurrentTask()].clue.Length < clueProgress) {
+		if(dialogue.taskDialouge[GameManager.gameManager.getCurrentTask()].clue.Length > clueProgress) {
 			StartCoroutine(addToChat(dialogue.taskDialouge[GameManager.gameManager.getCurrentTask()].clue[clueProgress].text));
 			clueProgress++;
 		}

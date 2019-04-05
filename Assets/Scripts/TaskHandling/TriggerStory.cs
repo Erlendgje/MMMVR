@@ -5,9 +5,9 @@ using UnityEngine;
 public class TriggerStory : MonoBehaviour
 {
 	private void OnTriggerEnter(Collider other) {
-		if(other.tag.CompareTo("Player") == 0) {
+		if(other.gameObject.tag.CompareTo("Player") == 0) {
 			GameManager.gameManager.GetDialogueHandler().playStory();
-			Destroy(this);
+			Destroy(this.gameObject);
 		}
 	}
 }
