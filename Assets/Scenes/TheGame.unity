@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18068194, g: 0.22618997, b: 0.30713663, a: 1}
+  m_IndirectSpecularColor: {r: 0.18068151, g: 0.22618926, b: 0.30713537, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4084,6 +4084,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: sciFiTablet_redWhite
       objectReference: {fileID: 0}
+    - target: {fileID: 33874719717828742, guid: daad980f2698e774dbd96182485f9f6a,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 33874719717828742, guid: daad980f2698e774dbd96182485f9f6a,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 33874719717828742, guid: daad980f2698e774dbd96182485f9f6a,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 33874719717828742, guid: daad980f2698e774dbd96182485f9f6a,
+        type: 3}
+      propertyPath: m_Horizontal
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1384723466136331113, guid: daad980f2698e774dbd96182485f9f6a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000000037252903
+      objectReference: {fileID: 0}
+    - target: {fileID: 1384723466136331113, guid: daad980f2698e774dbd96182485f9f6a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.000000044703484
+      objectReference: {fileID: 0}
+    - target: {fileID: 1384723466136331113, guid: daad980f2698e774dbd96182485f9f6a,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1384723466136331113, guid: daad980f2698e774dbd96182485f9f6a,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 437920, guid: daad980f2698e774dbd96182485f9f6a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.09
@@ -4141,7 +4181,7 @@ PrefabInstance:
     - target: {fileID: 7706891797836523293, guid: daad980f2698e774dbd96182485f9f6a,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6303698362699624008, guid: daad980f2698e774dbd96182485f9f6a,
         type: 3}
@@ -4172,50 +4212,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1384723466136331113, guid: daad980f2698e774dbd96182485f9f6a,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.000000037252903
-      objectReference: {fileID: 0}
-    - target: {fileID: 1384723466136331113, guid: daad980f2698e774dbd96182485f9f6a,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.000000044703484
-      objectReference: {fileID: 0}
-    - target: {fileID: 1384723466136331113, guid: daad980f2698e774dbd96182485f9f6a,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1384723466136331113, guid: daad980f2698e774dbd96182485f9f6a,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1419971720382437815, guid: daad980f2698e774dbd96182485f9f6a,
         type: 3}
       propertyPath: m_Enabled
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 33874719717828742, guid: daad980f2698e774dbd96182485f9f6a,
-        type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 33874719717828742, guid: daad980f2698e774dbd96182485f9f6a,
-        type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 33874719717828742, guid: daad980f2698e774dbd96182485f9f6a,
-        type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 33874719717828742, guid: daad980f2698e774dbd96182485f9f6a,
-        type: 3}
-      propertyPath: m_Horizontal
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6379451571028696406, guid: daad980f2698e774dbd96182485f9f6a,
         type: 3}

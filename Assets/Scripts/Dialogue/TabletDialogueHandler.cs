@@ -60,12 +60,23 @@ public class TabletDialogueHandler : MonoBehaviour
 			yield return null;
 			LayoutRebuilder.ForceRebuildLayoutImmediate(scrollView);
 			yield return null;
-			scrollRect.normalizedPosition = new Vector2(0.0f, 0.0f);
+			//scrollRect.normalizedPosition = new Vector2(0.0f, 0.0f);
+			StartCoroutine(scrollDown());
 
 			GetComponent<AudioSource>().Play();
 			if(i < messages.Length - 1) {
 				yield return new WaitForSeconds(secondsBetweenMessages);
 			}
+		}
+	}
+
+	private IEnumerator scrollDown() {
+
+		while(scrollRect.verticalNormalizedPosition > 0) {
+
+			scrollView.Translate(new Vector3(0, 0.5f, 0) * Time.deltaTime);
+
+			yield return null;
 		}
 	}
 }
