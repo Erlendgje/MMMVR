@@ -7,6 +7,7 @@ public class Pulse : MonoBehaviour
 {
 
 	private Bloom bloom;
+    private Material answerCubeScreen;
 	[SerializeField] private float pulseSpeed;
 	private bool active;
 	[SerializeField] private float from, to;
@@ -16,15 +17,7 @@ public class Pulse : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-		PostProcessProfile ppp = new PostProcessProfile();
-		ppp.AddSettings<Bloom>();
-		ppp.TryGetSettings<Bloom>(out bloom);
-		bloom.enabled.value = true;
-		bloom.intensity.overrideState = true;
-		bloom.intensity.value = intensity;
-		bloom.color.overrideState = true;
-		bloom.color.value = color;
-		GetComponent<PostProcessVolume>().profile = ppp;// .TryGetSettings(out bloom);
+        answerCubeScreen = GetComponent<MeshRenderer>().material;
 		StartCoroutine(pulse());
     }
 
@@ -32,16 +25,10 @@ public class Pulse : MonoBehaviour
 	private IEnumerator pulse() {
 
 		yield return new WaitForSeconds(Random.value);
-
-		while(true) {
-			while(bloom.intensity.value < to) {
-				bloom.intensity.value = bloom.intensity.value + pulseSpeed * Time.deltaTime;
-				yield return null;
-			}
-			while(bloom.intensity.value > from) {
-				bloom.intensity.value = bloom.intensity.value - pulseSpeed * Time.deltaTime;
-				yield return null;
-			}
+        
+        while (true) {
+            float emission = 1.0f + Mathf.PingPong(Time.time,2.0f);
+            answerCubeScreen.SetColor("_EmissionColor", color * Mathf.LinearToGammaSpace(emission));
 
 			yield return null;
 		}

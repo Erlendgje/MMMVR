@@ -5,13 +5,14 @@ using UnityEngine;
 public class Battery : MonoBehaviour
 {
 
-    public Material batteryMaterial;
+    private Material batteryMaterial;
     public float speed;
     public float currentY;
     public float minY;
 
     private void Start()
     {
+        batteryMaterial = GetComponent<MeshRenderer>().materials[1];
         batteryMaterial.SetFloat("_CurrentY", currentY);
     }
 
