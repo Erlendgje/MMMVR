@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
 
 	[SerializeField] private TabletDialogueHandler tabletDialogueHandler;
 	[SerializeField] private int spawnTaskNumber;
-	[SerializeField] private List<TaskAndLocation> tasks;
+	[SerializeField] private List<GameObject> tasks;
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
     public void unlockNextTask() {
 		currentTask++;
 		if(currentTask < tasks.Count) {
-			Instantiate(tasks[currentTask].task, tasks[currentTask].position.transform);
+			tasks[currentTask].SetActive(true);
 		}
 	}
 
@@ -43,12 +43,5 @@ public class GameManager : MonoBehaviour
 
 	public TabletDialogueHandler GetDialogueHandler() {
 		return tabletDialogueHandler;
-	}
-
-
-	[Serializable]
-	private class TaskAndLocation {
-		public GameObject task;
-		public GameObject position;
 	}
 }
