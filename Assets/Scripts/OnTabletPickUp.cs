@@ -14,6 +14,12 @@ public class OnTabletPickUp : MonoBehaviour
 	[SerializeField] private float secondsAfterThrow;
     private bool isThrowing = false;
 
+
+	void Start(){
+		startMoveTo();
+	}
+
+
     public void onPickUp() {
 		hover.enabled = false;
         moveTo.enabled = false;

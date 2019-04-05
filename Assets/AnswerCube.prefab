@@ -846,7 +846,6 @@ GameObject:
   - component: {fileID: 5937080710305784609}
   - component: {fileID: 6304243076638449496}
   - component: {fileID: 6051948307354338323}
-  - component: {fileID: 1612715482088583452}
   - component: {fileID: 6309802636357546247}
   m_Layer: 0
   m_Name: AnswerCube
@@ -1075,6 +1074,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   snapAttachEaseInCompleted: 0
   interactable: {fileID: 0}
+  currentHand: {fileID: 0}
 --- !u!114 &6304243076638449496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1102,23 +1102,6 @@ MonoBehaviour:
   answerInDm: 100
   numbersInGroup: 3
   plane: 1
---- !u!114 &1612715482088583452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6050824309412008111}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 0}
-  isGlobal: 0
-  blendDistance: 5
-  weight: 1
-  priority: 1
 --- !u!114 &6309802636357546247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1132,9 +1115,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pulseSpeed: 5
-  from: 15
-  to: 30
-  intensity: 10
+  from: 1.5
+  to: 6
+  intensity: 1.5
   color: {r: 0.16470589, g: 0.8705883, b: 0.9960785, a: 0}
 --- !u!1 &7495078896874850386
 GameObject:
