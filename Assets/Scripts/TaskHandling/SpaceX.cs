@@ -6,6 +6,8 @@ using UnityEngine.Events;
 
 public class SpaceX : MonoBehaviour {
 
+	private static bool playedStory = false;
+
 	private AnswerSpace answerSpace;
 	private List<AnswerCube> answers;
 	public bool correct;
@@ -45,6 +47,10 @@ public class SpaceX : MonoBehaviour {
 				}
 				else {
 					onCorrect.Invoke();
+					if(!playedStory) {
+						GameManager.gameManager.GetDialogueHandler().playStory();
+						playedStory = true;
+					}
 				}
 				answerSpace.valueChanged(correct, this, answers[0].answerInDm);
 			}
