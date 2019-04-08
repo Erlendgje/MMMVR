@@ -13,21 +13,21 @@ public class Pulse : MonoBehaviour
 	[SerializeField] private float from, to;
 	[SerializeField] float intensity;
 	[SerializeField] Color color;
+    private float delay; 
 
     // Start is called before the first frame update
     void Start()
     {
         answerCubeScreen = GetComponent<MeshRenderer>().material;
 		StartCoroutine(pulse());
+        delay = Random.value * 5;
     }
 
 
 	private IEnumerator pulse() {
-
-		yield return new WaitForSeconds(Random.value);
         
         while (true) {
-            float emission = 1.0f + Mathf.PingPong(Time.time,2.0f);
+            float emission = 1.0f + Mathf.PingPong(Time.time + delay, 2.5f);
             answerCubeScreen.SetColor("_EmissionColor", color * Mathf.LinearToGammaSpace(emission));
 
 			yield return null;

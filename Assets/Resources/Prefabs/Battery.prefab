@@ -184,10 +184,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ca17f1921838ab499ac51ff84d8bef6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  batteryMaterial: {fileID: 2100000, guid: 5bcb49685c8f59d4d9f102162f7fdb80, type: 2}
+  tabletMaterial: {fileID: 2100000, guid: a1643d04edbf3e1419a94822dfb3de5f, type: 2}
   speed: 0.015
   currentY: 0.04
-  minY: -0.05
+  minY: -0.04
 --- !u!114 &5304160625253564937
 MonoBehaviour:
   m_ObjectHideFlags: 0
