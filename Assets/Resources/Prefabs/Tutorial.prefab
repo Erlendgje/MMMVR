@@ -332,11 +332,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4505580663986441529}
     m_Modifications:
-    - target: {fileID: 3337709803976073605, guid: f7bb49d2bce3be74a8c8d02d1c982c19,
-        type: 3}
-      propertyPath: m_Name
-      value: Battery
-      objectReference: {fileID: 0}
     - target: {fileID: 3337709803975916965, guid: f7bb49d2bce3be74a8c8d02d1c982c19,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -392,6 +387,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -147.626
       objectReference: {fileID: 0}
+    - target: {fileID: 3337709803976073605, guid: f7bb49d2bce3be74a8c8d02d1c982c19,
+        type: 3}
+      propertyPath: m_Name
+      value: Battery
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7bb49d2bce3be74a8c8d02d1c982c19, type: 3}
 --- !u!4 &400000 stripped
@@ -407,11 +407,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4505580663986441529}
     m_Modifications:
-    - target: {fileID: 3337709803976073605, guid: f7bb49d2bce3be74a8c8d02d1c982c19,
-        type: 3}
-      propertyPath: m_Name
-      value: Battery (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 3337709803975916965, guid: f7bb49d2bce3be74a8c8d02d1c982c19,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -482,6 +477,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 3337709803976073605, guid: f7bb49d2bce3be74a8c8d02d1c982c19,
+        type: 3}
+      propertyPath: m_Name
+      value: Battery (3)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7bb49d2bce3be74a8c8d02d1c982c19, type: 3}
 --- !u!4 &1884345108736635632 stripped
@@ -497,11 +497,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4505580663986441529}
     m_Modifications:
-    - target: {fileID: 3337709803976073605, guid: f7bb49d2bce3be74a8c8d02d1c982c19,
-        type: 3}
-      propertyPath: m_Name
-      value: Battery (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 3337709803975916965, guid: f7bb49d2bce3be74a8c8d02d1c982c19,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -572,6 +567,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 3337709803976073605, guid: f7bb49d2bce3be74a8c8d02d1c982c19,
+        type: 3}
+      propertyPath: m_Name
+      value: Battery (4)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7bb49d2bce3be74a8c8d02d1c982c19, type: 3}
 --- !u!4 &1264327936976248086 stripped
@@ -587,11 +587,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4505580663986441529}
     m_Modifications:
-    - target: {fileID: 3337709803976073605, guid: f7bb49d2bce3be74a8c8d02d1c982c19,
-        type: 3}
-      propertyPath: m_Name
-      value: Battery (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 3337709803975916965, guid: f7bb49d2bce3be74a8c8d02d1c982c19,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -662,6 +657,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 3337709803976073605, guid: f7bb49d2bce3be74a8c8d02d1c982c19,
+        type: 3}
+      propertyPath: m_Name
+      value: Battery (1)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7bb49d2bce3be74a8c8d02d1c982c19, type: 3}
 --- !u!4 &7927097446495505939 stripped
@@ -677,11 +677,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4505580663986441529}
     m_Modifications:
-    - target: {fileID: 3337709803976073605, guid: f7bb49d2bce3be74a8c8d02d1c982c19,
-        type: 3}
-      propertyPath: m_Name
-      value: Battery (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 3337709803975916965, guid: f7bb49d2bce3be74a8c8d02d1c982c19,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -751,6 +746,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3337709803976073605, guid: f7bb49d2bce3be74a8c8d02d1c982c19,
+        type: 3}
+      propertyPath: m_Name
+      value: Battery (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7bb49d2bce3be74a8c8d02d1c982c19, type: 3}
@@ -823,6 +823,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 99.99997
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: e0bffe388053def4dab0a6a1268d32a4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 349d5d5f80229834da9d40f6a9a3d587, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0bffe388053def4dab0a6a1268d32a4, type: 3}
 --- !u!1 &8901881063004513526 stripped
@@ -892,6 +896,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: e0bffe388053def4dab0a6a1268d32a4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 349d5d5f80229834da9d40f6a9a3d587, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0bffe388053def4dab0a6a1268d32a4, type: 3}
 --- !u!1 &8982445935535789444 stripped

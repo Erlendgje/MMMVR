@@ -32,19 +32,17 @@ public class Battery : MonoBehaviour
     {
         if (other.transform.name == "sciFiTablet_redWhite")
         {
-            if (currentY > minY)
-            {
-                batteryMaterial.SetFloat("_CurrentY", currentY);
-                currentY -= Time.deltaTime * speed;
+            
+            batteryMaterial.SetFloat("_CurrentY", currentY);
+            currentY -= Time.deltaTime * speed;
 
-                color = Color.Lerp(color, new Vector4(0.0470588f, 1.294118f, 1.498039f, 0), Time.deltaTime * 0.2f);
- 
-                tabletMaterial.SetColor("_EmissionColor", color);
-            }
-            else
+            color = Color.Lerp(color, new Vector4(0.0470588f, 1.294118f, 1.498039f, 0), Time.deltaTime * 0.2f);
+
+            tabletMaterial.SetColor("_EmissionColor", color);
+            
+			if (currentY <= minY)
             {
-                other.transform.GetComponent<OnTabletPickUp>().enabled = true;
-				other.transform.GetComponent<TabletDialogueHandler>().enabled = true;
+				transform.GetComponent<Battery> ().enabled = false;
             }
         }
     }
