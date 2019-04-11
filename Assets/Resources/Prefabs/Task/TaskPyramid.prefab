@@ -376,8 +376,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1667003037419088}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 28.844, y: -0.386, z: -6.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4749976638448334}
@@ -2084,6 +2084,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4637602568662340}
     m_Modifications:
+    - target: {fileID: 9206763881186853373, guid: 40258ec08d9614b4d9c675e84fd71e4c,
+        type: 3}
+      propertyPath: m_Name
+      value: Dust Variant
+      objectReference: {fileID: 0}
     - target: {fileID: 9206763881186853368, guid: 40258ec08d9614b4d9c675e84fd71e4c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2148,11 +2153,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 1.0000002
-      objectReference: {fileID: 0}
-    - target: {fileID: 9206763881186853373, guid: 40258ec08d9614b4d9c675e84fd71e4c,
-        type: 3}
-      propertyPath: m_Name
-      value: Dust Variant
       objectReference: {fileID: 0}
     - target: {fileID: 9206763880668925125, guid: 40258ec08d9614b4d9c675e84fd71e4c,
         type: 3}
