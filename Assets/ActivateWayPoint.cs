@@ -6,6 +6,9 @@ public class ActivateWayPoint : MonoBehaviour
 {
 	private void OnTriggerExit(Collider other)
 	{
-		GameManager.gameManager.enableWayPoint();
+		if (other.gameObject.tag.CompareTo("Player") == 0)
+		{
+			GameManager.gameManager.enableWayPoint(transform.parent.gameObject);
+		}
 	}
 }

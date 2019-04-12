@@ -11,111 +11,118 @@
 			}
 		]
 	},
-	"taskDialouge": [
-		{
-			"id": "0",
-			"message": [
-				{
-					"text": [ "Det virker som om bordet reagerer på disse merkelige kubene, kanskje de skal sorteres på en eller annen måte?" ]
-				},
-				{
-					"text": [
-						"Det ser ut som om artefakten responderer positivt på endringene du gjør, fortsett slik!",
-						"Kabelen lyste også opp, kanskje den kobler svaret med noe?"
-					]
-				},
-				{
-					"text": [
-						"Vi får inn seismiske målinger her. Hva er det som skjer?",
-						"Kanskje det har noe med at du klarte å aktivere artefakten."
-					]
-				}
-			],
-			"clue": [
-				{
-					"text": [
-						"Hvis du trykker på hint knappen kommer vi til å sende deg en melding om forslag til hva du kan gjøre.",
+  "taskDialouge": [
+    {
+      "id": "0",
+      "message": [
+      ],
+      "clue": [
+      ]
+    },
+    {
+      "id": "1",
+      "message": [
+        {
+          "text": [ "Det virker som om bordet reagerer på disse merkelige kubene, kanskje de skal sorteres på en eller annen måte?" ]
+        },
+        {
+          "text": [
+            "Det ser ut som om artefakten responderer positivt på endringene du gjør, fortsett slik!",
+            "Kabelen lyste også opp, kanskje den kobler svaret med noe?"
+          ]
+        },
+        {
+          "text": [
+            "Vi får inn seismiske målinger her. Hva er det som skjer?",
+            "Kanskje det har noe med at du klarte å aktivere artefakten."
+          ]
+        }
+      ],
+      "clue": [
+        {
+          "text": [
+            "Hvis du trykker på hint knappen kommer vi til å sende deg en melding om forslag til hva du kan gjøre.",
             "Oppdraget ditt er å finne ut hvordan man aktiverer artefakten med de lysende kubene.",
             "Da er det bare å begynne på oppdraget ditt. Lykke til agent 237."
-					]
-				},
-				{
-					"text": [ "Er det mulig å endre størrelsen på disse svevende artefaktene på en måte?" ]
-				},
-				{
-					"text": [ "Kanskje det har noe med verdien på de lysende kubene du plasserte på bordet?" ]
-				},
-				{
-					"text": [ "Prøv å endre størrelsen på de svevende artefaktene slik at volumet blir det samme som verdiene på de lysende kubene." ]
-				}
-			]
-		},
-		{
-			"id": "1",
-			"message": [
-				{
-					"text": [ "En ny artefakt, den dukket sikkert opp når du aktiverte den andre artefakten." ]
-				},
-				{
-					"text": [
-						"Hmmm, lurer på hvor mange pyramider det er plass til.",
-						"Hvis vi vet dette kan vi nok finne ut av formelen for volumet til en pyramide."
-					]
-				},
-				{
-					"text": [
-						"Vi fikk inn flere seismiske målinger, det må bety at du har klart å aktivere artefakten. Bra jobbet!",
-						"Da har det sikkert dukket opp en ny artefakt!"
-					]
-				}
-			],
-			"clue": [
-				{
-					"text": [ "Er det mulig å plukke opp pyramidene?" ]
-				},
-				{
-					"text": [ "Passer pyramidene inn på midten av artefakten?" ]
-				},
-				{
-					"text": [ "Prøv å plasser alle pyramidene med spissen mot hverandre." ]
-				}
-			]
-		},
-		{
-			"id": "2",
-			"message": [
-				{
-					"text": [
-						"Hvordan aktiverer man denne artefakten?",
-						"Kanskje det har noe med verdiene på søylene og pyramidene å gjøre?"
-					]
-				},
-				{
-					"text": [
-						"Søylen endret farge, så det virker som den hvertfall registrerte pyramiden.",
-						"Kanskje du må plassere ut alle pyramidene før vi vet om det er riktig eller ikke."
-					]
-				},
-				{
-					"text": [
-						"Hva skjedde?",
-						"Er det det vi tror det er? VANN!!!",
-						"Du har klart det agent 237. Du har funnet kilden til menneskets overlevelse på Mars.",
-						"Ditt oppdrag er nå fullført, bra jobbet agent 237! Du kan nå dra tilbake til Jorden."
-					]
-				}
-			],
-			"clue": [
-				{
-					"text": [ "Se på verdien på søylene og prøv å plasser pyramiden med tilsvarende volum på søylen." ]
-				},
-				{
-					"text": [ "Hva er volumet til en pyramide? Hvor mange pyramider er det plass til i en kube?" ]
-				},
-				{
-					"text": [ "Volumet til pyramiden vil da bli volumet til en cube delt på antall pyramider i en kube." ]
-				}
-			]
-		}
-	]
+          ]
+        },
+        {
+          "text": [ "Er det mulig å endre størrelsen på disse svevende artefaktene på en måte?" ]
+        },
+        {
+          "text": [ "Kanskje det har noe med verdien på de lysende kubene du plasserte på bordet?" ]
+        },
+        {
+          "text": [ "Prøv å endre størrelsen på de svevende artefaktene slik at volumet blir det samme som verdiene på de lysende kubene." ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "message": [
+        {
+          "text": [ "En ny artefakt, den dukket sikkert opp når du aktiverte den andre artefakten." ]
+        },
+        {
+          "text": [
+            "Hmmm, lurer på hvor mange pyramider det er plass til.",
+            "Hvis vi vet dette kan vi nok finne ut av formelen for volumet til en pyramide."
+          ]
+        },
+        {
+          "text": [
+            "Vi fikk inn flere seismiske målinger, det må bety at du har klart å aktivere artefakten. Bra jobbet!",
+            "Da har det sikkert dukket opp en ny artefakt!"
+          ]
+        }
+      ],
+      "clue": [
+        {
+          "text": [ "Er det mulig å plukke opp pyramidene?" ]
+        },
+        {
+          "text": [ "Passer pyramidene inn på midten av artefakten?" ]
+        },
+        {
+          "text": [ "Prøv å plasser alle pyramidene med spissen mot hverandre." ]
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "message": [
+        {
+          "text": [
+            "Hvordan aktiverer man denne artefakten?",
+            "Kanskje det har noe med verdiene på søylene og pyramidene å gjøre?"
+          ]
+        },
+        {
+          "text": [
+            "Søylen endret farge, så det virker som den hvertfall registrerte pyramiden.",
+            "Kanskje du må plassere ut alle pyramidene før vi vet om det er riktig eller ikke."
+          ]
+        },
+        {
+          "text": [
+            "Hva skjedde?",
+            "Er det det vi tror det er? VANN!!!",
+            "Du har klart det agent 237. Du har funnet kilden til menneskets overlevelse på Mars.",
+            "Ditt oppdrag er nå fullført, bra jobbet agent 237! Du kan nå dra tilbake til Jorden."
+          ]
+        }
+      ],
+      "clue": [
+        {
+          "text": [ "Se på verdien på søylene og prøv å plasser pyramiden med tilsvarende volum på søylen." ]
+        },
+        {
+          "text": [ "Hva er volumet til en pyramide? Hvor mange pyramider er det plass til i en kube?" ]
+        },
+        {
+          "text": [ "Volumet til pyramiden vil da bli volumet til en cube delt på antall pyramider i en kube." ]
+        }
+      ]
+    }
+  ]
 }

@@ -6,6 +6,12 @@ public class TurnOffWaypoint : MonoBehaviour
 {
 	private void OnTriggerEnter(Collider other)
 	{
-		GetComponent<ParticleSystem>().Stop();
+		if (other.gameObject.tag.CompareTo("Player") == 0)
+		{
+			foreach(ParticleSystem ps in GetComponentsInChildren<ParticleSystem>())
+			{
+				ps.Stop();
+			}
+		}
 	}
 }

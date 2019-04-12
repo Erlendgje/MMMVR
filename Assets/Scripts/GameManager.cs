@@ -36,9 +36,10 @@ public class GameManager : MonoBehaviour
 
     public void unlockNextTask() {
 		currentTask++;
-		if(currentTask < tasks.Count) {
+		if(currentTask < tasks.Count - 1) {
 			tasks[currentTask].SetActive(true);
 			moveWayPoint(tasks[currentTask].transform.Find("WayPoint").transform.position);
+			enableWayPoint(tasks[currentTask]);
 		}
 	}
 
@@ -54,8 +55,14 @@ public class GameManager : MonoBehaviour
 		wayPoint.transform.position = position;
 	}
 
-	public void enableWayPoint()
+	public void enableWayPoint(GameObject parent)
 	{
-		wayPoint.GetComponent<ParticleSystem>().Play();
+		if(tasks.IndexOf(parent) == currentTask)
+		{
+			foreach (ParticleSystem ps in wayPoint.GetComponentsInChildren<ParticleSystem>())
+			{
+				ps.Play();
+			}
+		}
 	}
 }
