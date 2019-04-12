@@ -7,7 +7,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
-	[SerializeField] private GameObject arrow;
+	[SerializeField] private GameObject wayPoint;
 
 	public static GameManager gameManager;
 	private int currentTask = 0;
@@ -51,6 +51,11 @@ public class GameManager : MonoBehaviour
 	}
 
 	public void moveWayPoint(Vector3 position) {
-		arrow.transform.position = position;
+		wayPoint.transform.position = position;
+	}
+
+	public void enableWayPoint()
+	{
+		wayPoint.GetComponent<ParticleSystem>().Play();
 	}
 }
