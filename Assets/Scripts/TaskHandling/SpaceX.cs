@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 public class SpaceX : MonoBehaviour {
 
-	private static bool playedStory = false;
+	private static int playedStory = 0;
 
 	private AnswerSpace answerSpace;
 	private List<AnswerCube> answers;
@@ -47,9 +47,12 @@ public class SpaceX : MonoBehaviour {
 				}
 				else {
 					onCorrect.Invoke();
-					if(!playedStory) {
+					if(playedStory == 1) {
 						GameManager.gameManager.GetDialogueHandler().playStory();
-						playedStory = true;
+						playedStory++;
+					}
+					else if(playedStory < 1) {
+						playedStory++;
 					}
 				}
 				answerSpace.valueChanged(correct, this, answers[0].answerInDm);
@@ -92,6 +95,7 @@ public class SpaceX : MonoBehaviour {
 	private void OnTriggerExit(Collider other) {
 		if (other.gameObject.GetComponent<AnswerCube>() != null) {
 			if(answers.Contains(other.gameObject.GetComponent<AnswerCube>())) {
+				Debug.Log("KAKE");
 				removeAnswer(other.gameObject.GetComponent<AnswerCube>());
 			}
 		}

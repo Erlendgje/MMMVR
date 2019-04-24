@@ -16,6 +16,8 @@ public class OnTabletPickUp : MonoBehaviour
 
 
 	void Start(){
+
+		
 		startMoveTo();
 	}
 

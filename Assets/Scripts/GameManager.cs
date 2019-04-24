@@ -7,6 +7,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
+	[SerializeField] private GameObject wayPoint;
+
 	public static GameManager gameManager;
 	private int currentTask = 0;
 
@@ -27,13 +29,17 @@ public class GameManager : MonoBehaviour
 		for(int i = 0; i < spawnTaskNumber; i++) {
 			unlockNextTask();
 		}
+
+		moveWayPoint(tasks[currentTask].transform.Find("WayPoint").transform.position);
 	}
 
 
     public void unlockNextTask() {
 		currentTask++;
-		if(currentTask < tasks.Count) {
+		if(currentTask < tasks.Count - 1) {
 			tasks[currentTask].SetActive(true);
+			moveWayPoint(tasks[currentTask].transform.Find("WayPoint").transform.position);
+			enableWayPoint(tasks[currentTask]);
 		}
 	}
 
@@ -43,5 +49,20 @@ public class GameManager : MonoBehaviour
 
 	public TabletDialogueHandler GetDialogueHandler() {
 		return tabletDialogueHandler;
+	}
+
+	public void moveWayPoint(Vector3 position) {
+		wayPoint.transform.position = position;
+	}
+
+	public void enableWayPoint(GameObject parent)
+	{
+		if(tasks.IndexOf(parent) == currentTask)
+		{
+			foreach (ParticleSystem ps in wayPoint.GetComponentsInChildren<ParticleSystem>())
+			{
+				ps.Play();
+			}
+		}
 	}
 }
