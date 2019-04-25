@@ -19422,6 +19422,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cable: {fileID: 9028623938943365481}
   space: {fileID: 9028623938943365529}
+  onCorrectColor: {r: 0, g: 1, b: 0, a: 0}
+  onWrongColor: {r: 0, g: 0.4784314, b: 0, a: 0}
 --- !u!54 &843777024
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -19762,6 +19764,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cable: {fileID: 9028623938943365475}
   space: {fileID: 9028623938943365535}
+  onCorrectColor: {r: 0, g: 1, b: 0, a: 0}
+  onWrongColor: {r: 0, g: 0.4784314, b: 0, a: 0}
 --- !u!54 &2136981453
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -24809,6 +24813,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cable: {fileID: 9028623938943365487}
   space: {fileID: 9028623938943365491}
+  onCorrectColor: {r: 0, g: 1, b: 0, a: 0}
+  onWrongColor: {r: 0, g: 0.4784314, b: 0, a: 0}
 --- !u!54 &1072842349
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -68465,6 +68471,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cable: {fileID: 9028623938943365485}
   space: {fileID: 9028623938943365533}
+  onCorrectColor: {r: 0, g: 1, b: 0, a: 0}
+  onWrongColor: {r: 0, g: 0.4784314, b: 0, a: 0}
 --- !u!54 &580194314
 Rigidbody:
   m_ObjectHideFlags: 0

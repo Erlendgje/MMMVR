@@ -18,17 +18,12 @@ public class CablePulse : MonoBehaviour
     void Start()
     {
 		cableLight = Array.Find(this.GetComponent<MeshRenderer>().materials, m => m.name.Equals("CableLight (Instance)"));
-		Debug.Log (cableLight.name);
-		StartCoroutine(pulse());
     }
 
+    private void Update()
+    {
+        float emission = from + Mathf.PingPong(Time.time * pulseSpeed, to);
+        cableLight.SetColor("_EmissionColor", color * Mathf.LinearToGammaSpace(emission));
+    }
 
-	private IEnumerator pulse() {
-        
-        while (true) {
-			float emission = from + Mathf.PingPong(Time.time * pulseSpeed, to);
-            cableLight.SetColor("_EmissionColor", color * Mathf.LinearToGammaSpace(emission));
-			yield return null;
-		}
-	}
 }
