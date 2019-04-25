@@ -7,7 +7,10 @@ public class CorrectCubes : MonoBehaviour
 {
 	[SerializeField] private MeshRenderer cable;
 	[SerializeField] private MeshRenderer space;
-	private Animator anim;
+    [SerializeField] private Color onCorrectColor;
+    [SerializeField] private Color onWrongColor;
+
+    private Animator anim;
 
 	// Start is called before the first frame update
 	void Start()
@@ -25,24 +28,24 @@ public class CorrectCubes : MonoBehaviour
 	public void onCorrect() {
 		anim.SetBool("correct", true);
 
-		Array.Find(cable.materials, m => m.name.Equals("CableLight (Instance)")).EnableKeyword("_EMISSION");
-		cable.GetComponent<CablePulse> ().enabled = true;
+		Array.Find(cable.materials, m => m.name.Equals("CableLight (Instance)")).SetColor("_EmissionColor", onCorrectColor);
+        cable.GetComponent<CablePulse> ().enabled = true;
 
-		Array.Find(space.materials, m => m.name.Equals("CableLight (Instance)")).EnableKeyword("_EMISSION");
-		space.GetComponent<CablePulse> ().enabled = true;
+		Array.Find(space.materials, m => m.name.Equals("CableLight (Instance)")).SetColor("_EmissionColor", onCorrectColor);
+        space.GetComponent<CablePulse> ().enabled = true;
 
-		Array.Find(this.GetComponent<MeshRenderer>().materials, m => m.name.Equals("CableLight (Instance)")).EnableKeyword("_EMISSION");
-	}
+		Array.Find(this.GetComponent<MeshRenderer>().materials, m => m.name.Equals("CableLight (Instance)")).SetColor("_EmissionColor", onCorrectColor);
+    }
 
 	public void onWrong() {
 		anim.SetBool("correct", false);
 
 		cable.GetComponent<CablePulse> ().enabled = false;
-		Array.Find(cable.materials, m => m.name.Equals("CableLight (Instance)")).DisableKeyword("_EMISSION");
+		Array.Find(cable.materials, m => m.name.Equals("CableLight (Instance)")).SetColor("_EmissionColor", onWrongColor);
 
-		space.GetComponent<CablePulse> ().enabled = false;
-		Array.Find(space.materials, m => m.name.Equals("CableLight (Instance)")).DisableKeyword("_EMISSION");
+        space.GetComponent<CablePulse> ().enabled = false;
+		Array.Find(space.materials, m => m.name.Equals("CableLight (Instance)")).SetColor("_EmissionColor", onWrongColor);
 
-		Array.Find(this.GetComponent<MeshRenderer>().materials, m => m.name.Equals("CableLight (Instance)")).DisableKeyword("_EMISSION");
-	}
+        Array.Find(this.GetComponent<MeshRenderer>().materials, m => m.name.Equals("CableLight (Instance)")).SetColor("_EmissionColor", onWrongColor);
+    }
 }
