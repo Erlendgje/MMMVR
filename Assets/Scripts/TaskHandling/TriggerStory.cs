@@ -6,7 +6,7 @@ public class TriggerStory : MonoBehaviour
 {
 	private void OnTriggerEnter(Collider other) {
 		if(other.gameObject.tag.CompareTo("Player") == 0) {
-			GameManager.gameManager.GetDialogueHandler().playStory("Trigger story");
+			GameManager.gameManager.GetDialogueHandler().playStory();
 			Destroy(this.gameObject);
 		}
 	}

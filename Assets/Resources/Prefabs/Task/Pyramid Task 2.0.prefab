@@ -19294,8 +19294,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   successSound: {fileID: 8300000, guid: 1d2b2a3420d74da45be3592086136700, type: 3}
   onRegisterColor: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 0}
-  onCorrectColor: {r: 0, g: 0, b: 0, a: 0}
-  keepCurrentColor: 1
+  onCorrectColor: {r: 0, g: 1, b: 0.12321901, a: 1}
+  keepCurrentColor: 0
+  cable: {fileID: 0}
 --- !u!1 &839934417337319264
 GameObject:
   m_ObjectHideFlags: 0
@@ -19747,8 +19748,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   successSound: {fileID: 8300000, guid: 1d2b2a3420d74da45be3592086136700, type: 3}
   onRegisterColor: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 0}
-  onCorrectColor: {r: 0, g: 0, b: 0, a: 0}
-  keepCurrentColor: 1
+  onCorrectColor: {r: 0, g: 1, b: 0.12321901, a: 1}
+  keepCurrentColor: 0
+  cable: {fileID: 0}
 --- !u!54 &5778550775374691329
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -19985,8 +19987,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   successSound: {fileID: 8300000, guid: 1d2b2a3420d74da45be3592086136700, type: 3}
   onRegisterColor: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 0}
-  onCorrectColor: {r: 0, g: 0, b: 0, a: 0}
-  keepCurrentColor: 1
+  onCorrectColor: {r: 0, g: 1, b: 0.12321901, a: 1}
+  keepCurrentColor: 0
+  cable: {fileID: 0}
 --- !u!1 &2348970164766590846
 GameObject:
   m_ObjectHideFlags: 0
@@ -20215,8 +20218,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   successSound: {fileID: 8300000, guid: 1d2b2a3420d74da45be3592086136700, type: 3}
   onRegisterColor: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 0}
-  onCorrectColor: {r: 0, g: 0, b: 0, a: 0}
-  keepCurrentColor: 1
+  onCorrectColor: {r: 0, g: 1, b: 0.12321901, a: 1}
+  keepCurrentColor: 0
+  cable: {fileID: 0}
 --- !u!114 &4469121013845443657
 MonoBehaviour:
   m_ObjectHideFlags: 0

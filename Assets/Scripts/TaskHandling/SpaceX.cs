@@ -48,7 +48,7 @@ public class SpaceX : MonoBehaviour {
 				else {
 					onCorrect.Invoke();
 					if(playedStory == 1) {
-						GameManager.gameManager.GetDialogueHandler().playStory("SpaceX");
+						GameManager.gameManager.GetDialogueHandler().playStory();
 						playedStory++;
 					}
 					else if(playedStory < 1) {
@@ -95,7 +95,6 @@ public class SpaceX : MonoBehaviour {
 	private void OnTriggerExit(Collider other) {
 		if (other.gameObject.GetComponent<AnswerCube>() != null) {
 			if(answers.Contains(other.gameObject.GetComponent<AnswerCube>())) {
-				Debug.Log("KAKE");
 				removeAnswer(other.gameObject.GetComponent<AnswerCube>());
 			}
 		}

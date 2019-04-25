@@ -47,7 +47,7 @@ public class Task : MonoBehaviour {
         }
         catch
         {
-            Debug.Log("labal");
+            
         }
 		
 		this.solution = solution;

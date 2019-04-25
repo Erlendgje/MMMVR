@@ -27,7 +27,7 @@ public class TaskHandler : MonoBehaviour
             onCorrect.Invoke();
             if (!done)
             {
-				GameManager.gameManager.GetDialogueHandler().playStory("TaskHandler");
+				GameManager.gameManager.GetDialogueHandler().playStory();
                 GameManager.gameManager.unlockNextTask();
                 done = true;
             }

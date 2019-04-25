@@ -26,7 +26,7 @@ public class snapToHover : MonoBehaviour
                 detached = false;
 				SoundManager.instance.PlaySingle (snapSound);
 				if(!playedStory) {
-					GameManager.gameManager.GetDialogueHandler().playStory("Snap to hover");
+					GameManager.gameManager.GetDialogueHandler().playStory();
 					playedStory = true;
 				}
             }

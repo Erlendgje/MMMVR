@@ -1638,8 +1638,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   successSound: {fileID: 8300000, guid: 1d2b2a3420d74da45be3592086136700, type: 3}
   onRegisterColor: {r: 0, g: 0, b: 0, a: 0}
-  onCorrectColor: {r: 0, g: 0, b: 0, a: 0}
-  keepCurrentColor: 1
+  onCorrectColor: {r: 0, g: 1, b: 0.11130738, a: 0}
+  keepCurrentColor: 0
+  cable: {fileID: 0}
 --- !u!1 &9024830424573390932
 GameObject:
   m_ObjectHideFlags: 0
