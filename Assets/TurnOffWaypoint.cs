@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TurnOffWaypoint : MonoBehaviour
 {
-	private void OnTriggerEnter(Collider other)
+	private void OnTriggerStay(Collider other)
 	{
 		if (other.gameObject.tag.CompareTo("Player") == 0)
 		{

@@ -48,7 +48,7 @@ public class SpaceX : MonoBehaviour {
 				else {
 					onCorrect.Invoke();
 					if(playedStory == 1) {
-						GameManager.gameManager.GetDialogueHandler().playStory();
+						GameManager.gameManager.GetDialogueHandler().playStory("SpaceX");
 						playedStory++;
 					}
 					else if(playedStory < 1) {

@@ -61,7 +61,8 @@ public class TabletDialogueHandler : MonoBehaviour
 		StartCoroutine(showHint(dialogue.intro.message[0].text.Length * secondsBetweenMessages));
 	}
 
-	public void playStory() {
+	public void playStory(String name) {
+        Debug.Log(name);
 		if(dialogue.taskDialouge[GameManager.gameManager.getCurrentTask()].message.Length > storyProgress) {
 			StartCoroutine(addToChat(dialogue.taskDialouge[GameManager.gameManager.getCurrentTask()].message[storyProgress].text));
 			storyProgress++;

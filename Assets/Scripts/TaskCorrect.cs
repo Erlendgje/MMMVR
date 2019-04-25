@@ -29,7 +29,6 @@ public class TaskCorrect : MonoBehaviour
 	}
 
 	public void onRegisterAnswer() {
-		Debug.Log("KOMMER HIT");
 		material.EnableKeyword("_EMISSION");
 		material.SetColor("_EmissionColor", onRegisterColor);
 	}

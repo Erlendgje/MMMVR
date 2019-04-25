@@ -30,15 +30,30 @@ public class GameManager : MonoBehaviour
 			unlockNextTask();
 		}
 
-		moveWayPoint(tasks[currentTask].transform.Find("WayPoint").transform.position);
-	}
+        try
+        {
+            moveWayPoint(tasks[currentTask].transform.Find("WayPoint").transform.position);
+        }
+        catch
+        {
+            //No waypoint
+        }
+    }
 
 
     public void unlockNextTask() {
 		currentTask++;
-		if(currentTask < tasks.Count - 1) {
+		if(currentTask < tasks.Count) {
 			tasks[currentTask].SetActive(true);
-			moveWayPoint(tasks[currentTask].transform.Find("WayPoint").transform.position);
+            try
+            {
+                moveWayPoint(tasks[currentTask].transform.Find("WayPoint").transform.position);
+            }
+            catch
+            {
+                //No waypoint
+            }
+			
 			enableWayPoint(tasks[currentTask]);
 		}
 	}

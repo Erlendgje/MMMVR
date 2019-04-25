@@ -13,7 +13,7 @@ public class ActivatePillars : MonoBehaviour
         task.SetActive(true);
         if (!playedStory)
         {
-            GameManager.gameManager.GetDialogueHandler().playStory();
+            GameManager.gameManager.GetDialogueHandler().playStory("ActivatePillars");
             playedStory = true;
         }
     }
