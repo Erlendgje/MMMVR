@@ -6,21 +6,15 @@ public class ActivatePillars : MonoBehaviour
 {
 
     [SerializeField] private GameObject task;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    private bool playedStory = false;
 
     public void onPickup()
     {
         task.SetActive(true);
+        if (!playedStory)
+        {
+            GameManager.gameManager.GetDialogueHandler().playStory();
+            playedStory = true;
+        }
     }
 }

@@ -5,8 +5,6 @@ using UnityEngine.Events;
 
 public class SnapToPosition : MonoBehaviour {
 
-	private static bool playedStory = false;
-
 	private static bool taskDone = false;
 
 	[SerializeField] private UnityEvent onCorrect;
@@ -78,11 +76,6 @@ public class SnapToPosition : MonoBehaviour {
 			ghostPyramid.SetActive(true);
 			ghostPyramid.GetComponent<MaterialBlinking>().startBlinking();
 		}
-
-		if(!playedStory) {
-			GameManager.gameManager.GetDialogueHandler().playStory();
-			playedStory = true;
-		}
 	}
 
 	public void onDetach() {
@@ -105,7 +98,6 @@ public class SnapToPosition : MonoBehaviour {
                 if  (snappedObjects.Count == 3 && !taskDone) {
 					//TASK DONE!!!
 					taskDone = true;
-					GameManager.gameManager.GetDialogueHandler().playStory();
 					onCorrect.Invoke();
 				    GameManager.gameManager.unlockNextTask();
                 
