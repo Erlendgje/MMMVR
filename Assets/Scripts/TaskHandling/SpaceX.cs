@@ -95,7 +95,6 @@ public class SpaceX : MonoBehaviour {
 	private void OnTriggerExit(Collider other) {
 		if (other.gameObject.GetComponent<AnswerCube>() != null) {
 			if(answers.Contains(other.gameObject.GetComponent<AnswerCube>())) {
-				Debug.Log("KAKE");
 				removeAnswer(other.gameObject.GetComponent<AnswerCube>());
 			}
 		}
