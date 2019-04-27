@@ -76,6 +76,7 @@ public class GameManager : MonoBehaviour
 		{
 			foreach (ParticleSystem ps in wayPoint.GetComponentsInChildren<ParticleSystem>())
 			{
+				Debug.Log("KJØRER");
 				ps.Play();
 			}
 		}

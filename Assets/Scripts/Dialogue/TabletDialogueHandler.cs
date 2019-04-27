@@ -13,9 +13,9 @@ public class TabletDialogueHandler : MonoBehaviour
 
 	private String dialogueFileName = "story.json";
 	private Dialogue dialogue;
+    private AudioSource audioSource;
 	[SerializeField] private GameObject chat;
 	[SerializeField] private GameObject textBubble;
-	[SerializeField] private float secondsBetweenMessages;
 	[SerializeField] private RectTransform scrollView;
 	[SerializeField] private ScrollRect scrollRect;
 	[SerializeField] private List<Hand> hands;
@@ -35,6 +35,7 @@ public class TabletDialogueHandler : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
     {
+        audioSource = GetComponent<AudioSource>();
 		string filePath = Path.Combine(Application.streamingAssetsPath, dialogueFileName);
 		if(File.Exists(filePath)) {
 			string dataAsJason = File.ReadAllText(filePath);
@@ -57,13 +58,16 @@ public class TabletDialogueHandler : MonoBehaviour
 	}
 
 	public void playIntro() {
-		StartCoroutine(addToChat(dialogue.intro.message[0].text));
-		StartCoroutine(showHint(dialogue.intro.message[0].text.Length * secondsBetweenMessages));
+        string audioName = "intro-message0-text";
+        StartCoroutine(addToChat(dialogue.intro.message[0].text, audioName));
+		StartCoroutine(showHint(dialogue.intro.message[0].text.Length * 5));
 	}
 
 	public void playStory() {
 		if(dialogue.taskDialouge[GameManager.gameManager.getCurrentTask()].message.Length > storyProgress) {
-			StartCoroutine(addToChat(dialogue.taskDialouge[GameManager.gameManager.getCurrentTask()].message[storyProgress].text));
+            string audioName = "story-id" + GameManager.gameManager.getCurrentTask() + "-message" + storyProgress + "-text";
+
+            StartCoroutine(addToChat(dialogue.taskDialouge[GameManager.gameManager.getCurrentTask()].message[storyProgress].text, audioName));
 			storyProgress++;
 
 			if(dialogue.taskDialouge[GameManager.gameManager.getCurrentTask()].message.Length == storyProgress) {
@@ -75,12 +79,13 @@ public class TabletDialogueHandler : MonoBehaviour
 
 	public void playClue() {
 		if(dialogue.taskDialouge[GameManager.gameManager.getCurrentTask()].clue.Length > clueProgress) {
-			StartCoroutine(addToChat(dialogue.taskDialouge[GameManager.gameManager.getCurrentTask()].clue[clueProgress].text));
+            string audioName = "clue-id" + GameManager.gameManager.getCurrentTask() + "-message" + clueProgress + "-text";
+            StartCoroutine(addToChat(dialogue.taskDialouge[GameManager.gameManager.getCurrentTask()].clue[clueProgress].text, audioName));
 			clueProgress++;
 		}
 	}
 
-	private IEnumerator addToChat(String[] messages) {
+	private IEnumerator addToChat(String[] messages, string name) {
 		for(int i = 0; i < messages.Length; i++) {
 			GameObject chatBubble = Instantiate(textBubble, chat.transform);
 			chatBubble.GetComponentInChildren<TextMeshProUGUI>().text = messages[i];
@@ -89,10 +94,12 @@ public class TabletDialogueHandler : MonoBehaviour
 			LayoutRebuilder.ForceRebuildLayoutImmediate(scrollView);
 			yield return null;
 			StartCoroutine(scrollDown());
-
-			GetComponent<AudioSource>().Play();
+            string audioName = name + i;
+			AudioClip ac = Resources.Load<AudioClip>("DialogueAudio/" + audioName);
+            audioSource.clip = ac;
+			audioSource.Play();
 			if(i < messages.Length - 1) {
-				yield return new WaitForSeconds(secondsBetweenMessages);
+				yield return new WaitForSeconds(audioSource.clip.length);
 			}
 		}
 	}
