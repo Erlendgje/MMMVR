@@ -16,7 +16,6 @@ public class TabletDialogueHandler : MonoBehaviour
     private AudioSource audioSource;
 	[SerializeField] private GameObject chat;
 	[SerializeField] private GameObject textBubble;
-	[SerializeField] private float secondsBetweenMessages;
 	[SerializeField] private RectTransform scrollView;
 	[SerializeField] private ScrollRect scrollRect;
 	[SerializeField] private List<Hand> hands;
@@ -61,7 +60,7 @@ public class TabletDialogueHandler : MonoBehaviour
 	public void playIntro() {
         string audioName = "intro-message0-text";
         StartCoroutine(addToChat(dialogue.intro.message[0].text, audioName));
-		StartCoroutine(showHint(dialogue.intro.message[0].text.Length * secondsBetweenMessages));
+		StartCoroutine(showHint(dialogue.intro.message[0].text.Length * 5));
 	}
 
 	public void playStory() {
@@ -80,7 +79,7 @@ public class TabletDialogueHandler : MonoBehaviour
 
 	public void playClue() {
 		if(dialogue.taskDialouge[GameManager.gameManager.getCurrentTask()].clue.Length > clueProgress) {
-            string audioName = "clue-id" + GameManager.gameManager.getCurrentTask() + "-message" + storyProgress + "-text";
+            string audioName = "clue-id" + GameManager.gameManager.getCurrentTask() + "-message" + clueProgress + "-text";
             StartCoroutine(addToChat(dialogue.taskDialouge[GameManager.gameManager.getCurrentTask()].clue[clueProgress].text, audioName));
 			clueProgress++;
 		}
@@ -96,7 +95,8 @@ public class TabletDialogueHandler : MonoBehaviour
 			yield return null;
 			StartCoroutine(scrollDown());
             string audioName = name + i;
-            audioSource.clip = Resources.Load<AudioClip>(audioName);
+			AudioClip ac = Resources.Load<AudioClip>("DialogueAudio/" + audioName);
+            audioSource.clip = ac;
 			audioSource.Play();
 			if(i < messages.Length - 1) {
 				yield return new WaitForSeconds(audioSource.clip.length);

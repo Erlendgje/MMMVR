@@ -7,6 +7,7 @@ using UnityEngine.Events;
 public class SpaceX : MonoBehaviour {
 
 	private static int playedStory = 0;
+	private static int solvedSpaces = 1;
 
 	private AnswerSpace answerSpace;
 	private List<AnswerCube> answers;
@@ -41,23 +42,28 @@ public class SpaceX : MonoBehaviour {
 	public void checkSolution() {
 		if(answers.Count != 0) {
 			if (answers.FindAll(a => a.answerInDm == answers[0].answerInDm && a.plane == answers[0].plane).Count == answers[0].numbersInGroup && answers.Count == answers[0].numbersInGroup) {
+				if (!correct)
+				{
+					solvedSpaces++;
+				}
 				correct = true;
 				if(useRegisterdAnswer) {
 					onRegisterdAnswer.Invoke();
 				}
 				else {
 					onCorrect.Invoke();
-					if(playedStory == 1) {
+					if(solvedSpaces == 4 && playedStory == 0) {
 						GameManager.gameManager.GetDialogueHandler().playStory();
-						playedStory++;
-					}
-					else if(playedStory < 1) {
 						playedStory++;
 					}
 				}
 				answerSpace.valueChanged(correct, this, answers[0].answerInDm);
 			}
 			else {
+				if (correct)
+				{
+					solvedSpaces--;
+				}
 				correct = false;
 				if(useRegisterdAnswer) {
 					onRegisterdAnswer.Invoke();
