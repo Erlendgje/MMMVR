@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TheGame.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MathWorld.unity
     guid: 0b5d53e8f585c2c4dba4c4ed075d07f9
   m_configObjects: {}

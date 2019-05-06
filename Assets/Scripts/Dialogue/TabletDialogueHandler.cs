@@ -20,8 +20,8 @@ public class TabletDialogueHandler : MonoBehaviour
 	[SerializeField] private ScrollRect scrollRect;
 	[SerializeField] private List<Hand> hands;
 
-	private int storyProgress = 0;
-	private int clueProgress = 0;
+	public int storyProgress = 0;
+	public int clueProgress = 0;
 
 
 	public SteamVR_Input_Sources handType;
@@ -68,6 +68,12 @@ public class TabletDialogueHandler : MonoBehaviour
             string audioName = "story-id" + GameManager.gameManager.getCurrentTask() + "-message" + storyProgress + "-text";
 
             StartCoroutine(addToChat(dialogue.taskDialouge[GameManager.gameManager.getCurrentTask()].message[storyProgress].text, audioName));
+
+			if(storyProgress == 0)
+			{
+				clueProgress = 0;
+			}
+
 			storyProgress++;
 
 			if(dialogue.taskDialouge[GameManager.gameManager.getCurrentTask()].message.Length == storyProgress) {
